@@ -1,0 +1,2940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>Rocket - A lightweight HTML, CSS, and JavaScript framework.</title>
+        <!-- Favicon -->
+        <link rel="icon" href="../assets/images/logo/favicon.ico">
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+              rel="stylesheet">
+        <!-- Rocket style -->
+        <link rel="stylesheet" href="../assets/css/style.min.css">
+        <!-- highlight.js style -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+        <!-- Docs style -->
+        <link rel="stylesheet" href="./assets/css/docs.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <!-- Header logo -->
+                    <a href="index.html" class="header__logo">
+                        <img src="../assets/images/logo/logo.svg" alt="Rocket" class="logo">
+                    </a>
+                    <!-- Header navbar -->
+                    <nav class="header__navbar header__navbar--collapse">
+                        <ul class="navbar lv0">
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Grid</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-size" class="navbar__link lv1">
+                                            <span>Columns size</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-responsiveness" class="navbar__link lv1">
+                                            <span>Columns responsiveness</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-order" class="navbar__link lv1">
+                                            <span>Columns order</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-offset" class="navbar__link lv1">
+                                            <span>Columns offset</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#nesting-columns" class="navbar__link lv1">
+                                            <span>Nesting columns</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Typography</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#headings" class="navbar__link lv1">
+                                            <span>Headings</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#display" class="navbar__link lv1">
+                                            <span>Display</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lead" class="navbar__link lv1">
+                                            <span>Lead</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#inline-text-elements" class="navbar__link lv1">
+                                            <span>Inline text elements</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#blockquotes" class="navbar__link lv1">
+                                            <span>Blockquotes</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lists" class="navbar__link lv1">
+                                            <span>Lists</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Content</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#images" class="navbar__link lv1">
+                                            <span>Images</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#tables" class="navbar__link lv1">
+                                            <span>Tables</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#buttons" class="navbar__link lv1">
+                                            <span>Buttons</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#forms" class="navbar__link lv1">
+                                            <span>Forms</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Components</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#header" class="navbar__link lv1">
+                                            <span>Header</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#footer" class="navbar__link lv1">
+                                            <span>Footer</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#pagination" class="navbar__link lv1">
+                                            <span>Pagination</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#breadcrumb" class="navbar__link lv1">
+                                            <span>Breadcrumb</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#card" class="navbar__link lv1">
+                                            <span>Card</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#cover" class="navbar__link lv1">
+                                            <span>Cover</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#slider" class="navbar__link lv1">
+                                            <span>Slider</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#utilities" class="navbar__link lv0">
+                                    <span>Utilities</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#colors" class="navbar__link lv1">
+                                            <span>Colors</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#text-alignment" class="navbar__link lv1">
+                                            <span>Text alignment</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#spacing" class="navbar__link lv1">
+                                            <span>Spacing</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0">
+                                <a href="#icons" class="navbar__link lv0">
+                                    <span>Icons</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Header hamburger -->
+                    <div class="header__hamburger">
+                        <div class="hamburger hamburger--vortex">
+                            <span class="hamburger__inner"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Page wrapper -->
+        <div class="page-wrapper">
+            <main class="main">
+                <!-- Grid -->
+                <section id="grid" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Grid</h2>
+                        <!-- Columns size -->
+                        <div id="columns-size" class="subsection">
+                            <h3 class="subsection__title">Columns size</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-12">
+                                        <span>col-12</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-11">
+                                        <span>col-11</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-10">
+                                        <span>col-10</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-9">
+                                        <span>col-9</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-8">
+                                        <span>col-8</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-7">
+                                        <span>col-7</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-6">
+                                        <span>col-6</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-5">
+                                        <span>col-5</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-4">
+                                        <span>col-4</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-3">
+                                        <span>col-3</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-2">
+                                        <span>col-2</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-1">
+                                        <span>col-1</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="grid"&gt;
+    &lt;div class="col-8"&gt;
+        &lt;span&gt;col-8&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;span&gt;Auto&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Columns responsiveness -->
+                        <div id="columns-responsiveness" class="subsection">
+                            <h3 class="subsection__title">Columns responsiveness</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-8 col-xl-3">
+                                        <span>col-8 col-xl-3</span>
+                                    </div>
+                                    <div class="col-4 col-xl-9">
+                                        <span>col-4 col-xl-9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="grid"&gt;
+    &lt;div class="col-8 col-xl-3"&gt;
+        &lt;span&gt;col-8 col-xl-3&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4 col-xl-9"&gt;
+        &lt;span&gt;col-4 col-xl-9&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Columns order -->
+                        <div id="columns-order" class="subsection">
+                            <h3 class="subsection__title">Columns order</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-4 order-2">
+                                        <span>First in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-0">
+                                        <span>Second in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-1">
+                                        <span>Third in DOM</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-4 order-2">
+                                        <span>First in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-last">
+                                        <span>Second in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-first">
+                                        <span>Third in DOM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="grid"&gt;
+    &lt;div class="col-4 order-2"&gt;
+        &lt;span&gt;First in DOM&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4 order-0"&gt;
+        &lt;span&gt;Second in DOM&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4 order-1"&gt;
+        &lt;span&gt;Third in DOM&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Columns offset -->
+                        <div id="columns-offset" class="subsection">
+                            <h3 class="subsection__title">Columns offset</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-4 offset-1">
+                                        <span>col-4 offset-1</span>
+                                    </div>
+                                    <div class="col-4 offset-3">
+                                        <span>col-4 offset-3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="grid"&gt;
+    &lt;div class="col-4 offset-1"&gt;
+        &lt;span&gt;col-4 offset-1&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4 offset-3"&gt;
+        &lt;span&gt;col-4 offset-3&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Nesting columns -->
+                        <div id="nesting-columns" class="subsection">
+                            <h3 class="subsection__title">Nesting columns</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-3">
+                                        <span>col-3</span>
+                                    </div>
+                                    <div class="col-9">
+                                        <span>col-9</span>
+                                        <div class="grid">
+                                            <div class="col-4">
+                                                <span>col-4</span>
+                                            </div>
+                                            <div class="col-8">
+                                                <span>col-8</span>
+                                                <div class="grid">
+                                                    <div class="col-6">
+                                                        <span>col-6</span>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span>col-6</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="grid"&gt;
+    &lt;div class="col-3"&gt;
+        &lt;span&gt;col-3&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="col-9"&gt;
+        &lt;span&gt;col-9&lt;/span&gt;
+        &lt;div class="grid"&gt;
+            &lt;div class="col-4"&gt;
+                &lt;span&gt;col-4&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="col-8"&gt;
+                &lt;span&gt;col-8&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Typography -->
+                <section id="typography" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Typography</h2>
+                        <!-- Headings -->
+                        <div id="headings" class="subsection">
+                            <h3 class="subsection__title">Headings</h3>
+                            <div class="subsection__content">
+                                <h1>Heading h1</h1>
+                                <h2>Heading h2</h2>
+                                <h3>Heading h3</h3>
+                                <h4>Heading h4</h4>
+                                <h5>Heading h5</h5>
+                                <h6>Heading h6</h6>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;h1&gt;Heading h1&lt;/h1&gt;
+&lt;h2&gt;Heading h2&lt;/h2&gt;
+&lt;h3&gt;Heading h3&lt;/h3&gt;
+&lt;h4&gt;Heading h4&lt;/h4&gt;
+&lt;h5&gt;Heading h5&lt;/h5&gt;
+&lt;h6&gt;Heading h6&lt;/h6&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Display -->
+                        <div id="display" class="subsection">
+                            <h3 class="subsection__title">Display</h3>
+                            <div class="subsection__content">
+                                <div class="huge">Display huge</div>
+                                <div class="large">Display large</div>
+                                <div class="bigger">Display bigger</div>
+                                <div class="big">Display big</div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="huge"&gt;Display huge&lt;/div&gt;
+&lt;div class="large"&gt;Display large&lt;/div&gt;
+&lt;div class="bigger"&gt;Display bigger&lt;/div&gt;
+&lt;div class="big"&gt;Display big&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Lead -->
+                        <div id="lead" class="subsection">
+                            <h3 class="subsection__title">Lead</h3>
+                            <div class="subsection__content">
+                                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                    officiis?</p>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Inline text elements -->
+                        <div id="inline-text-elements" class="subsection">
+                            <h3 class="subsection__title">Inline text elements</h3>
+                            <div class="subsection__content">
+                                <p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</span>
+                                </p>
+                                <p>
+                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</small>
+                                </p>
+                                <p>
+                                    <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</em>
+                                </p>
+                                <p>
+                                    <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</strong>
+                                </p>
+                                <p>
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</a>
+                                </p>
+                                <hr>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="#"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Blockquotes -->
+                        <div id="blockquotes" class="subsection">
+                            <h3 class="subsection__title">Blockquotes</h3>
+                            <div class="subsection__content">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?
+                                    </p>
+                                </blockquote>
+                                <figure>
+                                    <blockquote>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                            officiis?</p>
+                                        <figcaption>Lorem ipsum dolor <cite>sit amet.</cite></figcaption>
+                                    </blockquote>
+                                </figure>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/p&gt;
+        &lt;figcaption&gt;Lorem ipsum dolor &lt;cite&gt;sit amet.&lt;/cite&gt;&lt;/figcaption&gt;
+    &lt;/blockquote&gt;
+&lt;/figure&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Lists -->
+                        <div id="lists" class="subsection">
+                            <h3 class="subsection__title">Lists</h3>
+                            <div class="subsection__content">
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li> Lorem ipsum dolor sit amet. <ul>
+                                            <li>Lorem ipsum dolor sit amet.</li>
+                                            <li>Lorem ipsum dolor sit amet.</li>
+                                            <li>Lorem ipsum dolor sit amet.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                                <ol>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ol>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;ul&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+    &lt;li&gt; Lorem ipsum dolor sit amet. &lt;ul&gt;
+            &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+            &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+            &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Description list</h5>
+                            <div class="subsection__content">
+                                <dl>
+                                    <dt>Lorem ipsum dolor sit amet.</dt>
+                                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
+                                    <dt>Lorem ipsum dolor sit amet consectetur.</dt>
+                                    <dd>Lorem ipsum dolor sit.</dd>
+                                    <dt>Lorem ipsum dolor sit, amet consectetur adipisicing.</dt>
+                                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, qui!</dd>
+                                </dl>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;dl&gt;
+    &lt;dt&gt;Lorem ipsum dolor sit amet.&lt;/dt&gt;
+    &lt;dd&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/dd&gt;
+    &lt;dt&gt;Lorem ipsum dolor sit amet consectetur.&lt;/dt&gt;
+    &lt;dd&gt;Lorem ipsum dolor sit.&lt;/dd&gt;
+    &lt;dt&gt;Lorem ipsum dolor sit, amet consectetur adipisicing.&lt;/dt&gt;
+    &lt;dd&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, qui!&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Content -->
+                <section id="content" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Content</h2>
+                        <!-- Images -->
+                        <div id="images" class="subsection">
+                            <h3 class="subsection__title">Images</h3>
+                            <div class="subsection__content">
+                                <img src="./assets/images/background.jpg" alt="Image" class="img--full">
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;img src="./assets/images/background.jpg" alt="Image" class="img--full"&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Images with caption</h5>
+                            <div class="subsection__content">
+                                <figure>
+                                    <img src="./assets/images/background.jpg" alt="Image" class="img--full">
+                                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore natus
+                                        similique aperiam inventore. Amet tempora optio totam nemo vitae deserunt!
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;figure&gt;
+    &lt;img src="./assets/images/background.jpg" alt="Image" class="img--full"&gt;
+    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore natus similique aperiam inventore. Amet tempora optio totam nemo vitae deserunt!&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Tables -->
+                        <div id="tables" class="subsection">
+                            <h3 class="subsection__title">Tables</h3>
+                            <div class="subsection__content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-th="Company">Alfreds Futterkiste</td>
+                                            <td data-th="Contact">Maria Anders</td>
+                                            <td data-th="Country">Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Centro comercial Moctezuma</td>
+                                            <td data-th="Contact">Francisco Chang</td>
+                                            <td data-th="Country">Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Ernst Handel</td>
+                                            <td data-th="Contact">Roland Mendel</td>
+                                            <td data-th="Country">Austria</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Island Trading</td>
+                                            <td data-th="Contact">Helen Bennett</td>
+                                            <td data-th="Country">UK</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                            <td data-th="Contact">Yoshi Tannamuri</td>
+                                            <td data-th="Country">Canada</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                            <td data-th="Contact">Giovanni Rovelli</td>
+                                            <td data-th="Country">Italy</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Company&lt;/th&gt;
+            &lt;th&gt;Contact&lt;/th&gt;
+            &lt;th&gt;Country&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Alfreds Futterkiste&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Maria Anders&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Germany&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Centro comercial Moctezuma&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Francisco Chang&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Mexico&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Tables with footer</h5>
+                            <div class="subsection__content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-th="Company">Alfreds Futterkiste</td>
+                                            <td data-th="Contact">Maria Anders</td>
+                                            <td data-th="Country">Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Centro comercial Moctezuma</td>
+                                            <td data-th="Contact">Francisco Chang</td>
+                                            <td data-th="Country">Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Ernst Handel</td>
+                                            <td data-th="Contact">Roland Mendel</td>
+                                            <td data-th="Country">Austria</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Island Trading</td>
+                                            <td data-th="Contact">Helen Bennett</td>
+                                            <td data-th="Country">UK</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                            <td data-th="Contact">Yoshi Tannamuri</td>
+                                            <td data-th="Country">Canada</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                            <td data-th="Contact">Giovanni Rovelli</td>
+                                            <td data-th="Country">Italy</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Company&lt;/th&gt;
+            &lt;th&gt;Contact&lt;/th&gt;
+            &lt;th&gt;Country&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Alfreds Futterkiste&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Maria Anders&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Germany&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Centro comercial Moctezuma&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Francisco Chang&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Mexico&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Company&lt;/th&gt;
+            &lt;th&gt;Contact&lt;/th&gt;
+            &lt;th&gt;Country&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Tables with caption</h5>
+                            <div class="subsection__content">
+                                <table>
+                                    <caption>List of company</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-th="Company">Alfreds Futterkiste</td>
+                                            <td data-th="Contact">Maria Anders</td>
+                                            <td data-th="Country">Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Centro comercial Moctezuma</td>
+                                            <td data-th="Contact">Francisco Chang</td>
+                                            <td data-th="Country">Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Ernst Handel</td>
+                                            <td data-th="Contact">Roland Mendel</td>
+                                            <td data-th="Country">Austria</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Island Trading</td>
+                                            <td data-th="Contact">Helen Bennett</td>
+                                            <td data-th="Country">UK</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                            <td data-th="Contact">Yoshi Tannamuri</td>
+                                            <td data-th="Country">Canada</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                            <td data-th="Contact">Giovanni Rovelli</td>
+                                            <td data-th="Country">Italy</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;table&gt;
+    &lt;caption&gt;List of company&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Company&lt;/th&gt;
+            &lt;th&gt;Contact&lt;/th&gt;
+            &lt;th&gt;Country&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Alfreds Futterkiste&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Maria Anders&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Germany&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Centro comercial Moctezuma&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Francisco Chang&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Mexico&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Tables stripped</h5>
+                            <div class="subsection__content">
+                                <table class="table--stripped">
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-th="Company">Alfreds Futterkiste</td>
+                                            <td data-th="Contact">Maria Anders</td>
+                                            <td data-th="Country">Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Centro comercial Moctezuma</td>
+                                            <td data-th="Contact">Francisco Chang</td>
+                                            <td data-th="Country">Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Ernst Handel</td>
+                                            <td data-th="Contact">Roland Mendel</td>
+                                            <td data-th="Country">Austria</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Island Trading</td>
+                                            <td data-th="Contact">Helen Bennett</td>
+                                            <td data-th="Country">UK</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                            <td data-th="Contact">Yoshi Tannamuri</td>
+                                            <td data-th="Country">Canada</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                            <td data-th="Contact">Giovanni Rovelli</td>
+                                            <td data-th="Country">Italy</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;table class="table--stripped"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Company&lt;/th&gt;
+            &lt;th&gt;Contact&lt;/th&gt;
+            &lt;th&gt;Country&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Alfreds Futterkiste&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Maria Anders&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Germany&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td data-th="Company"&gt;Centro comercial Moctezuma&lt;/td&gt;
+            &lt;td data-th="Contact"&gt;Francisco Chang&lt;/td&gt;
+            &lt;td data-th="Country"&gt;Mexico&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div id="buttons" class="subsection">
+                            <h3 class="subsection__title">Buttons</h3>
+                            <h5 class="subsection__subtitle">Buttons primary</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--primary primary">
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--primary success">
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--primary warning">
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--primary danger">
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--primary info">
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--primary light">
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--primary dark">
+                                    <span>Dark</span>
+                                </a>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;a href="#" class="button button--primary primary"&gt;&lt;span&gt;Primary&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--primary success"&gt;&lt;span&gt;Success&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--primary warning"&gt;&lt;span&gt;Warning&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--primary danger"&gt;&lt;span&gt;Danger&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--primary info"&gt;&lt;span&gt;Info&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--primary light"&gt;&lt;span&gt;Light&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--primary dark"&gt;&lt;span&gt;Dark&lt;/span&gt;&lt;/a&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons secondary</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--secondary primary">
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--secondary success">
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--secondary warning">
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--secondary danger">
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--secondary info">
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--secondary light">
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--secondary dark">
+                                    <span>Dark</span>
+                                </a>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;a href="#" class="button button--secondary primary"&gt;&lt;span&gt;Primary&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--secondary success"&gt;&lt;span&gt;Success&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--secondary warning"&gt;&lt;span&gt;Warning&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--secondary danger"&gt;&lt;span&gt;Danger&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--secondary info"&gt;&lt;span&gt;Info&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--secondary light"&gt;&lt;span&gt;Light&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--secondary dark"&gt;&lt;span&gt;Dark&lt;/span&gt;&lt;/a&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons tertiary</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--tertiary primary">
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--tertiary success">
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--tertiary warning">
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--tertiary danger">
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--tertiary info">
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--tertiary light">
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--tertiary dark">
+                                    <span>Dark</span>
+                                </a>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;a href="#" class="button button--tertiary primary"&gt;&lt;span&gt;Primary&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--tertiary success"&gt;&lt;span&gt;Success&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--tertiary warning"&gt;&lt;span&gt;Warning&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--tertiary danger"&gt;&lt;span&gt;Danger&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--tertiary info"&gt;&lt;span&gt;Info&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--tertiary light"&gt;&lt;span&gt;Light&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="button button--tertiary dark"&gt;&lt;span&gt;Dark&lt;/span&gt;&lt;/a&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons icon</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--primary primary">
+                                    <i class="icon-corner-down-right"></i>
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--primary success">
+                                    <i class="icon-shopping-cart"></i>
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--primary warning">
+                                    <i class="icon-alert-triangle"></i>
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--secondary danger">
+                                    <i class="icon-x"></i>
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--secondary info">
+                                    <i class="icon-info"></i>
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--secondary light">
+                                    <i class="icon-star"></i>
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--tertiary dark">
+                                    <i class="icon-award"></i>
+                                    <span>Dark</span>
+                                </a>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;a href="#" class="button button--primary primary"&gt;
+    &lt;i class="icon-corner-down-right"&gt;&lt;/i&gt;
+    &lt;span&gt;Primary&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary success"&gt;
+    &lt;i class="icon-shopping-cart"&gt;&lt;/i&gt;
+    &lt;span&gt;Success&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary warning"&gt;
+    &lt;i class="icon-alert-triangle"&gt;&lt;/i&gt;
+    &lt;span&gt;Warning&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--secondary danger"&gt;
+    &lt;i class="icon-x"&gt;&lt;/i&gt;
+    &lt;span&gt;Danger&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--secondary info"&gt;
+    &lt;i class="icon-info"&gt;&lt;/i&gt;
+    &lt;span&gt;Info&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--secondary light"&gt;
+    &lt;i class="icon-star"&gt;&lt;/i&gt;
+    &lt;span&gt;Light&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--tertiary dark"&gt;
+    &lt;i class="icon-award"&gt;&lt;/i&gt;
+    &lt;span&gt;Dark&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons icon only</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--primary button--icon primary">
+                                    <i class="icon-corner-down-right"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon success">
+                                    <i class="icon-shopping-cart"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon warning">
+                                    <i class="icon-alert-triangle"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon danger">
+                                    <i class="icon-x"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon info">
+                                    <i class="icon-info"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon light">
+                                    <i class="icon-star"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon dark">
+                                    <i class="icon-award"></i>
+                                </a>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;a href="#" class="button button--primary button--icon primary"&gt;
+    &lt;i class="icon-corner-down-right"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary button--icon success"&gt;
+    &lt;i class="icon-shopping-cart"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary button--icon warning"&gt;
+    &lt;i class="icon-alert-triangle"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary button--icon danger"&gt;
+    &lt;i class="icon-x"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary button--icon info"&gt;
+    &lt;i class="icon-info"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary button--icon light"&gt;
+    &lt;i class="icon-star"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href="#" class="button button--primary button--icon dark"&gt;
+    &lt;i class="icon-award"&gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Forms -->
+                        <div id="forms" class="subsection">
+                            <h3 class="subsection__title">Forms</h3>
+                            <div class="subsection__content">
+                                <form>
+                                    <div class="grid">
+                                        <div class="col-md-6">
+                                            <label for="first-name" class="is-required">First name</label>
+                                            <input type="text" id="first-name" placeholder="First name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="last-name">Last name</label>
+                                            <input type="text" id="last-name" placeholder="Last name" disabled>
+                                        </div>
+                                    </div>
+                                    <label for="email-address" class="is-required">Email address</label>
+                                    <input type="text" id="email-address" placeholder="Email address" required>
+                                    <label for="message">Message</label>
+                                    <textarea id="message" rows="3" placeholder="Message"></textarea>
+                                    <label for="select-number">Fruit</label>
+                                    <select id="select-number">
+                                        <option selected>Select a fruit...</option>
+                                        <option value="1">Banana</option>
+                                        <option value="2">Apple</option>
+                                        <option value="3">Orange</option>
+                                    </select>
+                                    <fieldset>
+                                        <legend>Size</legend>
+                                        <label for="small">
+                                            <input type="checkbox" id="small">
+                                            <span>Small</span>
+                                        </label>
+                                        <label for="medium">
+                                            <input type="checkbox" id="medium" checked>
+                                            <span>Medium</span>
+                                        </label>
+                                        <label for="large">
+                                            <input type="checkbox" id="large" disabled>
+                                            <span>Large</span>
+                                        </label>
+                                    </fieldset>
+                                    <fieldset>
+                                        <label for="term-conditions">
+                                            <input type="radio" name="example-radio" id="term-conditions">
+                                            <span>I agree to the Terms and Conditions</span>
+                                        </label>
+                                        <label for="privacy-policy">
+                                            <input type="radio" name="example-radio" id="privacy-policy" checked>
+                                            <span>I agree to the Privacy Policy</span>
+                                        </label>
+                                        <label for="cookie-policy">
+                                            <input type="radio" name="example-radio" id="cookie-policy" disabled>
+                                            <span>I agree to the Cookie Policy</span>
+                                        </label>
+                                    </fieldset>
+                                    <button type="submit" class="button button--primary primary">Submit</button>
+                                </form>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;form&gt;
+    &lt;div class="grid"&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="first-name" class="is-required"&gt;First name&lt;/label&gt;
+            &lt;input type="text" id="first-name" placeholder="First name" required&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-6"&gt;
+            &lt;label for="last-name"&gt;Last name&lt;/label&gt;
+            &lt;input type="text" id="last-name" placeholder="Last name" disabled&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;label for="email-address" class="is-required"&gt;Email address&lt;/label&gt;
+    &lt;input type="text" id="email-address" placeholder="Email address" required&gt;
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea id="message" rows="3" placeholder="Message"&gt;&lt;/textarea&gt;
+    &lt;label for="select-number"&gt;Fruit&lt;/label&gt;
+    &lt;select id="select-number"&gt;
+        &lt;option selected&gt;Select a fruit...&lt;/option&gt;
+        &lt;option value="1"&gt;Banana&lt;/option&gt;
+        &lt;option value="2"&gt;Apple&lt;/option&gt;
+        &lt;option value="3"&gt;Orange&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Size&lt;/legend&gt;
+        &lt;label for="small"&gt;
+            &lt;input type="checkbox" id="small"&gt;
+            &lt;span&gt;Small&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="medium"&gt;
+            &lt;input type="checkbox" id="medium" checked&gt;
+            &lt;span&gt;Medium&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="large"&gt;
+            &lt;input type="checkbox" id="large" disabled&gt;
+            &lt;span&gt;Large&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+        &lt;label for="term-conditions"&gt;
+            &lt;input type="radio" name="example-radio" id="term-conditions"&gt;
+            &lt;span&gt;I agree to the Terms and Conditions&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="privacy-policy"&gt;
+            &lt;input type="radio" name="example-radio" id="privacy-policy" checked&gt;
+            &lt;span&gt;I agree to the Privacy Policy&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="cookie-policy"&gt;
+            &lt;input type="radio" name="example-radio" id="cookie-policy" disabled&gt;
+            &lt;span&gt;I agree to the Cookie Policy&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;button type="submit" class="button button--primary primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Components -->
+                <section id="components" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Components</h2>
+                        <!-- Header -->
+                        <div id="header" class="subsection">
+                            <h3 class="subsection__title">Header</h3>
+                            <div class="subsection__content">
+                                <header class="header">
+                                    <div class="container">
+                                        <div class="header__inner">
+                                            <a href="#" class="header__logo">
+                                                <img src="../assets/images/logo/logo.svg" alt="Rocket" class="logo">
+                                            </a>
+                                            <nav class="header__navbar header__navbar--collapse">
+                                                <ul class="navbar lv0">
+                                                    <li class="navbar__item lv0">
+                                                        <a href="#" class="navbar__link lv0">
+                                                            <span>Menu item</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="navbar__item lv0 is-parent">
+                                                        <a href="#" class="navbar__link lv0">
+                                                            <span>Menu item dropdown</span>
+                                                            <i class="navbar__toggle icon-chevron-down"></i>
+                                                        </a>
+                                                        <ul class="navbar lv1">
+                                                            <li class="navbar__item lv1">
+                                                                <a href="#" class="navbar__link lv1">
+                                                                    <span>Dropdown item</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="navbar__item lv1">
+                                                                <a href="#" class="navbar__link lv1">
+                                                                    <span>Dropdown item</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <div class="header__hamburger">
+                                                <div class="hamburger
+                                                        hamburger--vortex"> <span class="hamburger__inner"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;header class="header"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="header__inner"&gt;
+            &lt;a href="#" class="header__logo"&gt;
+                &lt;img src="../assets/images/logo/logo.svg" alt="Rocket" class="logo"&gt;
+            &lt;/a&gt;
+            &lt;nav class="header__navbar header__navbar--collapse"&gt;
+                &lt;ul class="navbar lv0"&gt;
+                    &lt;li class="navbar__item lv0"&gt;
+                        &lt;a href="#" class="navbar__link lv0"&gt;
+                            &lt;span&gt;Menu item&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="navbar__item lv0 is-parent"&gt;
+                        &lt;a href="#" class="navbar__link lv0"&gt;
+                            &lt;span&gt;Menu item dropdown&lt;/span&gt;
+                            &lt;i class="navbar__toggle icon-chevron-down"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;ul class="navbar lv1"&gt;
+                            &lt;li class="navbar__item lv1"&gt;
+                                &lt;a href="#" class="navbar__link lv1"&gt;
+                                    &lt;span&gt;Dropdown item&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="navbar__item lv1"&gt;
+                                &lt;a href="#" class="navbar__link lv1"&gt;
+                                    &lt;span&gt;Dropdown item&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;div class="header__hamburger"&gt;
+                &lt;div class="hamburger hamburger--vortex"&gt;
+                    &lt;span class="hamburger__inner"&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Footer -->
+                        <div id="footer" class="subsection">
+                            <h3 class="subsection__title">Footer</h3>
+                            <div class="subsection__content">
+                                <footer class="footer">
+                                    <div class="container">
+                                        <div class="footer__inner">
+                                            <nav class="footer__navbar">
+                                                <ul class="navbar lv0">
+                                                    <li class="navbar__item lv0">
+                                                        <a href="#" class="navbar__link lv0">
+                                                            <span>Menu item</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="navbar__item lv0 is-parent">
+                                                        <a href="#" class="navbar__link lv0">
+                                                            <span>Menu item dropdown</span>
+                                                            <i class="navbar__toggle icon-chevron-down"></i>
+                                                        </a>
+                                                        <ul class="navbar lv1">
+                                                            <li class="navbar__item lv1">
+                                                                <a href="#" class="navbar__link lv1">
+                                                                    <span>Dropdown item</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="navbar__item lv1">
+                                                                <a href="#" class="navbar__link lv1">
+                                                                    <span>Dropdown item</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <div class="footer__bottom">
+                                                <div class="footer__copyright">
+                                                    <span>© 2022 Daniele De Luca | <a href="#">Privacy Policy</a> | <a
+                                                           href="#">Cookie Policy</a></span>
+                                                </div>
+                                                <div class="footer__social">
+                                                    <a href="#" target="_blank" class="button button--icon">
+                                                        <i class="icon-facebook-2"></i>
+                                                    </a>
+                                                    <a href="#" target="_blank" class="button button--icon">
+                                                        <i class="icon-instagram"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;footer class="footer"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="footer__inner"&gt;
+            &lt;nav class="footer__navbar"&gt;
+                &lt;ul class="navbar lv0"&gt;
+                    &lt;li class="navbar__item lv0"&gt;
+                        &lt;a href="#" class="navbar__link lv0"&gt;
+                            &lt;span&gt;Menu item&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="navbar__item lv0 is-parent"&gt;
+                        &lt;a href="#" class="navbar__link lv0"&gt;
+                            &lt;span&gt;Menu item dropdown&lt;/span&gt;
+                            &lt;i class="navbar__toggle icon-chevron-down"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;ul class="navbar lv1"&gt;
+                            &lt;li class="navbar__item lv1"&gt;
+                                &lt;a href="#" class="navbar__link lv1"&gt;
+                                    &lt;span&gt;Dropdown item&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="navbar__item lv1"&gt;
+                                &lt;a href="#" class="navbar__link lv1"&gt;
+                                    &lt;span&gt;Dropdown item&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;div class="footer__bottom"&gt;
+                &lt;div class="footer__copyright"&gt;
+                    &lt;span&gt;© 2022 Daniele De Luca | &lt;a href="#"&gt;Privacy Policy&lt;/a&gt; | &lt;a href="#"&gt;Cookie Policy&lt;/a&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="footer__social"&gt;
+                    &lt;a href="#" target="_blank" class="button button--icon"&gt;
+                        &lt;i class="icon-facebook-2"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#" target="_blank" class="button button--icon"&gt;
+                        &lt;i class="icon-instagram"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Pagination -->
+                        <div id="pagination" class="subsection">
+                            <h3 class="subsection__title">Pagination</h3>
+                            <div class="subsection__content">
+                                <nav class="pagination">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <i class="icon-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="pagination__item is-active">
+                                            <span class="pagination__link">1</span>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">2</a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">3</a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">4</a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <i class="icon-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;nav class="pagination"&gt;
+    &lt;ul class="pagination__list"&gt;
+        &lt;li class="pagination__item"&gt;
+            &lt;a href="#" class="pagination__link"&gt;
+                &lt;i class="icon-chevron-left"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="pagination__item is-active"&gt;
+            &lt;span class="pagination__link"&gt;1&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class="pagination__item"&gt;
+            &lt;a href="#" class="pagination__link"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="pagination__item"&gt;
+            &lt;a href="#" class="pagination__link"&gt;3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="pagination__item"&gt;
+            &lt;a href="#" class="pagination__link"&gt;4&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="pagination__item"&gt;
+            &lt;a href="#" class="pagination__link"&gt;
+                &lt;i class="icon-chevron-right"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div id="breadcrumb" class="subsection">
+                            <h3 class="subsection__title">Breadcrumb</h3>
+                            <div class="subsection__content">
+                                <nav class="breadcrumb">
+                                    <ul class="breadcrumb__list">
+                                        <li class="breadcrumb__item">
+                                            <a href="#" class="breadcrumb__link">
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb__item">
+                                            <a href="#" class="breadcrumb__link">
+                                                <span>Category</span>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb__item">
+                                            <a href="#" class="breadcrumb__link">
+                                                <span>Sub category</span>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb__item is-active">
+                                            <span class="breadcrumb__link">Product</span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;nav class="breadcrumb"&gt;
+    &lt;ul class="breadcrumb__list"&gt;
+        &lt;li class="breadcrumb__item"&gt;
+            &lt;a href="#" class="breadcrumb__link"&gt;
+                &lt;span&gt;Home&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="breadcrumb__item"&gt;
+            &lt;a href="#" class="breadcrumb__link"&gt;
+                &lt;span&gt;Category&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="breadcrumb__item"&gt;
+            &lt;a href="#" class="breadcrumb__link"&gt;
+                &lt;span&gt;Sub category&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="breadcrumb__item is-active"&gt;
+            &lt;span class="breadcrumb__link"&gt;Product&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div id="card" class="subsection">
+                            <h3 class="subsection__title">Card</h3>
+                            <h5 class="subsection__subtitle">Card only text</h5>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card__body">
+                                                <h3>Lorem ipsum</h3>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                                                    porro ullam quidem tenetur quae cupiditate libero impedit
+                                                    blanditiis, itaque ipsa.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <a href="#" class="card">
+                                            <div class="card__body">
+                                                <h3>Lorem ipsum </h3>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                                                    porro ullam quidem tenetur quae cupiditate libero impedit
+                                                    blanditiis, itaque ipsa.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card__body">
+                                                <h3>
+                                                    <a href="#">Lorem ipsum</a>
+                                                </h3>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                                                    porro ullam quidem tenetur quae cupiditate libero impedit
+                                                    blanditiis, itaque ipsa.</p>
+                                                <a href="#" class="button button--primary primary">Button</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="grid"&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;
+        &lt;div class="card"&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3&gt;Lorem ipsum&lt;/h3&gt;
+                &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;
+        &lt;a href="#" class="card"&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3&gt;Lorem ipsum &lt;/h3&gt;
+                &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;
+        &lt;div class="card"&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3&gt;
+                    &lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;
+                &lt;/h3&gt;
+                &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+                &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Card text and image</h5>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card__image">
+                                                <img src="./assets/images/background.jpg" alt="Card Image">
+                                            </div>
+                                            <div class="card__body">
+                                                <h3>Lorem ipsum</h3>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                                                    porro ullam quidem tenetur quae cupiditate libero impedit
+                                                    blanditiis, itaque ipsa.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <a href="#" class="card">
+                                            <span class="card__image">
+                                                <img src="./assets/images/background.jpg" alt="Card Image">
+                                            </span>
+                                            <div class="card__body">
+                                                <h3>Lorem ipsum</h3>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                                                    porro ullam quidem tenetur quae cupiditate libero impedit
+                                                    blanditiis, itaque ipsa.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <a href="#" class="card__image">
+                                                <img src="./assets/images/background.jpg" alt="Card Image">
+                                            </a>
+                                            <div class="card__body">
+                                                <h3>
+                                                    <a href="#">Lorem ipsum</a>
+                                                </h3>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                                                    porro ullam quidem tenetur quae cupiditate libero impedit
+                                                    blanditiis, itaque ipsa.</p>
+                                                <a href="#" class="button button--primary primary">Button</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="grid"&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;
+        &lt;div class="card"&gt;
+            &lt;div class="card__image"&gt;
+                &lt;img src="./assets/images/background.jpg" alt="Card Image"&gt;
+            &lt;/div&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3&gt;Lorem ipsum&lt;/h3&gt;
+                &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;
+        &lt;a href="#" class="card"&gt;
+            &lt;span class="card__image"&gt;
+                &lt;img src="./assets/images/background.jpg" alt="Card Image"&gt;
+            &lt;/span&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3&gt;Lorem ipsum&lt;/h3&gt;
+                &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;
+        &lt;div class="card"&gt;
+            &lt;a href="#" class="card__image"&gt;
+                &lt;img src="./assets/images/background.jpg" alt="Card Image"&gt;
+            &lt;/a&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3&gt;
+                    &lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;
+                &lt;/h3&gt;
+                &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+                &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Cover -->
+                        <div id="cover" class="subsection">
+                            <h3 class="subsection__title">Cover</h3>
+                            <div class="subsection__content">
+                                <div class="cover filter">
+                                    <div class="cover__content">
+                                        <h1>Lorem ipsum</h1>
+                                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                            minus eum voluptatem, corporis neque accusantium?</p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="cover filter"&gt;
+    &lt;div class="cover__content"&gt;
+        &lt;h1&gt;Lorem ipsum&lt;/h1&gt;
+        &lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus eum voluptatem, corporis neque accusantium?&lt;/p&gt;
+        &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Cover center</h5>
+                            <div class="subsection__content">
+                                <div class="cover cover--center filter">
+                                    <div class="cover__content">
+                                        <h1>Lorem ipsum</h1>
+                                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                            minus eum voluptatem, corporis neque accusantium?</p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="cover cover--center filter"&gt;
+    &lt;div class="cover__content"&gt;
+        &lt;h1&gt;Lorem ipsum&lt;/h1&gt;
+        &lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus eum voluptatem, corporis neque accusantium?&lt;/p&gt;
+        &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Cover right</h5>
+                            <div class="subsection__content">
+                                <div class="cover cover--right filter">
+                                    <div class="cover__content">
+                                        <h1>Lorem ipsum</h1>
+                                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                            minus eum voluptatem, corporis neque accusantium?</p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="cover cover--right filter"&gt;
+    &lt;div class="cover__content"&gt;
+        &lt;h1&gt;Lorem ipsum&lt;/h1&gt;
+        &lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus eum voluptatem, corporis neque accusantium?&lt;/p&gt;
+        &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Cover parallax</h5>
+                            <div class="subsection__content">
+                                <div class="cover parallax filter" data-scroll-speed="2">
+                                    <div class="cover__content">
+                                        <h1>Lorem ipsum</h1>
+                                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                            minus eum voluptatem, corporis neque accusantium?</p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="cover parallax filter" data-scroll-speed="2"&gt;
+    &lt;div class="cover__content"&gt;
+        &lt;h1&gt;Lorem ipsum&lt;/h1&gt;
+        &lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus eum voluptatem, corporis neque accusantium?&lt;/p&gt;
+        &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Slider -->
+                        <div id="slider" class="subsection">
+                            <h3 class="subsection__title">Slider</h3>
+                            <div class="subsection__content">
+                                <div class="splide" data-splide='{"type": "loop", "autoplay": true}'>
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide">
+                                                <div class="cover filter">
+                                                    <div class="cover__content">
+                                                        <h1>Lorem ipsum 1</h1>
+                                                        <p class="lead">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Impedit minus eum voluptatem, corporis
+                                                            neque accusantium?</p>
+                                                        <a href="#" class="button button--primary primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="cover filter">
+                                                    <div class="cover__content">
+                                                        <h1>Lorem ipsum 2</h1>
+                                                        <p class="lead">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Impedit minus eum voluptatem, corporis
+                                                            neque accusantium?</p>
+                                                        <a href="#" class="button button--primary warning">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="cover filter">
+                                                    <div class="cover__content">
+                                                        <h1>Lorem ipsum 3</h1>
+                                                        <p class="lead">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Impedit minus eum voluptatem, corporis
+                                                            neque accusantium?</p>
+                                                        <a href="#" class="button button--primary success">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="splide" data-splide='{"type": "loop", "autoplay": true}'&gt;
+    &lt;div class="splide__track"&gt;
+        &lt;ul class="splide__list"&gt;
+            &lt;li class="splide__slide"&gt;
+                &lt;div class="cover filter"&gt;
+                    &lt;div class="cover__content"&gt;
+                        &lt;h1&gt;Lorem ipsum 1&lt;/h1&gt;
+                        &lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus eum voluptatem, corporis neque accusantium?&lt;/p&gt;
+                        &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="splide__slide"&gt;
+                &lt;div class="cover filter"&gt;
+                    &lt;div class="cover__content"&gt;
+                        &lt;h1&gt;Lorem ipsum 2&lt;/h1&gt;
+                        &lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus eum voluptatem, corporis neque accusantium?&lt;/p&gt;
+                        &lt;a href="#" class="button button--primary warning"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="splide__slide"&gt;
+                &lt;div class="cover filter"&gt;
+                    &lt;div class="cover__content"&gt;
+                        &lt;h1&gt;Lorem ipsum 3&lt;/h1&gt;
+                        &lt;p class="lead"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus eum voluptatem, corporis neque accusantium?&lt;/p&gt;
+                        &lt;a href="#" class="button button--primary success"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Multiple slides per page</h5>
+                            <div class="subsection__content">
+                                <div class="splide"
+                                     data-splide='{"type": "loop", "autoplay": true, "perPage": 3, "gap": "2rem", "breakpoints": { "992": {"perPage": 2}, "576": {"perPage": 1}}}'>
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3>
+                                                            <a href="#">Lorem ipsum 1</a>
+                                                        </h3>
+                                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Consequatur porro ullam quidem tenetur quae cupiditate
+                                                            libero impedit blanditiis, itaque ipsa.</p>
+                                                        <a href="#" class="button button--primary primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3>
+                                                            <a href="#">Lorem ipsum 2</a>
+                                                        </h3>
+                                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Consequatur porro ullam quidem tenetur quae cupiditate
+                                                            libero impedit blanditiis, itaque ipsa.</p>
+                                                        <a href="#" class="button button--primary warning">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3>
+                                                            <a href="#">Lorem ipsum 3</a>
+                                                        </h3>
+                                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Consequatur porro ullam quidem tenetur quae cupiditate
+                                                            libero impedit blanditiis, itaque ipsa.</p>
+                                                        <a href="#" class="button button--primary success">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3>
+                                                            <a href="#">Lorem ipsum 4</a>
+                                                        </h3>
+                                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Consequatur porro ullam quidem tenetur quae cupiditate
+                                                            libero impedit blanditiis, itaque ipsa.</p>
+                                                        <a href="#" class="button button--primary dark">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;div class="splide" data-splide='{"type": "loop", "autoplay": true, "perPage": 3, "gap": "2rem", "breakpoints": { "992": {"perPage": 2}, "576": {"perPage": 1}}}'&gt;
+    &lt;div class="splide__track"&gt;
+        &lt;ul class="splide__list"&gt;
+            &lt;li class="splide__slide"&gt;
+                &lt;div class="card"&gt;
+                    &lt;a href="#" class="card__image"&gt;
+                        &lt;img src="./assets/images/background.jpg" alt="Card Image"&gt;
+                    &lt;/a&gt;
+                    &lt;div class="card__body"&gt;
+                        &lt;h3&gt;
+                            &lt;a href="#"&gt;Lorem ipsum 1&lt;/a&gt;
+                        &lt;/h3&gt;
+                        &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+                        &lt;a href="#" class="button button--primary primary"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="splide__slide"&gt;
+                &lt;div class="card"&gt;
+                    &lt;a href="#" class="card__image"&gt;
+                        &lt;img src="./assets/images/background.jpg" alt="Card Image"&gt;
+                    &lt;/a&gt;
+                    &lt;div class="card__body"&gt;
+                        &lt;h3&gt;
+                            &lt;a href="#"&gt;Lorem ipsum 2&lt;/a&gt;
+                        &lt;/h3&gt;
+                        &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+                        &lt;a href="#" class="button button--primary warning"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="splide__slide"&gt;
+                &lt;div class="card"&gt;
+                    &lt;a href="#" class="card__image"&gt;
+                        &lt;img src="./assets/images/background.jpg" alt="Card Image"&gt;
+                    &lt;/a&gt;
+                    &lt;div class="card__body"&gt;
+                        &lt;h3&gt;
+                            &lt;a href="#"&gt;Lorem ipsum 3&lt;/a&gt;
+                        &lt;/h3&gt;
+                        &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+                        &lt;a href="#" class="button button--primary success"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="splide__slide"&gt;
+                &lt;div class="card"&gt;
+                    &lt;a href="#" class="card__image"&gt;
+                        &lt;img src="./assets/images/background.jpg" alt="Card Image"&gt;
+                    &lt;/a&gt;
+                    &lt;div class="card__body"&gt;
+                        &lt;h3&gt;
+                            &lt;a href="#"&gt;Lorem ipsum 4&lt;/a&gt;
+                        &lt;/h3&gt;
+                        &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro ullam quidem tenetur quae cupiditate libero impedit blanditiis, itaque ipsa.&lt;/p&gt;
+                        &lt;a href="#" class="button button--primary dark"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Utilities -->
+                <section id="utilities" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Utilities</h2>
+                        <p class="lead mt-3">Every utilities class has it's own variation for each breakpoint:
+                            <code>{property}-{breakpoint}-{value}</code>.</p>
+                        <p>Where <em>breakpoint</em> is one of:</p>
+                        <ul>
+                            <li><code>sm</code> - for <code>576px</code> above </li>
+                            <li><code>md</code> - for <code>768px</code> above </li>
+                            <li><code>lg</code> - for <code>992px</code> above </li>
+                            <li><code>xl</code> - for <code>1200px</code> above </li>
+                        </ul>
+                        <!-- Colors -->
+                        <div id="colors" class="subsection">
+                            <h3 class="subsection__title">Colors</h3>
+                            <div class="subsection__content">
+                                <p>
+                                    <span class="text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-success">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-warning background-dark">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-light background-dark">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-white background-dark">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;p&gt;&lt;span class="text-primary"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-success"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-warning background-dark"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-danger"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-info"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-light background-dark"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-dark"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-white background-dark"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="text-black"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;</code></pre>
+                            </div>
+                            <h5 class="subsection__subtitle">Background colors</h5>
+                            <div class="subsection__content">
+                                <p>
+                                    <span class="background-primary">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-success">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-warning">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-danger">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-info">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-light">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-dark">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-white">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="background-black">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Asperiores, officiis?</span>
+                                </p>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;p&gt;&lt;span class="background-primary"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-success"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-warning"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-danger"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-info"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-light"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-dark"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-white"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="background-black"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/span&gt;&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Text alignment -->
+                        <div id="text-alignment" class="subsection">
+                            <h3 class="subsection__title">Text alignment</h3>
+                            <div class="subsection__content">
+                                <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Asperiores, officiis?</p>
+                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Asperiores, officiis?</p>
+                                <p class="text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Asperiores, officiis?</p>
+                            </div>
+                            <div class="subsection__code">
+                                <pre class="language-html">
+<code>&lt;p class="text-left"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/p&gt;
+&lt;p class="text-center"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/p&gt;
+&lt;p class="text-right"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- Spacing -->
+                        <div id="spacing" class="subsection">
+                            <h3 class="subsection__title">Spacing</h3>
+                            <div class="subsection__content">
+                                <p> The classes are named using the format
+                                    <code>{property}{side}-{breakpoint}-{value}</code>. </p>
+                                <p>Where <em>property</em> is one of:</p>
+                                <ul>
+                                    <li>
+                                        <code>m</code> - for classes that set <code>margin</code>
+                                    </li>
+                                    <li>
+                                        <code>p</code> - for classes that set <code>padding</code>
+                                    </li>
+                                </ul>
+                                <p>Where <em>side</em> is one of:</p>
+                                <ul>
+                                    <li>
+                                        <code>t</code> - for classes that set <code>margin-top</code> or
+                                        <code>padding-top</code>
+                                    </li>
+                                    <li>
+                                        <code>b</code> - for classes that set <code>margin-bottom</code> or
+                                        <code>padding-bottom</code>
+                                    </li>
+                                    <li>
+                                        <code>l</code> - for classes that set <code>margin-left</code> or
+                                        <code>padding-left</code>
+                                    </li>
+                                    <li>
+                                        <code>r</code> - for classes that set <code>margin-right</code> or
+                                        <code>padding-right</code>
+                                    </li>
+                                    <li>
+                                        <code>x</code> - for classes that set both <code>*-left</code> and
+                                        <code>*-right</code>
+                                    </li>
+                                    <li>
+                                        <code>y</code> - for classes that set both <code>*-top</code> and
+                                        <code>*-bottom</code>
+                                    </li>
+                                    <li> blank - for classes that set a <code>margin</code> or <code>padding</code> on
+                                        all 4 sides of the element </li>
+                                </ul>
+                                <p>Where <em>value</em> is one of:</p>
+                                <ul>
+                                    <li>
+                                        <code>0</code> - for classes that eliminate the <code>margin</code> or
+                                        <code>padding</code> by setting it to <code>0</code>
+                                    </li>
+                                    <li>
+                                        <code>1</code> - for classes that set the <code>margin</code> or
+                                        <code>padding</code> to <code>0.25rem</code>
+                                    </li>
+                                    <li>
+                                        <code>2</code> - for classes that set the <code>margin</code> or
+                                        <code>padding</code> to <code>0.5rem</code>
+                                    </li>
+                                    <li>
+                                        <code>3</code> - for classes that set the <code>margin</code> or
+                                        <code>padding</code> to <code>1rem</code>
+                                    </li>
+                                    <li>
+                                        <code>4</code> - for classes that set the <code>margin</code> or
+                                        <code>padding</code> to <code>1.5rem</code>
+                                    </li>
+                                    <li>
+                                        <code>5</code> - for classes that set the <code>margin</code> or
+                                        <code>padding</code> to <code>3rem</code>
+                                    </li>
+                                    <li>
+                                        <code>auto</code> - for classes that set the <code>margin</code> to
+                                        <code>auto</code>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Icons -->
+                <section id="icons" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Icons</h2>
+                        <div class="subsection">
+                            <div class="subsection__content">
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-alert-triangle"></i>
+                                    <small class="icon__name">icon-alert-triangle</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-down"></i>
+                                    <small class="icon__name">icon-arrow-down</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-down-left"></i>
+                                    <small class="icon__name">icon-arrow-down-left</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-down-right"></i>
+                                    <small class="icon__name">icon-arrow-down-right</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-left"></i>
+                                    <small class="icon__name">icon-arrow-left</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-right"></i>
+                                    <small class="icon__name">icon-arrow-right</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-up"></i>
+                                    <small class="icon__name">icon-arrow-up</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-up-left"></i>
+                                    <small class="icon__name">icon-arrow-up-left</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-arrow-up-right"></i>
+                                    <small class="icon__name">icon-arrow-up-right</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-award"></i>
+                                    <small class="icon__name">icon-award</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-calendar"></i>
+                                    <small class="icon__name">icon-calendar</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-check"></i>
+                                    <small class="icon__name">icon-check</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevron-down"></i>
+                                    <small class="icon__name">icon-chevron-down</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevron-left"></i>
+                                    <small class="icon__name">icon-chevron-left</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevron-right"></i>
+                                    <small class="icon__name">icon-chevron-right</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevrons-down"></i>
+                                    <small class="icon__name">icon-chevrons-down</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevrons-left"></i>
+                                    <small class="icon__name">icon-chevrons-left</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevrons-right"></i>
+                                    <small class="icon__name">icon-chevrons-right</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevrons-up"></i>
+                                    <small class="icon__name">icon-chevrons-up</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-chevron-up"></i>
+                                    <small class="icon__name">icon-chevron-up</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-clipboard"></i>
+                                    <small class="icon__name">icon-clipboard</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-clock"></i>
+                                    <small class="icon__name">icon-clock</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-compass"></i>
+                                    <small class="icon__name">icon-compass</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-copy"></i>
+                                    <small class="icon__name">icon-copy</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-down-left"></i>
+                                    <small class="icon__name">icon-corner-down-left</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-down-right"></i>
+                                    <small class="icon__name">icon-corner-down-right</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-left-down"></i>
+                                    <small class="icon__name">icon-corner-left-down</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-left-up"></i>
+                                    <small class="icon__name">icon-corner-left-up</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-right-down"></i>
+                                    <small class="icon__name">icon-corner-right-down</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-right-up"></i>
+                                    <small class="icon__name">icon-corner-right-up</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-up-left"></i>
+                                    <small class="icon__name">icon-corner-up-left</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-corner-up-right"></i>
+                                    <small class="icon__name">icon-corner-up-right</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-download"></i>
+                                    <small class="icon__name">icon-download</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-download-cloud"></i>
+                                    <small class="icon__name">icon-download-cloud</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-edit"></i>
+                                    <small class="icon__name">icon-edit</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-external-link"></i>
+                                    <small class="icon__name">icon-external-link</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-eye"></i>
+                                    <small class="icon__name">icon-eye</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-eye-off"></i>
+                                    <small class="icon__name">icon-eye-off</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-flag"></i>
+                                    <small class="icon__name">icon-flag</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-grid"></i>
+                                    <small class="icon__name">icon-grid</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-heart"></i>
+                                    <small class="icon__name">icon-heart</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-home-1"></i>
+                                    <small class="icon__name">icon-home-1</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-home-2"></i>
+                                    <small class="icon__name">icon-home-2</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-home-3"></i>
+                                    <small class="icon__name">icon-home-3</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-info"></i>
+                                    <small class="icon__name">icon-info</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-link"></i>
+                                    <small class="icon__name">icon-link</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-loader-1"></i>
+                                    <small class="icon__name">icon-loader-1</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-loader-2"></i>
+                                    <small class="icon__name">icon-loader-2</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-log-in"></i>
+                                    <small class="icon__name">icon-log-in</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-log-out"></i>
+                                    <small class="icon__name">icon-log-out</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-mail"></i>
+                                    <small class="icon__name">icon-mail</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-map-pin"></i>
+                                    <small class="icon__name">icon-map-pin</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-moon"></i>
+                                    <small class="icon__name">icon-moon</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-pause"></i>
+                                    <small class="icon__name">icon-pause</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-pause-circle"></i>
+                                    <small class="icon__name">icon-pause-circle</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-phone"></i>
+                                    <small class="icon__name">icon-phone</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-play"></i>
+                                    <small class="icon__name">icon-play</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-play-circle"></i>
+                                    <small class="icon__name">icon-play-circle</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-plus"></i>
+                                    <small class="icon__name">icon-plus</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-search"></i>
+                                    <small class="icon__name">icon-search</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-settings"></i>
+                                    <small class="icon__name">icon-settings</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-shopping-cart"></i>
+                                    <small class="icon__name">icon-shopping-cart</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-sliders"></i>
+                                    <small class="icon__name">icon-sliders</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-star"></i>
+                                    <small class="icon__name">icon-star</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-sun"></i>
+                                    <small class="icon__name">icon-sun</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-tag"></i>
+                                    <small class="icon__name">icon-tag</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-thumbs-down"></i>
+                                    <small class="icon__name">icon-thumbs-down</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-thumbs-up"></i>
+                                    <small class="icon__name">icon-thumbs-up</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-trash"></i>
+                                    <small class="icon__name">icon-trash</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-truck"></i>
+                                    <small class="icon__name">icon-truck</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-upload"></i>
+                                    <small class="icon__name">icon-upload</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-upload-cloud"></i>
+                                    <small class="icon__name">icon-upload-cloud</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-user"></i>
+                                    <small class="icon__name">icon-user</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-users"></i>
+                                    <small class="icon__name">icon-users</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-x"></i>
+                                    <small class="icon__name">icon-x</small>
+                                </div>
+                            </div>
+                            <h5 class="subsection__subtitle">Social icons</h5>
+                            <div class="subsection__content">
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-apple"></i>
+                                    <small class="icon__name">icon-apple</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-dribbble"></i>
+                                    <small class="icon__name">icon-dribbble</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-facebook-1"></i>
+                                    <small class="icon__name">icon-facebook-1</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-facebook-2"></i>
+                                    <small class="icon__name">icon-facebook-2</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-github"></i>
+                                    <small class="icon__name">icon-github</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-google"></i>
+                                    <small class="icon__name">icon-google</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-instagram"></i>
+                                    <small class="icon__name">icon-instagram</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-linkedin-1"></i>
+                                    <small class="icon__name">icon-linkedin-1</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-linkedin-2"></i>
+                                    <small class="icon__name">icon-linkedin-2</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-messenger"></i>
+                                    <small class="icon__name">icon-messenger</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-pinterest"></i>
+                                    <small class="icon__name">icon-pinterest</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-reddit"></i>
+                                    <small class="icon__name">icon-reddit</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-skype"></i>
+                                    <small class="icon__name">icon-skype</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-snapchat"></i>
+                                    <small class="icon__name">icon-snapchat</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-spotify"></i>
+                                    <small class="icon__name">icon-spotify</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-tiktok"></i>
+                                    <small class="icon__name">icon-tiktok</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-twitch"></i>
+                                    <small class="icon__name">icon-twitch</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-twitter"></i>
+                                    <small class="icon__name">icon-twitter</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-whatsapp"></i>
+                                    <small class="icon__name">icon-whatsapp</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-youtube"></i>
+                                    <small class="icon__name">icon-youtube</small>
+                                </div>
+                            </div>
+                            <h5 class="subsection__subtitle">Animating icons</h5>
+                            <div class="subsection__content">
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-loader-1 icon-spin"></i>
+                                    <small class="icon__name">icon-loader-1 <br>icon-spin</small>
+                                </div>
+                                <div class="icon__wrapper">
+                                    <i class="icon icon-loader-2 icon-spin"></i>
+                                    <small class="icon__name">icon-loader-2 <br>icon-spin</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <!-- Footer navbar -->
+                    <nav class="footer__navbar">
+                        <ul class="navbar lv0">
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Grid</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-size" class="navbar__link lv1">
+                                            <span>Columns size</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-responsiveness" class="navbar__link lv1">
+                                            <span>Columns responsiveness</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-order" class="navbar__link lv1">
+                                            <span>Columns order</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-offset" class="navbar__link lv1">
+                                            <span>Columns offset</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#nesting-columns" class="navbar__link lv1">
+                                            <span>Nesting columns</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Typography</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#headings" class="navbar__link lv1">
+                                            <span>Headings</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#display" class="navbar__link lv1">
+                                            <span>Display</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lead" class="navbar__link lv1">
+                                            <span>Lead</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#inline-text-elements" class="navbar__link lv1">
+                                            <span>Inline text elements</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#blockquotes" class="navbar__link lv1">
+                                            <span>Blockquotes</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lists" class="navbar__link lv1">
+                                            <span>Lists</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Content</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#images" class="navbar__link lv1">
+                                            <span>Images</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#tables" class="navbar__link lv1">
+                                            <span>Tables</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#buttons" class="navbar__link lv1">
+                                            <span>Buttons</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#forms" class="navbar__link lv1">
+                                            <span>Forms</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Components</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#header" class="navbar__link lv1">
+                                            <span>Header</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#footer" class="navbar__link lv1">
+                                            <span>Footer</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#pagination" class="navbar__link lv1">
+                                            <span>Pagination</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#breadcrumb" class="navbar__link lv1">
+                                            <span>Breadcrumb</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#card" class="navbar__link lv1">
+                                            <span>Card</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#cover" class="navbar__link lv1">
+                                            <span>Cover</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#slider" class="navbar__link lv1">
+                                            <span>Slider</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#utilities" class="navbar__link lv0">
+                                    <span>Utilities</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#colors" class="navbar__link lv1">
+                                            <span>Colors</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#text-alignment" class="navbar__link lv1">
+                                            <span>Text alignment</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#spacing" class="navbar__link lv1">
+                                            <span>Spacing</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0">
+                                <a href="#icons" class="navbar__link lv0">
+                                    <span>Icons</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Footer bottom -->
+                    <div class="footer__bottom">
+                        <!-- Footer copyright -->
+                        <div class="footer__copyright">
+                            <span>© 2022 Daniele De Luca | <a href="#">Privacy Policy</a> | <a href="#">Cookie
+                                    Policy</a></span>
+                        </div>
+                        <!-- Footer social -->
+                        <div class="footer__social">
+                            <a href="#" target="_blank" class="social button button--icon">
+                                <i class="icon-facebook-2"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social button button--icon">
+                                <i class="icon-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social button button--icon">
+                                <i class="icon-linkedin-2"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social button button--icon">
+                                <i class="icon-twitter"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social button button--icon">
+                                <i class="icon-whatsapp"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social button button--icon">
+                                <i class="icon-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Rocket Script -->
+        <script src="../assets/js/app.min.js"></script>
+        <!-- highlight.js script -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <!-- Sweetalert2 script -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Docs script -->
+        <script src="./assets/js/docs.js"></script>
+    </body>
+
+</html>

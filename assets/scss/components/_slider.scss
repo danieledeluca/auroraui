@@ -1,0 +1,37 @@
+// =====================================================
+//      Slider
+// =====================================================
+
+$slider-arrow-background-color: $gray-300 !default;
+
+.splide__arrow {
+    @include button;
+    @include button-icon;
+    @include button-primary($slider-arrow-background-color);
+    @include transition(background-color, color, opacity);
+    border-radius: 50%;
+
+    @include mb-down(md) {
+        display: none;
+    }
+
+    svg {
+        display: none;
+    }
+}
+
+.splide__arrow--prev {
+    &::before {
+        @include icon('chevron-left');
+    }
+}
+
+.splide__arrow--next {
+    &::before {
+        @include icon('chevron-right');
+    }
+}
+
+.splide__pagination__page {
+    @include transition(transform, opacity);
+}

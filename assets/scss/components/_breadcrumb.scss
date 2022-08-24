@@ -1,0 +1,37 @@
+// =====================================================
+//      Breadcrumb
+// =====================================================
+
+$breadcrumb-color: $base-color !default;
+$breadcrumb-font-size: $small-font-size !default;
+
+$breadcrumb-separator-icon: 'chevron-right' !default;
+$breadcrumb-separator-margin-right: 0.25rem !default;
+
+$breadcrumb-link-font-weight: $font-weight-semi-bold !default;
+
+.breadcrumb__list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: $breadcrumb-font-size;
+}
+
+.breadcrumb__item {
+    &:not(:last-child) {
+        &::after {
+            @include icon($breadcrumb-separator-icon);
+            margin-right: $breadcrumb-separator-margin-right;
+            vertical-align: middle;
+        }
+    }
+}
+
+.breadcrumb__link {
+    @include reset-link($breadcrumb-color);
+
+    &[href] {
+        font-weight: $breadcrumb-link-font-weight;
+    }
+}
