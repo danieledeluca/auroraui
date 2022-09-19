@@ -13,12 +13,6 @@ $input-focus-border-color: $primary !default;
 $input-disabled-background-color: $gray-300 !default;
 $input-disabled-opacity: $button-disabled-opacity !default;
 
-$select-padding-right: 2.25rem !default;
-$select-background-image: svg-encode(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="#{$input-color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5l6 6 6-6"/></svg>'
-) !default;
-$select-background-size: 1rem 0.75rem !default;
-
 $checkbox-width: 1rem !default;
 $checkbox-height: 1rem !default;
 $checkbox-checked-background-color: $input-focus-border-color !default;
@@ -34,3 +28,9 @@ $radio-checked-color: $checkbox-checked-color !default;
 $radio-checked-background-image: svg-encode(
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="2" fill="#{$radio-checked-color}"/></svg>'
 ) !default;
+
+$select-padding-right: 2.25rem !default;
+$select-background-image: svg-encode(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="#{$input-color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5l6 6 6-6"/></svg>'
+) !default;
+$select-background-size: 1rem 0.75rem !default;
