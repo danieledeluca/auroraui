@@ -5,7 +5,6 @@
 $pagination-width: 2rem !default;
 $pagination-height: $pagination-width !default;
 $pagination-margin: 0.5rem !default;
-$pagination-padding: 0.5rem !default;
 $pagination-background-color: $white !default;
 $pagination-color: color-contrast($pagination-background-color) !default;
 $pagination-border-radius: $base-border-radius !default;
@@ -38,7 +37,6 @@ $pagination-hover-color: color-contrast($pagination-hover-background-color) !def
     align-items: center;
     width: $pagination-width;
     height: $pagination-height;
-    padding: $pagination-padding;
     background-color: $pagination-background-color;
     border-radius: $pagination-border-radius;
     box-shadow: $pagination-box-shadow;
