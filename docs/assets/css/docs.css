@@ -108,7 +108,7 @@
 }
 
 /* Buttons section */
-[id='buttons'] {
+[id='buttons'] .subsection__content {
     margin-bottom: -0.5rem;
 }
 
