@@ -114,4 +114,26 @@
     &::after {
         margin: 0;
     }
+
+    &.button--big {
+        width: $button-big-icon-size;
+        height: $button-big-icon-size;
+        padding: 0;
+    }
+
+    &.button--small {
+        width: $button-small-icon-size;
+        height: $button-small-icon-size;
+        padding: 0;
+    }
+}
+
+@mixin button-big {
+    padding: $button-big-padding-y $button-big-padding-x;
+    font-size: $button-big-font-size;
+}
+
+@mixin button-small {
+    padding: $button-small-padding-y $button-small-padding-x;
+    font-size: $button-small-font-size;
 }

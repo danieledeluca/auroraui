@@ -26,4 +26,14 @@
     &.button--icon {
         @include button-icon;
     }
+
+    // Button big
+    &.button--big {
+        @include button-big;
+    }
+
+    // Button small
+    &.button--small {
+        @include button-small;
+    }
 }
