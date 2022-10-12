@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import Splide from '@splidejs/splide';
 
-$('.splide').each(function () {
-    const slider = new Splide(this, {
+$('.splide').each((index, element) => {
+    const slider = new Splide(element, {
         type: 'loop',
         autoplay: true,
     });

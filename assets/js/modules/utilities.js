@@ -10,6 +10,7 @@ const mobileBreakpoint = 768;
 
 /**
  * Check if is in mobile view
+ *
  * @returns {boolean}
  */
 function isMobile() {

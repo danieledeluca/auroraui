@@ -3,16 +3,16 @@ import $ from 'jquery';
 const $window = $(window);
 let scrollOffset = $window.scrollTop();
 
-$window.on('scroll resize', function () {
+$window.on('scroll resize', () => {
     scrollOffset = window.pageYOffset;
 
-    $('.parallax').each(function () {
-        const $parallax = $(this);
-        const scrollSpeed = $parallax.data('scroll-speed') || 2;
-        const backgroundOffset = parseInt($parallax.offset().top, 10);
+    $('.parallax').each((index, element) => {
+        const $element = $(element);
+        const scrollSpeed = $element.data('scroll-speed') || 2;
+        const backgroundOffset = parseInt($element.offset().top, 10);
         const yPosition = -((scrollOffset - backgroundOffset) / scrollSpeed);
         const backgroundPosition = `50% ${yPosition}px`;
 
-        $parallax.css({ backgroundPosition });
+        $element.css({ backgroundPosition });
     });
 });

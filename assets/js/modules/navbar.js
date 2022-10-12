@@ -2,13 +2,7 @@ import $ from 'jquery';
 import { classes, isMobile } from './utilities';
 
 const { activeClass, navOpenClass, parentClass } = classes;
-
 const $html = $('html');
-
-// Toggle mobile menu
-$('.header__hamburger').on('click', function () {
-    $html.toggleClass(navOpenClass);
-});
 
 /**
  * Close mobile menu
@@ -18,19 +12,25 @@ function closeMenu() {
     $(`.navbar__item.${activeClass}`).removeClass(activeClass);
 }
 
+// Toggle mobile menu
+$('.header__hamburger').on('click', () => {
+    $html.toggleClass(navOpenClass);
+});
+
 // Close mobile menu on resize
-$(window).on('resize', function () {
+$(window).on('resize', () => {
     if (!isMobile()) {
         closeMenu();
     }
 });
 
 // Toggle mobile submenu
-$('.navbar__link').on('click', function () {
+$('.navbar__link').on('click', (e) => {
     if (!isMobile()) return;
 
-    const $navbarItem = $(this).parent();
-    const navbarLinkHref = $(this).attr('href');
+    const $this = $(e.currentTarget);
+    const $navbarItem = $this.parent();
+    const navbarLinkHref = $this.attr('href');
 
     if ($navbarItem.hasClass(parentClass) && navbarLinkHref === '#') {
         $navbarItem.toggleClass(activeClass);
@@ -40,16 +40,16 @@ $('.navbar__link').on('click', function () {
 });
 
 // Toggle mobile submenu
-$('.navbar__toggle').on('click', function (e) {
+$('.navbar__toggle').on('click', (e) => {
     if (!isMobile()) return;
 
     e.preventDefault();
     e.stopPropagation();
 
-    $(this).closest('.navbar__item').toggleClass(activeClass);
+    $(e.currentTarget).closest('.navbar__item').toggleClass(activeClass);
 });
 
 // Prevent default behavior when click on empty click
-$('a[href="#"]').on('click', function (e) {
+$('a[href="#"]').on('click', (e) => {
     e.preventDefault();
 });
