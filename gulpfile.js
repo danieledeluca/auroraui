@@ -90,11 +90,13 @@ function compileCSS() {
  */
 async function compileJS() {
     if (mode.production()) {
-        options.rollup.plugins.push(terser({
-            format: {
-                comments: false,
-            },
-        }));
+        options.rollup.plugins.push(
+            terser({
+                format: {
+                    comments: false,
+                },
+            })
+        );
     }
 
     (await rollup.src(options.rollup))

@@ -16,8 +16,4 @@ function isMobile() {
     return window.innerWidth < mobileBreakpoint;
 }
 
-export {
-    classes,
-    mobileBreakpoint,
-    isMobile,
-};
+export { classes, mobileBreakpoint, isMobile };

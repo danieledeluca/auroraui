@@ -29,7 +29,7 @@ $(function () {
                         function () {
                             $target.attr('tabindex', '-1');
                             $target.trigger('focus');
-                        },
+                        }
                     );
                 }
             }

@@ -39,7 +39,8 @@ document.querySelectorAll('.show-code').forEach((item) => {
 document.querySelectorAll('.copy-code').forEach((item) => {
     item.addEventListener('click', () => {
         if (navigator.clipboard) {
-            navigator.clipboard.writeText(item.closest('.subsection__code').querySelector('code').textContent)
+            navigator.clipboard
+                .writeText(item.closest('.subsection__code').querySelector('code').textContent)
                 .then(fireToast);
         }
     });
@@ -48,8 +49,7 @@ document.querySelectorAll('.copy-code').forEach((item) => {
 document.querySelectorAll('.icon__wrapper').forEach((item) => {
     item.addEventListener('click', () => {
         if (navigator.clipboard) {
-            navigator.clipboard.writeText(item.querySelector('.icon__name').textContent)
-                .then(fireToast);
+            navigator.clipboard.writeText(item.querySelector('.icon__name').textContent).then(fireToast);
         }
     });
 });
