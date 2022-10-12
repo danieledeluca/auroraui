@@ -3,55 +3,53 @@ import { classes, isMobile } from './utilities';
 
 const { activeClass, navOpenClass, parentClass } = classes;
 
-$(function () {
-    const $html = $('html');
+const $html = $('html');
 
-    // Toggle mobile menu
-    $('.header__hamburger').on('click', function () {
-        $html.toggleClass(navOpenClass);
-    });
+// Toggle mobile menu
+$('.header__hamburger').on('click', function () {
+    $html.toggleClass(navOpenClass);
+});
 
-    /**
-     * Close mobile menu
-     */
-    function closeMenu() {
-        $html.removeClass(navOpenClass);
-        $(`.navbar__item.${activeClass}`).removeClass(activeClass);
+/**
+ * Close mobile menu
+ */
+function closeMenu() {
+    $html.removeClass(navOpenClass);
+    $(`.navbar__item.${activeClass}`).removeClass(activeClass);
+}
+
+// Close mobile menu on resize
+$(window).on('resize', function () {
+    if (!isMobile()) {
+        closeMenu();
     }
+});
 
-    // Close mobile menu on resize
-    $(window).on('resize', function () {
-        if (!isMobile()) {
-            closeMenu();
-        }
-    });
+// Toggle mobile submenu
+$('.navbar__link').on('click', function () {
+    if (!isMobile()) return;
 
-    // Toggle mobile submenu
-    $('.navbar__link').on('click', function () {
-        if (!isMobile()) return;
+    const $navbarItem = $(this).parent();
+    const navbarLinkHref = $(this).attr('href');
 
-        const $navbarItem = $(this).parent();
-        const navbarLinkHref = $(this).attr('href');
+    if ($navbarItem.hasClass(parentClass) && navbarLinkHref === '#') {
+        $navbarItem.toggleClass(activeClass);
+    } else {
+        closeMenu();
+    }
+});
 
-        if ($navbarItem.hasClass(parentClass) && navbarLinkHref === '#') {
-            $navbarItem.toggleClass(activeClass);
-        } else {
-            closeMenu();
-        }
-    });
+// Toggle mobile submenu
+$('.navbar__toggle').on('click', function (e) {
+    if (!isMobile()) return;
 
-    // Toggle mobile submenu
-    $('.navbar__toggle').on('click', function (e) {
-        if (!isMobile()) return;
+    e.preventDefault();
+    e.stopPropagation();
 
-        e.preventDefault();
-        e.stopPropagation();
+    $(this).closest('.navbar__item').toggleClass(activeClass);
+});
 
-        $(this).closest('.navbar__item').toggleClass(activeClass);
-    });
-
-    // Prevent default behavior when click on empty click
-    $('a[href="#"]').on('click', function (e) {
-        e.preventDefault();
-    });
+// Prevent default behavior when click on empty click
+$('a[href="#"]').on('click', function (e) {
+    e.preventDefault();
 });
