@@ -49,4 +49,9 @@ $(function () {
 
         $(this).closest('.navbar__item').toggleClass(activeClass);
     });
+
+    // Prevent default behavior when click on empty click
+    $('a[href="#"]').on('click', function (e) {
+        e.preventDefault();
+    });
 });
