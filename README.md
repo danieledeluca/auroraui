@@ -60,6 +60,18 @@ npm run dev
 npm run build
 ```
 
+### Lint code trough Eslint and Stylelint (you can use `:js` or `:css` to lint only specif file)
+
+```
+npm run lint
+```
+
+### Format code trough Prettier (you can use `:html` or `:js` or `:css` to lint only specif file)
+
+```
+npm run format
+```
+
 ## Packages
 
 | Package | Version |
