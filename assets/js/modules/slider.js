@@ -1,11 +1,20 @@
+// =====================================================
+// Slider
+// =====================================================
+
 import $ from 'jquery';
 import Splide from '@splidejs/splide';
 
-$('.splide').each((index, element) => {
-    const slider = new Splide(element, {
-        type: 'loop',
-        autoplay: true,
-    });
-
+/**
+ * Init Splide
+ *
+ * @param {HTMLElement} element
+ */
+function initSplide(element) {
+    const slider = new Splide(element);
     slider.mount();
+}
+
+$('.splide').each((index, element) => {
+    initSplide(element);
 });

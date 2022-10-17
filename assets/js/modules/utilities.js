@@ -1,3 +1,7 @@
+// =====================================================
+// Utilities
+// =====================================================
+
 // Utilities classes
 const classes = {
     activeClass: 'is-active',
@@ -11,7 +15,7 @@ const mobileBreakpoint = 768;
 /**
  * Check if is in mobile view
  *
- * @returns {boolean}
+ * @returns {Boolean}
  */
 function isMobile() {
     return window.innerWidth < mobileBreakpoint;
