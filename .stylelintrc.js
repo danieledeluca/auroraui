@@ -8,14 +8,7 @@ module.exports = {
         'color-hex-length': 'long',
         'declaration-property-value-disallowed-list': null,
         'function-parentheses-space-inside': 'never-single-line',
-        'max-nesting-depth': [
-            2,
-
-            {
-                ignore: ['pseudo-classes'],
-                ignoreAtRules: [/include/],
-            },
-        ],
+        'max-nesting-depth': [2, { ignore: ['pseudo-classes'], ignoreAtRules: [/include/] }],
         'selector-class-pattern': null,
         'selector-no-qualifying-type': [true, { ignore: ['attribute', 'class'] }],
         'scss/at-each-key-value-single-line': true,
@@ -24,6 +17,16 @@ module.exports = {
         'scss/at-mixin-argumentless-call-parentheses': 'never',
         'scss/at-mixin-parentheses-space-before': 'never',
         'scss/dollar-variable-default': [true, { ignore: 'local' }],
+        'scss/dollar-variable-empty-line-after': [
+            'always',
+            { except: ['last-nested', 'before-comment', 'before-dollar-variable'] },
+        ],
+        'scss/double-slash-comment-whitespace-inside': 'always',
+        'scss/comment-no-empty': true,
+        'scss/comment-no-loud': true,
+        'scss/dimension-no-non-numeric-values': true,
+        'scss/map-keys-quotes': 'always',
+        'scss/operator-no-unspaced': true,
         'scss/selector-no-union-class-name': true,
         'scss/no-duplicate-mixins': true,
         'order/properties-alphabetical-order': null,
