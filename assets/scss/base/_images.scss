@@ -1,7 +1,9 @@
 // =====================================================
-// Utilities
+// Images
 // =====================================================
 
-@import 'colors';
-@import 'text-alignment';
-@import 'spacing';
+img {
+    &.img--full {
+        width: 100%;
+    }
+}

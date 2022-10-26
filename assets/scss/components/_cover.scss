@@ -1,5 +1,5 @@
 // =====================================================
-//      Cover
+// Cover
 // =====================================================
 
 $cover-padding: 7rem !default;
@@ -21,8 +21,15 @@ $cover-content-max-width: 600px !default;
     &[href] {
         @include reset-link;
 
-        &.filter {
-            @include reset-link($filter-color);
+        &.overlay {
+            @include reset-link($overlay-color);
+        }
+    }
+
+    &.overlay {
+        .cover__content {
+            position: relative;
+            z-index: 1;
         }
     }
 

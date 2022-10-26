@@ -1,5 +1,5 @@
 // =====================================================
-//      Card
+// Card
 // =====================================================
 
 $card-margin-bottom: 2rem !default;
@@ -24,12 +24,15 @@ $card-body-padding: 1.25rem !default;
 
     &[href],
     [href]:not(.button) {
-        color: $card-color;
-        text-decoration: none;
+        @include reset-link($card-color);
     }
 }
 
 .card__image {
+    &[href] {
+        display: inline-block;
+    }
+
     img {
         width: 100%;
         height: $card-image-height;

@@ -1,7 +1,7 @@
 // =====================================================
-// Utilities
+// Abstracts
 // =====================================================
 
-@import 'colors';
-@import 'text-alignment';
-@import 'spacing';
+@import 'functions/functions';
+@import 'variables/variables';
+@import 'mixins/mixins';

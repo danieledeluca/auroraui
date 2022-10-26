@@ -1,0 +1,22 @@
+// =====================================================
+// Logo
+// =====================================================
+
+$header-logo-margin-right: 1.25rem !default;
+$header-logo-padding: 1rem 0 !default;
+$header-logo-height: 2.5rem !default;
+
+.header__logo {
+    display: inline-block;
+    margin-right: $header-logo-margin-right;
+    padding: $container-gap;
+
+    @include mb-up(md) {
+        padding: $header-logo-padding;
+    }
+
+    .logo {
+        display: block;
+        height: $header-logo-height;
+    }
+}

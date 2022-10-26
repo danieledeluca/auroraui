@@ -1,0 +1,49 @@
+// =====================================================
+// Buttons
+// =====================================================
+
+.button {
+    @include button;
+
+    @each $color, $value in $theme-colors {
+        &.button--primary.#{$color} {
+            @include button-primary($value);
+        }
+
+        &.button--secondary.#{$color} {
+            @include button-secondary($value);
+        }
+
+        &.button--tertiary.#{$color} {
+            @include button-tertiary($value);
+        }
+    }
+
+    &.button--big {
+        @include button-big;
+    }
+
+    &.button--small {
+        @include button-small;
+    }
+
+    &.button--icon {
+        @include button-icon;
+
+        &.button--icon-big {
+            @include button-icon-big;
+        }
+
+        &.button--icon-small {
+            @include button-icon-small;
+        }
+    }
+
+    &.button--icon-left {
+        @include button-icon-left;
+    }
+
+    &.button--icon-right {
+        @include button-icon-right;
+    }
+}

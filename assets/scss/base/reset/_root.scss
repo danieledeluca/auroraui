@@ -1,0 +1,36 @@
+// =====================================================
+// Root
+// =====================================================
+
+:root {
+    @if $enable-smooth-scroll {
+        @media (prefers-reduced-motion: no-preference) {
+            scroll-behavior: smooth;
+            scroll-padding-top: $scroll-padding-top;
+        }
+    }
+
+    // Colors
+    @each $color, $value in $colors {
+        --#{$prefix}-#{$color}: #{$value};
+    }
+
+    @each $color, $value in $grays {
+        --#{$prefix}-#{$color}: #{$value};
+    }
+
+    @each $color, $value in $theme-colors {
+        --#{$prefix}-#{$color}: #{$value};
+    }
+
+    // Base variables
+    --#{$prefix}-base-margin: #{$base-margin};
+    --#{$prefix}-base-border-radius: #{$base-border-radius};
+    --#{$prefix}-base-background-color: #{$base-background-color};
+    --#{$prefix}-base-color: #{$base-color};
+    --#{$prefix}-base-box-shadow-color: #{$base-box-shadow-color};
+    --#{$prefix}-base-font-family: #{$base-font-family};
+    --#{$prefix}-base-font-size: #{$base-font-size};
+    --#{$prefix}-base-font-weight: #{$base-font-weight};
+    --#{$prefix}-base-line-height: #{$base-line-height};
+}

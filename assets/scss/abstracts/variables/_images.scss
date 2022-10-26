@@ -1,7 +1,6 @@
 // =====================================================
-// Utilities
+// Images
 // =====================================================
 
-@import 'colors';
-@import 'text-alignment';
-@import 'spacing';
+$figcaption-color: $gray-700 !default;
+$figcaption-font-size: $small-font-size !default;

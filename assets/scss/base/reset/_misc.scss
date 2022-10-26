@@ -1,7 +1,9 @@
 // =====================================================
-// Utilities
+// Misc
 // =====================================================
 
-@import 'colors';
-@import 'text-alignment';
-@import 'spacing';
+// Always hide an element with the `hidden` HTML attribute.
+
+[hidden] {
+    display: none !important;
+}

@@ -1,5 +1,5 @@
 // =====================================================
-//      Pagination
+// Pagination
 // =====================================================
 
 $pagination-width: 2rem !default;
@@ -38,6 +38,7 @@ $pagination-hover-color: color-contrast($pagination-hover-background-color) !def
     width: $pagination-width;
     height: $pagination-height;
     background-color: $pagination-background-color;
+    color: $pagination-color;
     border-radius: $pagination-border-radius;
     box-shadow: $pagination-box-shadow;
     font-size: $pagination-font-size;

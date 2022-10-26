@@ -1,7 +1,11 @@
 // =====================================================
-// Utilities
+// Inline text elements
 // =====================================================
 
-@import 'colors';
-@import 'text-alignment';
-@import 'spacing';
+.strong {
+    @extend %strong;
+}
+
+.small {
+    @extend %small;
+}

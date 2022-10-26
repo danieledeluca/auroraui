@@ -1,7 +1,8 @@
 // =====================================================
-// Utilities
+// Root
 // =====================================================
 
-@import 'colors';
-@import 'text-alignment';
-@import 'spacing';
+$prefix: 'rk' !default;
+
+$enable-smooth-scroll: true !default;
+$scroll-padding-top: 4.5rem !default;
