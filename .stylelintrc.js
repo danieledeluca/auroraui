@@ -19,13 +19,14 @@ module.exports = {
         'scss/dollar-variable-default': [true, { ignore: 'local' }],
         'scss/dollar-variable-empty-line-after': [
             'always',
-            { except: ['last-nested', 'before-comment', 'before-dollar-variable'] },
+            {
+                except: ['last-nested', 'before-comment', 'before-dollar-variable'],
+                ignore: ['before-comment', 'inside-single-line-block'],
+            },
         ],
         'scss/double-slash-comment-whitespace-inside': 'always',
         'scss/comment-no-empty': true,
-        'scss/comment-no-loud': true,
         'scss/dimension-no-non-numeric-values': true,
-        'scss/map-keys-quotes': 'always',
         'scss/operator-no-unspaced': true,
         'scss/selector-no-union-class-name': true,
         'scss/no-duplicate-mixins': true,
