@@ -52,8 +52,7 @@ const options = {
     },
     browserSync: {
         server: true,
-        startPath: '/docs',
-        files: './**/*.html',
+        files: ['./**/*.html'],
         https: true,
     },
 };
