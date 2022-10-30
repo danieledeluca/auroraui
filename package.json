@@ -1,6 +1,6 @@
 {
     "name": "rocket",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A lightweight HTML, CSS, and JavaScript framework.",
     "main": "gulpfile.js",
     "scripts": {
