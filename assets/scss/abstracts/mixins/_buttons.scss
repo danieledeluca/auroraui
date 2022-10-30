@@ -60,36 +60,13 @@
     }
 }
 
-@mixin button-tertiary($color) {
-    color: $color;
-
-    &:hover,
-    &:focus {
-        $color-darken: darken($color, 5);
-
-        color: $color-darken;
-
-        span {
-            &::after {
-                background-color: $color-darken;
-            }
-        }
-    }
-
-    span {
-        position: relative;
-
-        &::after {
-            @include transition(background-color);
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            display: inline-block;
-            width: 100%;
-            height: 2px;
-            background-color: $color;
-        }
+@mixin button-size($size) {
+    @if $size == 'big' {
+        padding: $button-big-padding-y $button-big-padding-x;
+        font-size: $button-big-font-size;
+    } @else if $size == 'small' {
+        padding: $button-small-padding-y $button-small-padding-x;
+        font-size: $button-small-font-size;
     }
 }
 
@@ -100,38 +77,28 @@
     padding: 0;
 }
 
-@mixin button-big {
-    padding: $button-big-padding-y $button-big-padding-x;
-    font-size: $button-big-font-size;
-}
-
-@mixin button-small {
-    padding: $button-small-padding-y $button-small-padding-x;
-    font-size: $button-small-font-size;
-}
-
-@mixin button-icon-left {
-    &::before,
-    [class*='icon-'] {
-        margin-right: $button-icon-margin;
+@mixin button-icon-size($size) {
+    @if $size == 'big' {
+        width: $button-big-icon-size;
+        height: $button-big-icon-size;
+    } @else if $size == 'small' {
+        width: $button-small-icon-size;
+        height: $button-small-icon-size;
     }
 }
 
-@mixin button-icon-right {
-    &::after,
-    [class*='icon-'] {
-        margin-left: $button-icon-margin;
+@mixin button-icon-position($position) {
+    --button-icon-margin: #{$button-icon-margin};
+
+    @if $position == 'left' {
+        &::before,
+        [class*='icon-'] {
+            margin-right: var(--button-icon-margin);
+        }
+    } @else if $position == 'right' {
+        &::after,
+        [class*='icon-'] {
+            margin-left: var(--button-icon-margin);
+        }
     }
-}
-
-@mixin button-icon-big {
-    width: $button-big-icon-size;
-    height: $button-big-icon-size;
-    padding: 0;
-}
-
-@mixin button-icon-small {
-    width: $button-small-icon-size;
-    height: $button-small-icon-size;
-    padding: 0;
 }

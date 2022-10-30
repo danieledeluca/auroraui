@@ -13,37 +13,43 @@
         &.button--secondary.#{$color} {
             @include button-secondary($value);
         }
-
-        &.button--tertiary.#{$color} {
-            @include button-tertiary($value);
-        }
     }
 
     &.button--big {
-        @include button-big;
+        @include button-size('big');
+
+        &.button--icon-left,
+        &.button--icon-right {
+            --button-icon-margin: #{$button-big-icon-margin};
+        }
     }
 
     &.button--small {
-        @include button-small;
+        @include button-size('small');
+
+        &.button--icon-left,
+        &.button--icon-right {
+            --button-icon-margin: #{$button-small-icon-margin};
+        }
     }
 
     &.button--icon {
         @include button-icon;
 
-        &.button--icon-big {
-            @include button-icon-big;
+        &.button--big {
+            @include button-icon-size('big');
         }
 
-        &.button--icon-small {
-            @include button-icon-small;
+        &.button--small {
+            @include button-icon-size('small');
         }
     }
 
     &.button--icon-left {
-        @include button-icon-left;
+        @include button-icon-position('left');
     }
 
     &.button--icon-right {
-        @include button-icon-right;
+        @include button-icon-position('right');
     }
 }
