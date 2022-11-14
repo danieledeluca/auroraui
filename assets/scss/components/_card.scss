@@ -30,7 +30,7 @@ $card-body-padding: 1.25rem !default;
 
 .card__image {
     &[href] {
-        display: inline-block;
+        display: block;
     }
 
     img {
