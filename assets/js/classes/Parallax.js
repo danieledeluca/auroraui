@@ -26,11 +26,11 @@ export default class Parallax {
      */
     constructor(element, options = {}) {
         this.element = element;
-        this.options = Object.assign(
-            Parallax.options,
-            options,
-            JSON.parse(this.element.getAttribute(DATA_ATTRIBUTE)) || {}
-        );
+        this.options = {
+            ...Parallax.options,
+            ...options,
+            ...(JSON.parse(this.element.getAttribute(DATA_ATTRIBUTE)) || {}),
+        };
     }
 
     /**
