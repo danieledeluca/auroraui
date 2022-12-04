@@ -1,0 +1,41 @@
+// =====================================================
+// Responsive font size
+// =====================================================
+
+$rfs-breakpoint-key: 'xl' !default;
+
+@function rfs-value($font-size) {
+    $base-value: 1.25rem !default;
+    $rem-value: 16 !default;
+    $factor: 3 !default;
+    $breakpoint-value: map-get($breakpoints, $rfs-breakpoint-key);
+
+    // Remove units
+    $base-value: div($base-value, ($base-value * 0 + div(1, $rem-value)));
+    $breakpoint-value: div($breakpoint-value, ($breakpoint-value * 0 + 1));
+
+    $val: '';
+    $value: div($font-size, ($font-size * 0 + div(1, $rem-value)));
+
+    // Add the media query only if the $value is greater than the $base-value
+    @if $value <= $base-value {
+        $val: #{div($value, $rem-value)}rem;
+    } @else {
+        // Calculate the minimum value
+        $min-value: $base-value + div(($value - $base-value), $factor);
+
+        // Calculate the difference between the $value and the $min-value
+        $diff-value: $value - $min-value;
+
+        // Format the $min-value in rem
+        $min-value: #{div($min-value, $rem-value)}rem;
+
+        // Calculate the variable width between 0 and $breakpoint-value
+        $variable-width: #{div($diff-value * 100, $breakpoint-value)}vw;
+
+        // Set the calculated value
+        $val: calc(#{$min-value} + #{$variable-width});
+    }
+
+    @return $val;
+}

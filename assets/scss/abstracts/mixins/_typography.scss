@@ -2,6 +2,19 @@
 // Typography
 // =====================================================
 
+@mixin rfs($font-size) {
+    $value: #{$font-size};
+    $rfs-value: rfs-value($font-size);
+
+    font-size: $value;
+
+    @if $value != $rfs-value {
+        @include mb-down($rfs-breakpoint-key) {
+            font-size: $rfs-value;
+        }
+    }
+}
+
 @mixin last-child-no-margin($margin-bottom: $base-margin) {
     &:not(:last-child) {
         margin-bottom: $margin-bottom;
