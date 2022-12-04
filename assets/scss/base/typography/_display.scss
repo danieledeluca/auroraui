@@ -13,10 +13,6 @@
 @each $display, $value in $display-font-sizes {
     .#{$display} {
         @extend %display;
-        font-size: $value;
-
-        @include mb-down(md) {
-            font-size: div($value, 1.5);
-        }
+        @include rfs($value);
     }
 }
