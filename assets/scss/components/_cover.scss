@@ -40,11 +40,6 @@ $cover-content-max-width: 600px !default;
     &.cover--right {
         text-align: right;
     }
-
-    // Parallax
-    &.parallax {
-        background-attachment: fixed;
-    }
 }
 
 .cover__content {
