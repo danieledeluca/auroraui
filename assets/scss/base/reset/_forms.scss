@@ -4,7 +4,7 @@
 
 // Label
 label {
-    @include last-child-no-margin(div($base-margin, 2));
+    @include last-child-no-margin($label-margin-bottom);
     display: block;
 }
 
@@ -115,9 +115,9 @@ fieldset {
 
 legend {
     width: 100%;
-    margin-bottom: div($base-margin, 2);
+    margin-bottom: $legend-margin-bottom;
     padding: 0; // 1
-    font-size: 1.25rem;
+    font-size: $legend-font-size;
 }
 
 // Progress
