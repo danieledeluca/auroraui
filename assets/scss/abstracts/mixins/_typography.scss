@@ -21,13 +21,17 @@
     }
 }
 
-@mixin reset-link($color: $base-color) {
+@mixin reset-link($color: $base-color, $hover-color: null) {
     color: $color;
     text-decoration: none;
 
+    @if $hover-color == null {
+        $hover-color: $color;
+    }
+
     &:hover,
     &:focus {
-        color: $color;
+        color: $hover-color;
     }
 }
 
