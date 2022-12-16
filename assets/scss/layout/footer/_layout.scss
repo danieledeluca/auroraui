@@ -5,25 +5,11 @@
 $footer-background-color: $gray-200 !default;
 $footer-color: $base-color !default;
 
-$footer-link-color: $footer-color !default;
-$footer-link-text-decoration: none !default;
-$footer-link-hover-color: $link-hover-color !default;
-
 $footer-border-top: 2px solid $gray-300 !default;
 
 .footer {
     background-color: $footer-background-color;
     color: $footer-color;
-
-    a {
-        color: $footer-link-color;
-        text-decoration: $footer-link-text-decoration;
-
-        &:hover,
-        &:focus {
-            color: $footer-link-hover-color;
-        }
-    }
 }
 
 .footer__navbar,

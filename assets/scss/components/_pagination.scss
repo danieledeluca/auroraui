@@ -27,10 +27,17 @@ $pagination-hover-color: color-contrast($pagination-hover-background-color) !def
     &:not(:last-child) {
         margin-right: $pagination-margin;
     }
+
+    &.is-active {
+        .pagination__link {
+            background-color: $pagination-hover-background-color;
+            color: $pagination-hover-color;
+        }
+    }
 }
 
 .pagination__link {
-    @include reset-link;
+    @include reset-link($pagination-color);
     @include transition(background-color, color);
     display: inline-flex;
     justify-content: center;
@@ -38,14 +45,12 @@ $pagination-hover-color: color-contrast($pagination-hover-background-color) !def
     width: $pagination-width;
     height: $pagination-height;
     background-color: $pagination-background-color;
-    color: $pagination-color;
     border-radius: $pagination-border-radius;
     box-shadow: $pagination-box-shadow;
     font-size: $pagination-font-size;
 
     &:hover,
-    &:focus,
-    .pagination__item.is-active & {
+    &:focus {
         background-color: $pagination-hover-background-color;
         color: $pagination-hover-color;
     }

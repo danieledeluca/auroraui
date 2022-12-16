@@ -4,12 +4,12 @@
 
 @import '@splidejs/splide/src/css/themes/default/index';
 
-$slider-arrow-background-color: $gray-300 !default;
+$splide-arrow-background-color: $gray-300 !default;
 
 .splide__arrow {
     @include button;
     @include button-icon;
-    @include button-primary($slider-arrow-background-color);
+    @include button-primary($splide-arrow-background-color);
     @include transition(background-color, color, opacity);
     border-radius: 50%;
 

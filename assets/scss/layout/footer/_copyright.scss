@@ -2,6 +2,8 @@
 // Copyright
 // =====================================================
 
+$footer-copyright-color: $footer-color !default;
+$footer-copyright-hover-color: $link-hover-color !default;
 $footer-copyright-font-size: 0.75rem !default;
 
 .footer__copyright {
@@ -9,5 +11,9 @@ $footer-copyright-font-size: 0.75rem !default;
 
     @include mb-down(md) {
         order: 1;
+    }
+
+    a {
+        @include reset-link($footer-copyright-color, $footer-copyright-hover-color);
     }
 }

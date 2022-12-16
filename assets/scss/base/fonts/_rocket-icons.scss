@@ -25,18 +25,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-@each $name, $glyph in $icons {
-    .icon-#{$name} {
+@each $icon, $value in $icons {
+    .icon-#{$icon} {
         &::before {
-            @include icon($name);
+            @include icon($icon);
         }
     }
 }
 
-@each $name, $value in $icon-animations {
-    .icon-#{$name} {
+@each $animation, $value in $icon-animations {
+    .icon-#{$animation} {
         &::before {
-            @include icon-animation($name);
+            @include icon-animation($animation);
         }
     }
 }

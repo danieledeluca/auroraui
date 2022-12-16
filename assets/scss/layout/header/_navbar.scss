@@ -11,6 +11,7 @@ $header-navbar-item-lv0-border-md: 1px solid $gray-300 !default;
 $header-navbar-item-lv1-border: $header-navbar-item-lv0-border-md !default;
 
 $header-navbar-link-color: $gray-700 !default;
+$header-navbar-link-color-md: $base-color !default;
 $header-navbar-link-font-size: $small-font-size !default;
 $header-navbar-link-hover-color: $base-color !default;
 $header-navbar-link-lv0-padding: 0.5rem 0.75rem !default;
@@ -134,6 +135,7 @@ $header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
     }
 
     .navbar__link {
+        @include reset-link($header-navbar-link-color-md, $header-navbar-link-hover-color);
         position: relative;
         display: inline-block;
         width: 100%;
@@ -141,11 +143,6 @@ $header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
 
         @include mb-up(md) {
             color: $header-navbar-link-color;
-        }
-
-        &:hover,
-        &:focus {
-            color: $header-navbar-link-hover-color;
         }
 
         &.lv0 {

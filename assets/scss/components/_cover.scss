@@ -35,10 +35,26 @@ $cover-content-max-width: 600px !default;
 
     &.cover--center {
         text-align: center;
+
+        .cover__content {
+            margin: 0 auto;
+
+            @include mb-up(md) {
+                padding: 0 div($cover-padding, 2);
+            }
+        }
     }
 
     &.cover--right {
         text-align: right;
+
+        .cover__content {
+            margin-left: auto;
+
+            @include mb-up(md) {
+                padding: 0 $cover-padding 0 0;
+            }
+        }
     }
 }
 
@@ -48,21 +64,5 @@ $cover-content-max-width: 600px !default;
     @include mb-up(md) {
         max-width: $cover-content-max-width;
         padding: 0 0 0 $cover-padding;
-    }
-
-    .cover--center & {
-        margin: 0 auto;
-
-        @include mb-up(md) {
-            padding: 0 div($cover-padding, 2);
-        }
-    }
-
-    .cover--right & {
-        margin-left: auto;
-
-        @include mb-up(md) {
-            padding: 0 $cover-padding 0 0;
-        }
     }
 }

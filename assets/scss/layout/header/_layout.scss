@@ -2,6 +2,7 @@
 // Layout
 // =====================================================
 
+$header-height: $scroll-padding-top !default;
 $header-background-color: $white !default;
 $header-box-shadow: 0 5px 20px $base-box-shadow-color !default;
 
@@ -19,10 +20,6 @@ $header-box-shadow: 0 5px 20px $base-box-shadow-color !default;
     background-color: $header-background-color;
     box-shadow: $header-box-shadow;
     z-index: 100;
-
-    a {
-        @include reset-link;
-    }
 
     .container {
         @include mb-down(md) {

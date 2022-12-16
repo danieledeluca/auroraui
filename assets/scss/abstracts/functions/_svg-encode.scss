@@ -11,8 +11,8 @@
         ')': '%29',
     );
 
-    @each $char, $encoded in $encoding-reference {
-        $string: str-replace($string, $char, $encoded);
+    @each $char, $value in $encoding-reference {
+        $string: str-replace($string, $char, $value);
     }
 
     @return 'data:image/svg+xml,' + $string;

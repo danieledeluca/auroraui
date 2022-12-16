@@ -16,6 +16,7 @@ $footer-navbar-link-lv0-font-weight: $font-weight-semi-bold !default;
 $footer-navbar-link-lv1-padding-md: 0.25rem 0.5rem !default;
 $footer-navbar-link-lv1-color: $gray-600 !default;
 $footer-navbar-link-lv1-font-size: $small-font-size !default;
+$footer-navbar-link-lv1-hover-color: $base-color !default;
 
 .footer__navbar {
     .navbar {
@@ -76,7 +77,7 @@ $footer-navbar-link-lv1-font-size: $small-font-size !default;
         padding: $footer-navbar-link-padding;
 
         &.lv0 {
-            color: $footer-navbar-link-lv0-color;
+            @include reset-link($footer-navbar-link-lv0-color);
             font-size: $footer-navbar-link-lv0-font-size;
             font-weight: $footer-navbar-link-lv0-font-weight;
             text-transform: uppercase;
@@ -87,7 +88,7 @@ $footer-navbar-link-lv1-font-size: $small-font-size !default;
         }
 
         &.lv1 {
-            color: $footer-navbar-link-lv1-color;
+            @include reset-link($footer-navbar-link-lv1-color, $footer-navbar-link-lv1-hover-color);
             font-size: $footer-navbar-link-lv1-font-size;
 
             @include mb-down(md) {
