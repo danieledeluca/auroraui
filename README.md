@@ -28,7 +28,7 @@ For all the details and the docs please visit the [documentation](http://daniele
 or
 
 ```html
-<link rel="stylesheet" href="https://gitcdn.link/cdn/danieledeluca/rocket/master/assets/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/danieledeluca/rocket/assets/css/style.min.css" />
 ```
 
 ### JavaScript
@@ -40,7 +40,7 @@ or
 or
 
 ```html
-<script src="https://gitcdn.link/cdn/danieledeluca/rocket/master/assets/js/app.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/danieledeluca/rocket/assets/js/app.min.js"></script>
 ```
 
 ### Start the server
