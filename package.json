@@ -8,12 +8,12 @@
         "dev": "gulp watch",
         "build": "gulp build --production",
         "lint": "npm run lint:js && npm run lint:css",
-        "lint:js": "eslint '**/*.js' --config .eslintrc.js --fix",
-        "lint:css": "stylelint '**/*.scss' --config .stylelintrc.js --fix",
+        "lint:js": "eslint '**/*.js' --config .eslintrc.json --fix",
+        "lint:css": "stylelint '**/*.scss' --config .stylelintrc --fix",
         "format": "npm run format:html && npm run format:js && npm run format:css",
-        "format:html": "prettier '**/*.html' --config .prettierrc.js --write --ignore-path .gitignore",
-        "format:js": "prettier '**/!(*.min).js' --config .prettierrc.js --write --ignore-path .gitignore",
-        "format:css": "prettier '**/*.scss' --config .prettierrc.js --write --ignore-path .gitignore"
+        "format:html": "prettier '**/*.html' --config .prettierrc --write --ignore-path .gitignore",
+        "format:js": "prettier '**/!(*.min).js' --config .prettierrc --write --ignore-path .gitignore",
+        "format:css": "prettier '**/*.scss' --config .prettierrc --write --ignore-path .gitignore"
     },
     "author": "Daniele De Luca",
     "license": "MIT",
