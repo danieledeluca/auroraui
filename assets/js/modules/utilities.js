@@ -2,7 +2,7 @@
 // Utilities
 // =====================================================
 
-// Utilities classes
+// Utility classes
 const classes = {
     activeClass: 'is-active',
     navOpenClass: 'nav-open',
