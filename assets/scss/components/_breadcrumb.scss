@@ -2,11 +2,11 @@
 // Breadcrumb
 // =====================================================
 
+$breadcrumb-gap: 0.25rem !default;
 $breadcrumb-color: $base-color !default;
 $breadcrumb-font-size: $small-font-size !default;
 
 $breadcrumb-separator-icon: 'chevron-right' !default;
-$breadcrumb-separator-margin-right: 0.25rem !default;
 
 $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
 
@@ -14,6 +14,7 @@ $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
     @include reset-list;
     display: flex;
     align-items: center;
+    gap: $breadcrumb-gap;
     flex-wrap: wrap;
     font-size: $breadcrumb-font-size;
 }
@@ -22,7 +23,6 @@ $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
     &:not(:last-child) {
         &::after {
             @include icon($breadcrumb-separator-icon);
-            margin-right: $breadcrumb-separator-margin-right;
             vertical-align: middle;
         }
     }

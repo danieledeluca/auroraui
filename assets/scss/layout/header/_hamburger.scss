@@ -2,7 +2,7 @@
 // Hamburger
 // =====================================================
 
-$header-hamburger-layer-width: 1.375rem !default;
+$header-hamburger-layer-width: 22px !default;
 $header-hamburger-layer-height: 3.5px !default;
 $header-hamburger-layer-spacing: 3.5px !default;
 $header-hamburger-layer-color: $base-color !default;
@@ -11,7 +11,7 @@ $header-hamburger-layer-border-radius: $base-border-radius !default;
 .header__hamburger {
     display: flex;
     align-items: center;
-    padding: 0 div($header-height - $header-hamburger-layer-width, 2);
+    padding: 0 $container-padding-x;
     cursor: pointer;
 
     @include mb-up(md) {
@@ -42,13 +42,13 @@ $header-hamburger-layer-border-radius: $base-border-radius !default;
             visibility: visible;
         }
     }
+}
 
-    .hamburger {
-        position: relative;
-        display: inline-block;
-        width: $header-hamburger-layer-width;
-        height: $header-hamburger-layer-height * 3 + $header-hamburger-layer-spacing * 2;
-    }
+.hamburger {
+    position: relative;
+    display: inline-block;
+    width: $header-hamburger-layer-width;
+    height: $header-hamburger-layer-height * 3 + $header-hamburger-layer-spacing * 2;
 }
 
 .hamburger__inner {
@@ -84,41 +84,41 @@ $header-hamburger-layer-border-radius: $base-border-radius !default;
 
 // Hamburger animations
 // =====================================================
-$base-transition-timing: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
-$base-active-transition-timing: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+$hamburger-base-transition-timing: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$hamburger-base-active-transition-timing: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
 
-$spin-transition-timing: $base-transition-timing !default;
-$spin-active-transition-timing: $base-active-transition-timing !default;
+$hamburger-spin-transition-timing: $hamburger-base-transition-timing !default;
+$hamburger-spin-active-transition-timing: $hamburger-base-active-transition-timing !default;
 
-$vortex-transition-timing: cubic-bezier(0.19, 1, 0.22, 1) !default;
-$vortex-active-transition-timing: $vortex-transition-timing !default;
+$hamburger-vortex-transition-timing: cubic-bezier(0.19, 1, 0.22, 1) !default;
+$hamburger-vortex-active-transition-timing: $hamburger-vortex-transition-timing !default;
 
-$collapse-transition-timing-1: $base-transition-timing !default;
-$collapse-transition-timing-2: cubic-bezier(0.33333, 0.66667, 0.66667, 1) !default;
-$collapse-active-transition-timing-1: $base-active-transition-timing !default;
-$collapse-active-transition-timing-2: cubic-bezier(0.33333, 0, 0.66667, 0.33333) !default;
+$hamburger-collapse-transition-timing-1: $hamburger-base-transition-timing !default;
+$hamburger-collapse-transition-timing-2: cubic-bezier(0.33333, 0.66667, 0.66667, 1) !default;
+$hamburger-collapse-active-transition-timing-1: $hamburger-base-active-transition-timing !default;
+$hamburger-collapse-active-transition-timing-2: cubic-bezier(0.33333, 0, 0.66667, 0.33333) !default;
 
-$squeeze-transition-timing: $base-transition-timing !default;
-$squeeze-active-transition-timing: $base-active-transition-timing !default;
+$hamburger-squeeze-transition-timing: $hamburger-base-transition-timing !default;
+$hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-timing !default;
 
 // Spin
 .hamburger--spin {
     .hamburger__inner {
         transition-duration: 0.22s;
-        transition-timing-function: $spin-transition-timing;
+        transition-timing-function: $hamburger-spin-transition-timing;
 
         &::before {
             transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
         }
 
         &::after {
-            transition: bottom 0.1s 0.25s ease-in, transform 0.22s $spin-transition-timing;
+            transition: bottom 0.1s 0.25s ease-in, transform 0.22s $hamburger-spin-transition-timing;
         }
 
         .nav-open & {
             transform: rotate(225deg);
             transition-delay: 0.12s;
-            transition-timing-function: $spin-active-transition-timing;
+            transition-timing-function: $hamburger-spin-active-transition-timing;
 
             &::before {
                 top: 0;
@@ -129,7 +129,7 @@ $squeeze-active-transition-timing: $base-active-transition-timing !default;
             &::after {
                 bottom: 0;
                 transform: rotate(-90deg);
-                transition: bottom 0.1s ease-out, transform 0.22s 0.12s $spin-active-transition-timing;
+                transition: bottom 0.1s ease-out, transform 0.22s 0.12s $hamburger-spin-active-transition-timing;
             }
         }
     }
@@ -139,7 +139,7 @@ $squeeze-active-transition-timing: $base-active-transition-timing !default;
 .hamburger--vortex {
     .hamburger__inner {
         transition-duration: 0.2s;
-        transition-timing-function: $vortex-transition-timing;
+        transition-timing-function: $hamburger-vortex-transition-timing;
 
         &::before,
         &::after {
@@ -158,7 +158,7 @@ $squeeze-active-transition-timing: $base-active-transition-timing !default;
 
         .nav-open & {
             transform: rotate(765deg);
-            transition-timing-function: $vortex-active-transition-timing;
+            transition-timing-function: $hamburger-vortex-active-transition-timing;
 
             &::before,
             &::after {
@@ -185,34 +185,35 @@ $squeeze-active-transition-timing: $base-active-transition-timing !default;
         bottom: 0;
         transition-duration: 0.13s;
         transition-delay: 0.13s;
-        transition-timing-function: $collapse-transition-timing-1;
+        transition-timing-function: $hamburger-collapse-transition-timing-1;
+
+        &::before {
+            transition: top 0.12s 0.2s $hamburger-collapse-transition-timing-2,
+                transform 0.13s $hamburger-collapse-transition-timing-1;
+        }
 
         &::after {
             top: ($header-hamburger-layer-spacing * 2 + $header-hamburger-layer-height * 2) * -1;
-            transition: top 0.2s 0.2s $collapse-transition-timing-2, opacity 0.1s linear;
-        }
-
-        &::before {
-            transition: top 0.12s 0.2s $collapse-transition-timing-2, transform 0.13s $collapse-transition-timing-1;
+            transition: top 0.2s 0.2s $hamburger-collapse-transition-timing-2, opacity 0.1s linear;
         }
 
         .nav-open & {
             transform: translate3d(0, ($header-hamburger-layer-spacing + $header-hamburger-layer-height) * -1, 0)
                 rotate(-45deg);
             transition-delay: 0.22s;
-            transition-timing-function: $collapse-active-transition-timing-1;
-
-            &::after {
-                top: 0;
-                opacity: 0;
-                transition: top 0.2s $collapse-active-transition-timing-2, opacity 0.1s 0.22s linear;
-            }
+            transition-timing-function: $hamburger-collapse-active-transition-timing-1;
 
             &::before {
                 top: 0;
                 transform: rotate(-90deg);
-                transition: top 0.1s 0.16s $collapse-active-transition-timing-2,
-                    transform 0.13s 0.25s $collapse-active-transition-timing-1;
+                transition: top 0.1s 0.16s $hamburger-collapse-active-transition-timing-2,
+                    transform 0.13s 0.25s $hamburger-collapse-active-transition-timing-1;
+            }
+
+            &::after {
+                top: 0;
+                opacity: 0;
+                transition: top 0.2s $hamburger-collapse-active-transition-timing-2, opacity 0.1s 0.22s linear;
             }
         }
     }
@@ -222,20 +223,20 @@ $squeeze-active-transition-timing: $base-active-transition-timing !default;
 .hamburger--squeeze {
     .hamburger__inner {
         transition-duration: 0.075s;
-        transition-timing-function: $squeeze-transition-timing;
+        transition-timing-function: $hamburger-squeeze-transition-timing;
 
         &::before {
             transition: top 0.075s 0.12s ease, opacity 0.075s ease;
         }
 
         &::after {
-            transition: bottom 0.075s 0.12s ease, transform 0.075s $squeeze-transition-timing;
+            transition: bottom 0.075s 0.12s ease, transform 0.075s $hamburger-squeeze-transition-timing;
         }
 
         .nav-open & {
             transform: rotate(45deg);
             transition-delay: 0.12s;
-            transition-timing-function: $squeeze-active-transition-timing;
+            transition-timing-function: $hamburger-squeeze-active-transition-timing;
 
             &::before {
                 top: 0;
@@ -246,7 +247,7 @@ $squeeze-active-transition-timing: $base-active-transition-timing !default;
             &::after {
                 bottom: 0;
                 transform: rotate(-90deg);
-                transition: bottom 0.075s ease, transform 0.075s 0.12s $squeeze-active-transition-timing;
+                transition: bottom 0.075s ease, transform 0.075s 0.12s $hamburger-squeeze-active-transition-timing;
             }
         }
     }

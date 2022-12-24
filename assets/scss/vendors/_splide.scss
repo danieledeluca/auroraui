@@ -6,11 +6,15 @@
 
 $splide-arrow-background-color: $gray-300 !default;
 
+$splide-arrow-prev-icon: 'chevron-left' !default;
+$splide-arrow-next-icon: 'chevron-right' !default;
+
 .splide__arrow {
     @include button;
     @include button-icon;
     @include button-primary($splide-arrow-background-color);
     @include transition(background-color, color, opacity);
+    height: auto;
     border-radius: 50%;
 
     @include mb-down(md) {
@@ -24,13 +28,13 @@ $splide-arrow-background-color: $gray-300 !default;
 
 .splide__arrow--prev {
     &::before {
-        @include icon('chevron-left');
+        @include icon($splide-arrow-prev-icon);
     }
 }
 
 .splide__arrow--next {
     &::before {
-        @include icon('chevron-right');
+        @include icon($splide-arrow-next-icon);
     }
 }
 

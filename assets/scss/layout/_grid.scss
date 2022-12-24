@@ -5,14 +5,14 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -$container-gap;
-    margin-right: -$container-gap;
+    margin-left: -$container-padding-x;
+    margin-right: -$container-padding-x;
 
     > * {
         width: 100%;
         max-width: 100%;
-        padding-left: $container-gap;
-        padding-right: $container-gap;
+        padding-left: $container-padding-x;
+        padding-right: $container-padding-x;
     }
 }
 

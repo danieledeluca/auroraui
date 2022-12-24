@@ -36,8 +36,8 @@ $card-body-padding: 1.25rem !default;
     img {
         width: 100%;
         height: $card-image-height;
-        object-fit: cover;
         border-radius: $card-border-radius $card-border-radius 0 0;
+        object-fit: cover;
 
         @include mb-down(md) {
             height: $card-image-height-md;

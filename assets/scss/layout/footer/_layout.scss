@@ -5,7 +5,9 @@
 $footer-background-color: $gray-200 !default;
 $footer-color: $base-color !default;
 
-$footer-border-top: 2px solid $gray-300 !default;
+$footer-content-padding: 1.5rem 0 !default;
+
+$footer-bottom-border-top: 2px solid $gray-300 !default;
 
 .footer {
     background-color: $footer-background-color;
@@ -14,7 +16,7 @@ $footer-border-top: 2px solid $gray-300 !default;
 
 .footer__navbar,
 .footer__bottom {
-    padding: 1.5rem 0;
+    padding: $footer-content-padding;
 }
 
 .footer__bottom {
@@ -33,7 +35,7 @@ $footer-border-top: 2px solid $gray-300 !default;
 
     .footer__navbar + & {
         @include mb-up(md) {
-            border-top: $footer-border-top;
+            border-top: $footer-bottom-border-top;
         }
 
         @include mb-down(md) {

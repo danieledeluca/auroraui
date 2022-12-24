@@ -1,5 +1,5 @@
 // =====================================================
-// Transitions
+// Transition
 // =====================================================
 
 @function transition($properties) {
@@ -20,23 +20,4 @@
     }
 
     @return unquote($transition);
-}
-
-@mixin transition($properties...) {
-    transition: transition($properties);
-}
-
-// Transition animations
-// =====================================================
-
-// Collapse
-@mixin collapse {
-    @include transition(max-height);
-    max-height: 0;
-    overflow-y: hidden;
-}
-
-@mixin collapse-active($max-height: 50vh) {
-    max-height: $max-height;
-    overflow-y: auto;
 }

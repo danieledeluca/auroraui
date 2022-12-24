@@ -6,8 +6,8 @@
     width: 100%;
     max-width: $container-max-width;
     margin: 0 auto;
-    padding-left: $container-gap;
-    padding-right: $container-gap;
+    padding-left: $container-padding-x;
+    padding-right: $container-padding-x;
 
     &.container--full {
         max-width: 100%;

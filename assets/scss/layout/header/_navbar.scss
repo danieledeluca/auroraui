@@ -14,18 +14,23 @@ $header-navbar-link-color: $gray-700 !default;
 $header-navbar-link-color-md: $base-color !default;
 $header-navbar-link-font-size: $small-font-size !default;
 $header-navbar-link-hover-color: $base-color !default;
+$header-navbar-link-hover-color-md: $header-navbar-link-hover-color !default;
 $header-navbar-link-lv0-padding: 0.5rem 0.75rem !default;
-$header-navbar-link-lv0-padding-md: 1.25rem $container-gap !default;
+$header-navbar-link-lv0-padding-x-md: $container-padding-x !default;
+$header-navbar-link-lv0-padding-md: 1.25rem $header-navbar-link-lv0-padding-x-md !default;
 $header-navbar-link-lv0-font-weight-md: $font-weight-medium !default;
-$header-navbar-link-lv1-padding: 0.75rem $container-gap !default;
+$header-navbar-link-lv1-padding: 0.75rem $container-padding-x !default;
+$header-navbar-link-parent-padding-right-md: $header-navbar-link-lv0-padding-x-md * 2 + $header-navbar-link-font-size !default;
 $header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
+
+$header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
 
 .header__navbar {
     background-color: $header-navbar-background-color;
 
     @include mb-down(md) {
         position: absolute;
-        top: calc(100% - 1px);
+        top: 100%;
         width: 100%;
     }
 
@@ -58,31 +63,26 @@ $header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
     }
 
     .navbar {
-        @include mb-up(md) {
-            display: flex;
-        }
-
         &.lv0 {
             @include mb-up(md) {
+                display: flex;
                 height: 100%;
             }
         }
 
         &.lv1 {
-            background-color: $header-navbar-lv1-background-color-md;
-
             @include mb-up(md) {
                 position: absolute;
                 top: 100%;
                 right: 0;
                 display: none;
                 min-width: $header-navbar-lv1-min-width;
-                flex-direction: column;
                 background-color: $header-navbar-lv1-background-color;
             }
 
             @include mb-down(md) {
                 @include collapse;
+                background-color: $header-navbar-lv1-background-color-md;
             }
         }
     }
@@ -128,21 +128,21 @@ $header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
 
             > .navbar__link {
                 @include mb-down(md) {
-                    padding-right: 3rem;
+                    padding-right: $header-navbar-link-parent-padding-right-md;
                 }
             }
         }
     }
 
     .navbar__link {
-        @include reset-link($header-navbar-link-color-md, $header-navbar-link-hover-color);
+        @include reset-link($header-navbar-link-color, $header-navbar-link-hover-color);
         position: relative;
         display: inline-block;
         width: 100%;
         font-size: $header-navbar-link-font-size;
 
-        @include mb-up(md) {
-            color: $header-navbar-link-color;
+        @include mb-down(md) {
+            @include reset-link($header-navbar-link-color-md, $header-navbar-link-hover-color-md);
         }
 
         &.lv0 {
@@ -160,7 +160,7 @@ $header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
 
         &.button {
             @include mb-down(md) {
-                width: calc(100% - $container-gap * 2);
+                width: calc(100% - $container-padding-x * 2);
                 margin: $header-navbar-link-lv0-padding-md;
                 padding: $header-navbar-link-button-padding-md;
             }
@@ -179,8 +179,7 @@ $header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
             display: inline-flex;
             align-items: center;
             height: 100%;
-            padding: $header-navbar-link-lv0-padding-md;
-            font-size: $base-font-size;
+            padding: $header-navbar-toggle-padding-md;
         }
     }
 }

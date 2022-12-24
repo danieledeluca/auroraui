@@ -14,7 +14,7 @@ $font-size: 1rem !default;
 $font-weight-thin: 100 !default;
 $font-weight-lighter: 200 !default;
 $font-weight-light: 300 !default;
-$font-weight-regular: 400 !default;
+$font-weight-normal: 400 !default;
 $font-weight-medium: 500 !default;
 $font-weight-semi-bold: 600 !default;
 $font-weight-bold: 700 !default;
@@ -69,7 +69,7 @@ $blockquote-font-size-md: $lead-font-size-md !default;
 $blockquote-figcaption-color: $gray-600 !default;
 $blockquote-figcaption-font-size: $small-font-size !default;
 
-// Lists
+// List
 $list-padding-left: 2rem !default;
 $list-nested-margin: 0.25rem 0 !default;
 

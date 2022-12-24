@@ -4,7 +4,7 @@
 
 $pagination-width: 2rem !default;
 $pagination-height: $pagination-width !default;
-$pagination-margin: 0.5rem !default;
+$pagination-gap: 0.5rem !default;
 $pagination-background-color: $white !default;
 $pagination-color: color-contrast($pagination-background-color) !default;
 $pagination-border-radius: $base-border-radius !default;
@@ -18,16 +18,10 @@ $pagination-hover-color: color-contrast($pagination-hover-background-color) !def
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: -#{$pagination-margin};
+    gap: $pagination-gap;
 }
 
 .pagination__item {
-    margin-bottom: $pagination-margin;
-
-    &:not(:last-child) {
-        margin-right: $pagination-margin;
-    }
-
     &.is-active {
         .pagination__link {
             background-color: $pagination-hover-background-color;

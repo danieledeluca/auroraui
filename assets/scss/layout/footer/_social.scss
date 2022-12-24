@@ -2,13 +2,14 @@
 // Social
 // =====================================================
 
-$footer-social-gap: 1rem !default;
+$footer-social-gap: 0.5rem !default;
 $footer-social-margin-bottom-md: 0.5rem !default;
 $footer-social-font-size: 1.5rem !default;
 
 .footer__social {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: $footer-social-gap;
 
     @include mb-down(md) {

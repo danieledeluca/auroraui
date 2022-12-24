@@ -11,9 +11,9 @@ $breakpoints: (
 ) !default;
 $break-offset: 0.02px !default;
 
-// Containers
+// Container
 $container-max-width: 1320px !default;
-$container-gap: 1rem !default;
+$container-padding-x: 1rem !default;
 
 // Grid
 $grid-columns: 12 !default;

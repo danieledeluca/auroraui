@@ -4,15 +4,16 @@
 
 $header-logo-margin-right: 1.25rem !default;
 $header-logo-padding: 1rem 0 !default;
+$header-logo-padding-md: 1rem $container-padding-x !default;
 $header-logo-height: 2.5rem !default;
 
 .header__logo {
     display: inline-block;
     margin-right: $header-logo-margin-right;
-    padding: $container-gap;
+    padding: $header-logo-padding;
 
-    @include mb-up(md) {
-        padding: $header-logo-padding;
+    @include mb-down(md) {
+        padding: $header-logo-padding-md;
     }
 
     .logo {

@@ -21,6 +21,7 @@ $input-disabled-opacity: $button-disabled-opacity !default;
 // Checkbox
 $checkbox-width: 1rem !default;
 $checkbox-height: $checkbox-width !default;
+$checkbox-margin: div($base-line-height - $checkbox-width, 2) 0.5rem 0 0 !default;
 $checkbox-checked-background-color: $input-focus-border-color !default;
 $checkbox-checked-color: color-contrast($checkbox-checked-background-color) !default;
 $checkbox-checked-background-image: svg-encode(
@@ -30,10 +31,16 @@ $checkbox-checked-background-image: svg-encode(
 // Radio
 $radio-width: $checkbox-width !default;
 $radio-height: $checkbox-height !default;
+$radio-margin: $checkbox-margin !default;
 $radio-checked-background-color: $checkbox-checked-background-color !default;
 $radio-checked-color: $checkbox-checked-color !default;
 $radio-checked-background-image: svg-encode(
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="2" fill="#{$radio-checked-color}"/></svg>'
+) !default;
+
+// Textarea
+$textarea-min-width: calc(
+    $base-line-height * ($base-font-size * 3) + $input-padding-y * 2 + $input-border-width * 2
 ) !default;
 
 // Select
@@ -42,11 +49,6 @@ $select-background-image: svg-encode(
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="#{$input-color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5l6 6 6-6"/></svg>'
 ) !default;
 $select-background-size: 1rem 0.75rem !default;
-
-// Textarea
-$textarea-min-width: calc(
-    $base-line-height * ($base-font-size * 3) + $input-padding-y * 2 + $input-border-width * 2
-) !default;
 
 // Legend
 $legend-margin-bottom: div($base-margin, 2) !default;

@@ -72,18 +72,16 @@
 
 @mixin button-icon {
     justify-content: center;
-    width: $button-icon-size;
-    height: $button-icon-size;
+    width: $button-icon-width;
     padding: 0;
+    aspect-ratio: 1 / 1;
 }
 
 @mixin button-icon-size($size) {
     @if $size == 'big' {
-        width: $button-big-icon-size;
-        height: $button-big-icon-size;
+        width: $button-big-icon-width;
     } @else if $size == 'small' {
-        width: $button-small-icon-size;
-        height: $button-small-icon-size;
+        width: $button-small-icon-width;
     }
 }
 

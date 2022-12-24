@@ -56,7 +56,7 @@ input {
     &[type='checkbox'] {
         width: $checkbox-width;
         height: $checkbox-height;
-        margin: div($base-line-height - $checkbox-width, 2) 0.5rem 0 0;
+        margin: $checkbox-margin;
 
         &:checked {
             background: $checkbox-checked-background-color url($checkbox-checked-background-image);
@@ -66,7 +66,7 @@ input {
     &[type='radio'] {
         width: $radio-width;
         height: $radio-height;
-        margin: div($base-line-height - $radio-width, 2) 0.5rem 0 0;
+        margin: $radio-margin;
         border-radius: 50%;
 
         &:checked {

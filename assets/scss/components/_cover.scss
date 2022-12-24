@@ -2,20 +2,20 @@
 // Cover
 // =====================================================
 
-$cover-padding: 7rem !default;
-$cover-padding-md: 5rem !default;
+$cover-padding-y: 7rem !default;
+$cover-padding-y-md: 5rem !default;
 
 $cover-content-max-width: 600px !default;
 
 .cover {
     display: block;
-    padding: $cover-padding 0;
+    padding: $cover-padding-y 0;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 
     @include mb-down(md) {
-        padding: $cover-padding-md 0;
+        padding: $cover-padding-y-md 0;
     }
 
     &[href] {
@@ -40,7 +40,7 @@ $cover-content-max-width: 600px !default;
             margin: 0 auto;
 
             @include mb-up(md) {
-                padding: 0 div($cover-padding, 2);
+                padding: 0 div($cover-padding-y, 2);
             }
         }
     }
@@ -52,17 +52,17 @@ $cover-content-max-width: 600px !default;
             margin-left: auto;
 
             @include mb-up(md) {
-                padding: 0 $cover-padding 0 0;
+                padding: 0 $cover-padding-y 0 0;
             }
         }
     }
 }
 
 .cover__content {
-    padding: 0 $container-gap;
+    padding: 0 $container-padding-x;
 
     @include mb-up(md) {
         max-width: $cover-content-max-width;
-        padding: 0 0 0 $cover-padding;
+        padding: 0 0 0 $cover-padding-y;
     }
 }
