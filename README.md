@@ -8,7 +8,7 @@ A lightweight HTML, CSS, and JavaScript framework.
 
 ## Features
 
--   Lightweight CSS file ![CSS size](https://img.shields.io/github/size/danieledeluca/rocket/assets/css/style.min.css?label&color)
+-   Lightweight CSS file (include font files) ![CSS size](https://img.shields.io/github/size/danieledeluca/rocket/assets/css/style.min.css?label&color)
 -   Minimal JavaScript ![JavaScript size](https://img.shields.io/github/size/danieledeluca/rocket/assets/js/app.min.js?label&color)
 -   Prebuilt components
 -   Icons font based on [Feathericons](https://feathericons.com/)
@@ -22,43 +22,25 @@ For all the details and the docs please visit the [documentation](http://daniele
 ### CSS
 
 ```html
-<link rel="stylesheet" href="assets/css/style.min.css" />
+<link rel="stylesheet" href="./dist/rocket.css" />
 ```
 
 or
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/danieledeluca/rocket/assets/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/danieledeluca/rocket/dist/rocket.css" />
 ```
 
 ### JavaScript
 
 ```html
-<script src="assets/js/app.min.js"></script>
+<script src="./dist/rocket.umd.cjs"></script>
 ```
 
 or
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/danieledeluca/rocket/assets/js/app.min.js"></script>
-```
-
-### Start the server
-
-```
-npm run serve
-```
-
-### Start the server and watch file for changes
-
-```
-npm run dev
-```
-
-### Compile CSS and JS files ready for **production**
-
-```
-npm run build
+<script src="https://cdn.jsdelivr.net/gh/danieledeluca/rocket/dist/rocket.umd.cjs"></script>
 ```
 
 ### Lint code trough Eslint and Stylelint (you can use `:js` or `:css` to lint only specif file)
@@ -67,7 +49,7 @@ npm run build
 npm run lint
 ```
 
-### Format code trough Prettier (you can use `:html` or `:js` or `:css` to lint only specif file)
+### Format code trough Prettier (you can use `:js` or `:css` to lint only specif file)
 
 ```
 npm run format
