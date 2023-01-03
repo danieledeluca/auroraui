@@ -26,11 +26,13 @@
     // Base variables
     --#{$prefix}-base-margin: #{$base-margin};
     --#{$prefix}-base-border-radius: #{$base-border-radius};
-    --#{$prefix}-base-background-color: #{$base-background-color};
-    --#{$prefix}-base-color: #{$base-color};
     --#{$prefix}-base-box-shadow-color: #{$base-box-shadow-color};
-    --#{$prefix}-base-font-family: #{$base-font-family};
-    --#{$prefix}-base-font-size: #{$base-font-size};
-    --#{$prefix}-base-font-weight: #{$base-font-weight};
-    --#{$prefix}-base-line-height: #{$base-line-height};
+
+    // Body variables
+    --#{$prefix}-body-background-color: #{$body-background-color};
+    --#{$prefix}-body-color: #{$body-color};
+    --#{$prefix}-body-font-family: #{$body-font-family};
+    --#{$prefix}-body-font-size: #{$body-font-size};
+    --#{$prefix}-body-font-weight: #{$body-font-weight};
+    --#{$prefix}-body-line-height: #{$body-line-height};
 }

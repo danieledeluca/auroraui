@@ -27,12 +27,12 @@ body {
     flex-direction: column; // 6
     min-height: 100vh; // 6
     margin: 0; // 1
-    background-color: $base-background-color; // 2
-    color: $base-color;
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    font-weight: $base-font-weight;
-    line-height: $base-line-height; // 3
+    background-color: $body-background-color; // 2
+    color: $body-color;
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height; // 3
     text-align: left;
     text-size-adjust: 100%; // 4
     -webkit-tap-highlight-color: rgba($black, 0); // 5

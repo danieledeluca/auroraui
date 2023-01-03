@@ -21,7 +21,7 @@
     }
 }
 
-@mixin reset-link($color: $base-color, $hover-color: null) {
+@mixin reset-link($color: $body-color, $hover-color: null) {
     color: $color;
     text-decoration: none;
 
