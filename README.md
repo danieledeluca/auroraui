@@ -8,8 +8,8 @@ A lightweight HTML, CSS, and JavaScript framework.
 
 ## Features
 
--   Lightweight CSS file (include font files) ![CSS size](https://img.shields.io/github/size/danieledeluca/rocket/assets/css/style.min.css?label&color)
--   Minimal JavaScript ![JavaScript size](https://img.shields.io/github/size/danieledeluca/rocket/assets/js/app.min.js?label&color)
+-   Lightweight CSS file (include font files) ![CSS size](https://img.shields.io/github/size/danieledeluca/rocket/dist/rocket.css?label&color)
+-   Minimal JavaScript ![JavaScript size](https://img.shields.io/github/size/danieledeluca/rocket/dist/rocket.umd.cjs?label&color)
 -   Prebuilt components
 -   Icons font based on [Feathericons](https://feathericons.com/)
 
