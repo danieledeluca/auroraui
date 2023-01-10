@@ -18,9 +18,7 @@ table {
         > :last-child {
             /* stylelint-disable-next-line max-nesting-depth, selector-max-compound-selectors */
             > * {
-                @include mb-up(md) {
-                    border-bottom-color: currentColor;
-                }
+                border-bottom-color: currentColor;
             }
         }
     }
@@ -30,36 +28,6 @@ caption {
     padding: $table-cell-padding 0;
     color: $table-caption-color;
     text-align: left;
-}
-
-thead,
-tfoot {
-    @include mb-down(md) {
-        display: none;
-    }
-}
-
-tbody {
-    > :not(:last-child) > :last-child {
-        @include mb-down(md) {
-            border-bottom-color: currentColor;
-        }
-    }
-
-    td {
-        @include mb-down(md) {
-            display: block;
-        }
-
-        &::before {
-            @include mb-down(md) {
-                content: attr(data-th) ': ';
-                display: inline-block;
-                padding-right: 0.5rem;
-                font-weight: $font-weight-bold;
-            }
-        }
-    }
 }
 
 // Th

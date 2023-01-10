@@ -3,6 +3,44 @@
 // =====================================================
 
 table {
+    &.table--mobile {
+        thead,
+        tfoot {
+            @include mb-down(md) {
+                display: none;
+            }
+        }
+
+        tbody {
+            /* stylelint-disable-next-line max-nesting-depth */
+            tr:not(:last-child) {
+                /* stylelint-disable-next-line max-nesting-depth, selector-max-compound-selectors */
+                td:last-child {
+                    @include mb-down(md) {
+                        border-bottom-color: currentColor;
+                    }
+                }
+            }
+
+            /* stylelint-disable-next-line max-nesting-depth */
+            td {
+                @include mb-down(md) {
+                    display: block;
+                }
+
+                /* stylelint-disable-next-line max-nesting-depth */
+                &::before {
+                    @include mb-down(md) {
+                        content: attr(data-th) ': ';
+                        display: inline-block;
+                        padding-right: 0.5rem;
+                        font-weight: $font-weight-bold;
+                    }
+                }
+            }
+        }
+    }
+
     &.table--stripped {
         tbody {
             tr:nth-of-type(odd) {
