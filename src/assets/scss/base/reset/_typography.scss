@@ -194,9 +194,3 @@ sub {
 sup {
     top: -0.5em;
 }
-
-// Selection
-::selection {
-    background-color: $primary;
-    color: color-contrast($primary);
-}
