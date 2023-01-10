@@ -33,15 +33,6 @@ caption {
 }
 
 thead,
-tbody,
-tfoot,
-tr,
-th,
-td {
-    border: 0 solid inherit;
-}
-
-thead,
 tfoot {
     @include mb-down(md) {
         display: none;
