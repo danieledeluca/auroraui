@@ -132,6 +132,13 @@ abbr[title] {
     text-decoration-skip-ink: none; // 3
 }
 
+// Address
+address {
+    @include last-child-no-margin;
+    font-style: normal;
+    line-height: inherit;
+}
+
 // Code
 // =====================================================
 // 1. Correct the inheritance and scaling of font size in all browsers
