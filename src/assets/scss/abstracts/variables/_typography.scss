@@ -22,7 +22,7 @@ $font-weight-bolder: 800 !default;
 $font-weight-black: 900 !default;
 
 // Headings
-$headings-margin-bottom: div($base-margin, 2) !default;
+$headings-margin-bottom: 0.5em !default;
 $headings-font-family: null !default;
 $headings-font-sizes: (
     'h1': $font-size * 2.5,
@@ -74,7 +74,7 @@ $list-padding-left: 2rem !default;
 $list-nested-margin: 0.25rem 0 !default;
 
 $description-list-title-font-weight: $font-weight-bold !default;
-$description-list-detail-margin-bottom: div($base-margin, 2) !default;
+$description-list-detail-margin-bottom: 0.5rem !default;
 
 // Hr
 $hr-height: 2px !default;

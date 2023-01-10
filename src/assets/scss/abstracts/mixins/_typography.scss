@@ -15,7 +15,7 @@
     }
 }
 
-@mixin last-child-no-margin($margin-bottom: $base-margin) {
+@mixin last-child-no-margin($margin-bottom: 1em) {
     &:not(:last-child) {
         margin-bottom: $margin-bottom;
     }

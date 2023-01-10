@@ -3,10 +3,10 @@
 // =====================================================
 
 // Label
-$label-margin-bottom: div($base-margin, 2) !default;
+$label-margin-bottom: 0.5rem !default;
 
 // Input
-$input-margin-bottom: $base-margin !default;
+$input-margin-bottom: 1rem !default;
 $input-padding-y: $button-padding-y !default;
 $input-padding-x: $button-padding-x !default;
 $input-background-color: $gray-100 !default;
@@ -51,5 +51,5 @@ $select-background-image: svg-encode(
 $select-background-size: 1rem 0.75rem !default;
 
 // Legend
-$legend-margin-bottom: div($base-margin, 2) !default;
+$legend-margin-bottom: 0.5em !default;
 $legend-font-size: 1.25rem !default;

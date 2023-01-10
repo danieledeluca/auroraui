@@ -13,7 +13,7 @@ figcaption {
     font-size: $figcaption-font-size;
 
     img + & {
-        margin-top: div($base-margin, 2);
+        margin-top: 0.5rem;
     }
 }
 
