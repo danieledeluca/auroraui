@@ -7,7 +7,7 @@
         "color-hex-length": "long",
         "declaration-property-value-disallowed-list": null,
         "function-parentheses-space-inside": "never-single-line",
-        "max-nesting-depth": [2, { "ignore": ["pseudo-classes"], "ignoreAtRules": ["/include/"] }],
+        "max-nesting-depth": [2, { "ignore": ["pseudo-classes"], "ignoreAtRules": ["/include/", "/each/", "/if/"] }],
         "selector-class-pattern": null,
         "selector-no-qualifying-type": [true, { "ignore": ["attribute", "class"] }],
         "scss/at-each-key-value-single-line": true,
