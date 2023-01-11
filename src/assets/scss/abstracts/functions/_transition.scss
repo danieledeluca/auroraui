@@ -2,6 +2,9 @@
 // Transition
 // =====================================================
 
+$transition-duration: 0.3s !default;
+$transition-timing-function: ease-in-out !default;
+
 @function transition($properties) {
     $properties-length: length($properties);
     $transition: '';

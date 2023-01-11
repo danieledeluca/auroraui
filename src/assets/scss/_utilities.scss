@@ -1,0 +1,17 @@
+// =====================================================
+// Utilities
+// =====================================================
+
+@each $utility, $value in $utilities {
+    @include utilities($value);
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include mb-up($breakpoint) {
+        @each $utility, $utility-value in $utilities {
+            @if (map-get($utility-value, responsive)) {
+                @include utilities($utility-value, '-' + #{$breakpoint});
+            }
+        }
+    }
+}

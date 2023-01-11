@@ -1,0 +1,26 @@
+// =====================================================
+// Utilities
+// =====================================================
+
+@mixin utilities($utility, $infix: '') {
+    $values: map-get($utility, values);
+
+    @each $key, $value in $values {
+        $properties: map-get($utility, property);
+
+        @if type-of($properties) == 'string' {
+            $properties: append((), $properties);
+        }
+
+        $property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
+        $property-class-modifier: '-' + $key;
+
+        @if $value != null {
+            .#{$property-class}#{$infix}#{$property-class-modifier} {
+                @each $property in $properties {
+                    #{$property}: $value !important;
+                }
+            }
+        }
+    }
+}
