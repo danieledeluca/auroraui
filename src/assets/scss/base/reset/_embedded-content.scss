@@ -4,8 +4,8 @@
 
 // Figure
 figure {
-    @include last-child-no-margin;
-    margin: 0;
+    @include last-child-no-margin-bottom;
+    margin: $figure-margin;
 }
 
 figcaption {

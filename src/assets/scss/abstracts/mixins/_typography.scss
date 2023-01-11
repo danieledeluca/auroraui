@@ -15,12 +15,6 @@
     }
 }
 
-@mixin last-child-no-margin($margin-bottom: 1em) {
-    &:not(:last-child) {
-        margin-bottom: $margin-bottom;
-    }
-}
-
 @mixin reset-link($color: $body-color, $hover-color: null) {
     color: $color;
     text-decoration: none;

@@ -23,9 +23,9 @@
 
 // Paragraphs
 p {
-    @include last-child-no-margin;
+    @include last-child-no-margin-bottom;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: $paragraph-margin-bottom;
 }
 
 // Links
@@ -67,8 +67,8 @@ small {
 
 // Blockquote
 blockquote {
-    @include last-child-no-margin;
-    margin: 0;
+    @include last-child-no-margin-bottom;
+    margin: $blockquote-margin;
     font-size: $blockquote-font-size;
 
     @include mb-down(md) {
@@ -76,7 +76,7 @@ blockquote {
     }
 
     figcaption {
-        margin: -1rem 0 1rem;
+        margin: $blockquote-figcaption-margin;
         color: $blockquote-figcaption-color;
         font-size: $blockquote-figcaption-font-size;
 
@@ -89,9 +89,9 @@ blockquote {
 // Lists
 ul,
 ol {
-    @include last-child-no-margin;
+    @include last-child-no-margin-bottom;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: $list-margin-bottom;
     padding-left: $list-padding-left;
 
     ul,
@@ -106,9 +106,9 @@ ol {
 
 // Description lists
 dl {
-    @include last-child-no-margin;
+    @include last-child-no-margin-bottom;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: $description-list-margin-bottom;
 }
 
 dt {
@@ -134,7 +134,8 @@ abbr[title] {
 
 // Address
 address {
-    @include last-child-no-margin;
+    @include last-child-no-margin-bottom;
+    margin-bottom: $address-margin-bottom;
     font-style: normal;
     line-height: inherit;
 }
@@ -153,14 +154,14 @@ samp {
 }
 
 // 1. Remove top margins from pre
-// 2. Remove bottom margins from last element
+// 2. Reset browser default bottom margin
 // 3. Don't allow content to break outside
 
 pre {
-    @include last-child-no-margin; // 2
+    @include last-child-no-margin-bottom;
     display: block;
     margin-top: 0; // 1
-    margin-bottom: 0; // 2
+    margin-bottom: $pre-margin-bottom; // 2
     overflow: auto; // 3
     font-size: $pre-font-size;
 

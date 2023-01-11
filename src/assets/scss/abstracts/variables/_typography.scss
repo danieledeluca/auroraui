@@ -50,6 +50,9 @@ $display-font-sizes: (
 $display-font-weight: $headings-font-weight !default;
 $display-line-height: $headings-line-height !default;
 
+// Paragraph
+$paragraph-margin-bottom: 1rem !default;
+
 // Lead
 $lead-font-family: null !default;
 $lead-font-size: $font-size * 1.25 !default;
@@ -67,17 +70,24 @@ $small-font-size: $font-size * 0.875 !default;
 $strong-font-weight: $font-weight-bold !default;
 
 // Blockquote
+$blockquote-margin: 0 0 1rem !default;
 $blockquote-font-size: $lead-font-size !default;
 $blockquote-font-size-md: $lead-font-size-md !default;
+$blockquote-figcaption-margin: -$paragraph-margin-bottom 0 $paragraph-margin-bottom !default;
 $blockquote-figcaption-color: $gray-600 !default;
 $blockquote-figcaption-font-size: $small-font-size !default;
 
 // List
+$list-margin-bottom: 1rem !default;
 $list-padding-left: 2rem !default;
 $list-nested-margin: 0.25rem 0 !default;
 
+$description-list-margin-bottom: 1rem !default;
 $description-list-title-font-weight: $font-weight-bold !default;
 $description-list-detail-margin-bottom: 0.5rem !default;
+
+// Address
+$address-margin-bottom: 1rem !default;
 
 // Hr
 $hr-height: 2px !default;
@@ -85,6 +95,7 @@ $hr-margin: 1.5rem 0 !default;
 $hr-background-color: $gray-300 !default;
 
 // Pre
+$pre-margin-bottom: 1rem !default;
 $pre-font-size: $small-font-size !default;
 
 // Sub and Sup

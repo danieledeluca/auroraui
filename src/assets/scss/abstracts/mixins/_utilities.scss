@@ -24,3 +24,9 @@
         }
     }
 }
+
+@mixin last-child-no-margin-bottom {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

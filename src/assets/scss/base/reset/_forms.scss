@@ -4,8 +4,9 @@
 
 // Label
 label {
-    @include last-child-no-margin($label-margin-bottom);
+    @include last-child-no-margin-bottom;
     display: block;
+    margin-bottom: $label-margin-bottom;
 }
 
 // Input
@@ -102,9 +103,9 @@ select {
 // 2. Reset the default outline behavior of fieldsets so they don't affect page layout
 
 fieldset {
-    @include last-child-no-margin;
+    @include last-child-no-margin-bottom;
     min-width: 0; // 1
-    margin: 0; // 2
+    margin: $fieldset-margin; // 2
     padding: 0; // 2
     border: 0; // 2
 }

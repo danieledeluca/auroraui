@@ -8,8 +8,9 @@
 // 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
 
 table {
-    @include last-child-no-margin;
+    @include last-child-no-margin-bottom;
     width: 100%;
+    margin-bottom: $table-margin-bottom;
     border-collapse: collapse; // 1
     border-color: inherit; // 2
     caption-side: $table-caption-side;

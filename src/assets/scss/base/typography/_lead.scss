@@ -3,7 +3,6 @@
 // =====================================================
 
 .lead {
-    @include last-child-no-margin;
     font-family: $lead-font-family;
     font-size: $lead-font-size;
     font-weight: $lead-font-weight;
