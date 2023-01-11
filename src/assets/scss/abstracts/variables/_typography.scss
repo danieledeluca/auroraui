@@ -25,7 +25,7 @@ $font-weight-bolder: 800 !default;
 $font-weight-black: 900 !default;
 
 // Headings
-$headings-margin-bottom: 0.5em !default;
+$headings-margin-bottom: 0.5rem !default;
 $headings-font-family: null !default;
 $headings-font-sizes: (
     'h1': $font-size * 2.5,
@@ -39,7 +39,7 @@ $headings-font-weight: $font-weight-semi-bold !default;
 $headings-line-height: 1.2 !default;
 
 // Display
-$display-margin-bottom: $headings-margin-bottom !default;
+$display-margin-bottom: 1rem !default;
 $display-font-family: $headings-font-family !default;
 $display-font-sizes: (
     'huge': $font-size * 5,
