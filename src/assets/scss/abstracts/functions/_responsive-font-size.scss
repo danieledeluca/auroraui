@@ -2,8 +2,6 @@
 // Responsive font size
 // =====================================================
 
-$rfs-breakpoint-key: 'xl' !default;
-
 @function rfs-value($font-size) {
     $base-value: 1.25rem !default;
     $rem-value: 16 !default;
