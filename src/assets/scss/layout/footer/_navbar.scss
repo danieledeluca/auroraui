@@ -65,7 +65,9 @@ $footer-navbar-link-parent-padding-right-md: $footer-navbar-link-lv0-padding-x-m
         }
 
         &.is-parent {
+            /* stylelint-disable-next-line max-nesting-depth */
             &.is-active {
+                /* stylelint-disable-next-line max-nesting-depth */
                 > .navbar {
                     @include mb-down(md) {
                         @include collapse-active;
@@ -73,6 +75,7 @@ $footer-navbar-link-parent-padding-right-md: $footer-navbar-link-lv0-padding-x-m
                 }
             }
 
+            /* stylelint-disable-next-line max-nesting-depth */
             > .navbar__link {
                 position: relative;
 

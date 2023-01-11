@@ -101,6 +101,7 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
 
             &:hover,
             &:focus-within {
+                /* stylelint-disable-next-line max-nesting-depth */
                 > .navbar {
                     @include mb-up(md) {
                         display: block;
@@ -118,7 +119,9 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
         }
 
         &.is-parent {
+            /* stylelint-disable-next-line max-nesting-depth */
             &.is-active {
+                /* stylelint-disable-next-line max-nesting-depth */
                 > .navbar {
                     @include mb-down(md) {
                         @include collapse-active;
@@ -126,6 +129,7 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
                 }
             }
 
+            /* stylelint-disable-next-line max-nesting-depth */
             > .navbar__link {
                 @include mb-down(md) {
                     padding-right: $header-navbar-link-parent-padding-right-md;

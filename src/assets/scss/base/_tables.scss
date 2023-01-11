@@ -43,6 +43,7 @@ table {
 
     &.table--stripped {
         tbody {
+            /* stylelint-disable-next-line max-nesting-depth */
             tr:nth-of-type(odd) {
                 background-color: $table-stripped-background-color;
             }

@@ -120,12 +120,14 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transition-delay: 0.12s;
             transition-timing-function: $hamburger-spin-active-transition-timing;
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 opacity: 0;
                 transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
             }
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 bottom: 0;
                 transform: rotate(-90deg);
@@ -160,16 +162,19 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transform: rotate(765deg);
             transition-timing-function: $hamburger-vortex-active-transition-timing;
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::before,
             &::after {
                 transition-delay: 0s;
             }
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 opacity: 0;
             }
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 bottom: 0;
                 transform: rotate(90deg);
@@ -203,6 +208,7 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transition-delay: 0.22s;
             transition-timing-function: $hamburger-collapse-active-transition-timing-1;
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 transform: rotate(-90deg);
@@ -210,6 +216,7 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
                     transform 0.13s 0.25s $hamburger-collapse-active-transition-timing-1;
             }
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 top: 0;
                 opacity: 0;
@@ -238,12 +245,14 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transition-delay: 0.12s;
             transition-timing-function: $hamburger-squeeze-active-transition-timing;
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 opacity: 0;
                 transition: top 0.075s ease, opacity 0.075s 0.12s ease;
             }
 
+            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 bottom: 0;
                 transform: rotate(-90deg);
