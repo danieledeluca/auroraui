@@ -8,6 +8,14 @@
     "browserslist": [
         "last 2 versions"
     ],
+    "keywords": [
+        "css",
+        "sass",
+        "responsive",
+        "front-end",
+        "framework",
+        "web"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "vite build",
