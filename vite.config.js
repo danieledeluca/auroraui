@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import autoprefixer from 'autoprefixer';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
@@ -6,21 +7,28 @@ export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, 'src/assets/js/app.js'),
-            name: 'Rocket',
             fileName: 'rocket',
+            name: 'Rocket',
         },
         rollupOptions: {
-            external: ['jquery', '@splidejs/splide'],
+            external: ['@splidejs/splide'],
             output: {
-                globals: {
-                    'jquery': '$',
-                    '@splidejs/splide': 'Splide',
-                },
                 assetFileNames: ({ name }) => {
                     if (name === 'style.css') return 'rocket.css';
                     return name;
                 },
+                globals: {
+                    '@splidejs/splide': 'Splide',
+                },
             },
+        },
+        sourcemap: true,
+        watch: true,
+    },
+    css: {
+        devSourcemap: true,
+        postcss: {
+            plugins: [autoprefixer()],
         },
     },
 });
