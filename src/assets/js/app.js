@@ -3,6 +3,8 @@
 // =====================================================
 
 import '../scss/style.scss';
-import './modules/navbar';
-import './modules/parallax';
-import './modules/slider';
+import * as rocketUtilities from './utilities';
+import RocketNavbar from './classes/Navbar';
+import RocketParallax from './classes/Parallax';
+
+export { rocketUtilities, RocketNavbar, RocketParallax };

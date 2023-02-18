@@ -21,4 +21,15 @@ function isMobile() {
     return window.innerWidth < mobileBreakpoint;
 }
 
-export { classes, mobileBreakpoint, isMobile };
+/**
+ * Prevent default behavior on click on empty links
+ */
+function preventClickOnEmptyLinks() {
+    document.querySelectorAll('a[href="#"]').forEach((emptyLink) => {
+        emptyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+        });
+    });
+}
+
+export { classes, mobileBreakpoint, isMobile, preventClickOnEmptyLinks };

@@ -59,7 +59,6 @@ npm run format
 
 | Package                                                | Version                                                                    |
 | ------------------------------------------------------ | -------------------------------------------------------------------------- |
-| [jquery](https://github.com/jquery/jquery)             | ![jquery version](https://img.shields.io/npm/v/jquery.svg?label)           |
 | [@splidejs/splide](https://github.com/Splidejs/splide) | ![splide version](https://img.shields.io/npm/v/@splidejs/splide.svg?label) |
 
 ## License

@@ -42,7 +42,6 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@splidejs/splide": "^4.1.4",
-        "jquery": "^3.6.3"
+        "@splidejs/splide": "^4.1.4"
     }
 }

@@ -7,12 +7,7 @@ const DEFAULT_OPTIONS = {
     scrollSpeed: 2,
 };
 
-export default class Parallax {
-    /**
-     * The element where the Parallax is applied
-     */
-    static element;
-
+export default class RocketParallax {
     /**
      * The default options
      */
@@ -27,7 +22,7 @@ export default class Parallax {
     constructor(element, options = {}) {
         this.element = element;
         this.options = {
-            ...Parallax.options,
+            ...RocketParallax.options,
             ...options,
             ...(JSON.parse(this.element.getAttribute(DATA_ATTRIBUTE)) || {}),
         };
@@ -37,11 +32,11 @@ export default class Parallax {
      * Initialize the instance
      */
     mount() {
-        this.#setBackgroundPosition();
-
         window.addEventListener('scroll', () => {
             this.#setBackgroundPosition();
         });
+
+        window.dispatchEvent(new Event('scroll'));
     }
 
     /**
