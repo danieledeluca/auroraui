@@ -4,7 +4,7 @@
 
 // Headings
 // =====================================================
-// 1. Remove top margins from headings
+// 1. Remove top margin from headings
 
 %heading {
     margin-top: 0; // 1
@@ -22,10 +22,14 @@
 }
 
 // Paragraphs
+// =====================================================
+// 1. Remove top margin
+// 2. Reset bottom margin to use `rem` instead of `em`
+
 p {
     @include last-child-no-margin-bottom;
-    margin-top: 0;
-    margin-bottom: $paragraph-margin-bottom;
+    margin-top: 0; // 1
+    margin-bottom: $paragraph-margin-bottom; // 2
 }
 
 // Links
@@ -65,27 +69,6 @@ small {
     @extend %small;
 }
 
-// Blockquote
-blockquote {
-    @include last-child-no-margin-bottom;
-    margin: $blockquote-margin;
-    font-size: $blockquote-font-size;
-
-    @include mb-down(md) {
-        font-size: $blockquote-font-size-md;
-    }
-
-    figcaption {
-        margin: $blockquote-figcaption-margin;
-        color: $blockquote-figcaption-color;
-        font-size: $blockquote-figcaption-font-size;
-
-        &::before {
-            content: '\2014\00A0';
-        }
-    }
-}
-
 // Lists
 ul,
 ol {
@@ -120,6 +103,61 @@ dd {
     margin-left: 0;
 }
 
+// Blockquote
+blockquote {
+    @include last-child-no-margin-bottom;
+    margin: 0 0 $blockquote-margin-bottom;
+    font-size: $blockquote-font-size;
+
+    @include mb-down(md) {
+        font-size: $blockquote-font-size-md;
+    }
+
+    + figcaption {
+        margin: $blockquote-figcaption-margin;
+        color: $blockquote-figcaption-color;
+        font-size: $blockquote-figcaption-font-size;
+
+        &::before {
+            content: $blockquote-figcaption-icon;
+        }
+    }
+}
+
+// Address
+address {
+    @include last-child-no-margin-bottom;
+    margin-bottom: $address-margin-bottom;
+    font-style: normal;
+    line-height: inherit;
+}
+
+// Mark
+mark {
+    padding: $mark-padding;
+    background-color: $mark-background-color;
+}
+
+// Sub and Sup
+// =====================================================
+// Prevent `sub` and `sup` elements from affecting the line height in all browsers
+
+sub,
+sup {
+    position: relative;
+    font-size: $sub-sup-font-size;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
 // Abbreviations
 // =====================================================
 // 1. Add the correct text decoration in Chrome, Edge, Opera, and Safari
@@ -130,14 +168,6 @@ abbr[title] {
     text-decoration: underline dotted; // 1
     cursor: help; // 2
     text-decoration-skip-ink: none; // 3
-}
-
-// Address
-address {
-    @include last-child-no-margin-bottom;
-    margin-bottom: $address-margin-bottom;
-    font-style: normal;
-    line-height: inherit;
 }
 
 // Code
@@ -164,34 +194,39 @@ pre {
     margin-bottom: $pre-margin-bottom; // 2
     overflow: auto; // 3
     font-size: $pre-font-size;
+}
 
-    code {
+code {
+    color: $code-color;
+    font-size: $code-font-size;
+    word-wrap: break-word;
+
+    pre & {
         color: inherit;
+        font-size: inherit;
         word-break: normal;
     }
 }
 
-code {
-    color: $primary;
-    word-wrap: break-word;
+kbd {
+    padding: $kbd-padding;
+    background-color: $kbd-background-color;
+    color: $kbd-color;
+    border-radius: $kbd-border-radius;
+    font-size: $kbd-font-size;
+
+    kbd {
+        padding: 0;
+        font-size: 1em;
+    }
 }
 
-// Sub and Sup
+// Hr
 // =====================================================
-// Prevent `sub` and `sup` elements from affecting the line height in all browsers
+// 1. Reset Firefox's gray color
 
-sub,
-sup {
-    position: relative;
-    font-size: $sub-sup-font-size;
-    line-height: 0;
-    vertical-align: baseline;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-sup {
-    top: -0.5em;
+hr {
+    margin: $hr-margin;
+    color: inherit; // 1
+    border-top: $hr-border;
 }

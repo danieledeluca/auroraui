@@ -2,50 +2,34 @@
 // Pagination
 // =====================================================
 
-$pagination-width: 2rem !default;
-$pagination-height: $pagination-width !default;
-$pagination-gap: 0.5rem !default;
-$pagination-background-color: $white !default;
-$pagination-color: color-contrast($pagination-background-color) !default;
-$pagination-border-radius: $base-border-radius !default;
-$pagination-box-shadow: 0 0 10px $base-box-shadow-color !default;
-$pagination-font-size: $small-font-size !default;
-$pagination-hover-background-color: $primary !default;
-$pagination-hover-color: color-contrast($pagination-hover-background-color) !default;
+$pagination-list-gap: 0.5rem !default;
+
+$pagination-link-background-color: $white !default;
+$pagination-link-box-shadow: 0 0 10px rgba($black, 0.05) !default;
+$pagination-link-size: 'small' !default;
+
+$pagination-link-active-background-color: $primary !default;
 
 .pagination__list {
     @include reset-list;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: $pagination-gap;
+    gap: $pagination-list-gap;
 }
 
 .pagination__item {
     &.is-active {
         .pagination__link {
-            background-color: $pagination-hover-background-color;
-            color: $pagination-hover-color;
+            @include button-primary($pagination-link-active-background-color);
         }
     }
 }
 
 .pagination__link {
-    @include reset-link($pagination-color);
-    @include transition(background-color, color);
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: $pagination-width;
-    height: $pagination-height;
-    background-color: $pagination-background-color;
-    border-radius: $pagination-border-radius;
-    box-shadow: $pagination-box-shadow;
-    font-size: $pagination-font-size;
-
-    &:hover,
-    &:focus {
-        background-color: $pagination-hover-background-color;
-        color: $pagination-hover-color;
-    }
+    @include button;
+    @include button-primary($pagination-link-background-color);
+    @include button-icon;
+    @include button-icon-size($pagination-link-size);
+    box-shadow: $pagination-link-box-shadow;
 }

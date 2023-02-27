@@ -2,34 +2,34 @@
 // Breadcrumb
 // =====================================================
 
-$breadcrumb-gap: 0.25rem !default;
-$breadcrumb-color: $body-color !default;
-$breadcrumb-font-size: $small-font-size !default;
+$breadcrumb-list-gap: 0.25rem !default;
 
-$breadcrumb-separator-icon: 'chevron-right' !default;
+$breadcrumb-item-divider-icon: 'chevron-right' !default;
 
+$breadcrumb-link-color: $body-color !default;
+$breadcrumb-link-font-size: $small-font-size !default;
 $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
 
 .breadcrumb__list {
     @include reset-list;
     display: flex;
     align-items: center;
-    gap: $breadcrumb-gap;
+    gap: $breadcrumb-list-gap;
     flex-wrap: wrap;
-    font-size: $breadcrumb-font-size;
 }
 
 .breadcrumb__item {
     &:not(:last-child) {
         &::after {
-            @include icon($breadcrumb-separator-icon);
+            @include icon($breadcrumb-item-divider-icon);
             vertical-align: middle;
         }
     }
 }
 
 .breadcrumb__link {
-    @include reset-link($breadcrumb-color);
+    @include reset-link($breadcrumb-link-color);
+    font-size: $breadcrumb-link-font-size;
 
     &[href] {
         font-weight: $breadcrumb-link-font-weight;

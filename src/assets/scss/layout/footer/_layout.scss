@@ -5,8 +5,9 @@
 $footer-background-color: $gray-200 !default;
 $footer-color: $body-color !default;
 
-$footer-content-padding: 1.5rem 0 !default;
+$footer-navbar-padding: 1.5rem 0 !default;
 
+$footer-bottom-padding: $footer-navbar-padding !default;
 $footer-bottom-border-top: 2px solid $gray-300 !default;
 
 .footer {
@@ -14,15 +15,15 @@ $footer-bottom-border-top: 2px solid $gray-300 !default;
     color: $footer-color;
 }
 
-.footer__navbar,
-.footer__bottom {
-    padding: $footer-content-padding;
+.footer__navbar {
+    padding: $footer-navbar-padding;
 }
 
 .footer__bottom {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: $footer-bottom-padding;
 
     @include mb-up(md) {
         justify-content: space-between;

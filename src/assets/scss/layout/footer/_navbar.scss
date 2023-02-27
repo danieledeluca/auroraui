@@ -3,27 +3,33 @@
 // =====================================================
 
 $footer-navbar-min-width: 200px !default;
+
 $footer-navbar-lv0-gap: 2rem !default;
+
 $footer-navbar-lv1-margin-top: 0.5rem !default;
 
 $footer-navbar-item-lv0-border-bottom-md: 1px solid $gray-400 !default;
 
 $footer-navbar-link-padding: 0.25rem 0 !default;
+
+$footer-navbar-link-lv0-padding-y-md: 1.5rem !default;
 $footer-navbar-link-lv0-padding-x-md: 0.5rem !default;
-$footer-navbar-link-lv0-padding-md: 1.5rem 0.5rem !default;
+$footer-navbar-link-lv0-padding-md: $footer-navbar-link-lv0-padding-y-md $footer-navbar-link-lv0-padding-x-md !default;
 $footer-navbar-link-lv0-color: $body-color !default;
 $footer-navbar-link-lv0-font-size: 0.75rem !default;
 $footer-navbar-link-lv0-font-weight: $font-weight-semi-bold !default;
 $footer-navbar-link-lv0-text-transform: uppercase !default;
+
 $footer-navbar-link-lv1-padding-md: 0.25rem 0.5rem !default;
 $footer-navbar-link-lv1-color: $gray-600 !default;
 $footer-navbar-link-lv1-font-size: $small-font-size !default;
 $footer-navbar-link-lv1-hover-color: $body-color !default;
 
-$footer-navbar-toggle-padding: $footer-navbar-link-lv0-padding-md !default;
-$footer-navbar-toggle-font-size: $body-font-size !default;
-
-$footer-navbar-link-parent-padding-right-md: $footer-navbar-link-lv0-padding-x-md * 2 + $footer-navbar-toggle-font-size !default;
+$footer-navbar-toggle-icon: 'chevron-down' !default;
+$footer-navbar-toggle-height: calc(
+    $footer-navbar-link-lv0-font-size * $body-line-height + $footer-navbar-link-lv0-padding-y-md * 2
+) !default;
+$footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !default;
 
 .footer__navbar {
     .navbar {
@@ -65,6 +71,8 @@ $footer-navbar-link-parent-padding-right-md: $footer-navbar-link-lv0-padding-x-m
         }
 
         &.is-parent {
+            position: relative;
+
             /* stylelint-disable-next-line max-nesting-depth */
             &.is-active {
                 /* stylelint-disable-next-line max-nesting-depth */
@@ -72,15 +80,6 @@ $footer-navbar-link-parent-padding-right-md: $footer-navbar-link-lv0-padding-x-m
                     @include mb-down(md) {
                         @include collapse-active;
                     }
-                }
-            }
-
-            /* stylelint-disable-next-line max-nesting-depth */
-            > .navbar__link {
-                position: relative;
-
-                @include mb-down(md) {
-                    padding-right: $footer-navbar-link-parent-padding-right-md;
                 }
             }
         }
@@ -112,17 +111,20 @@ $footer-navbar-link-parent-padding-right-md: $footer-navbar-link-lv0-padding-x-m
     }
 
     .navbar__toggle {
+        @include mobile-only;
         position: absolute;
         top: 0;
         right: 0;
-        display: inline-flex;
+        display: flex;
+        justify-content: flex-end;
         align-items: center;
-        height: 100%;
-        padding: $footer-navbar-toggle-padding;
-        font-size: $footer-navbar-toggle-font-size;
+        height: $footer-navbar-toggle-height;
+        padding-right: $footer-navbar-toggle-padding-right;
+        aspect-ratio: 1 / 2;
+        cursor: pointer;
 
-        @include mb-up(md) {
-            display: none;
+        &::before {
+            @include icon($footer-navbar-toggle-icon);
         }
     }
 }

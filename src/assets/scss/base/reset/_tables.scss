@@ -17,21 +17,18 @@ table {
 
     > :not(:last-child) {
         > :last-child {
-            /* stylelint-disable-next-line max-nesting-depth, selector-max-compound-selectors */
-            > * {
-                border-bottom-color: currentColor;
-            }
+            border-bottom: $table-group-divider-border-bottom;
         }
     }
 }
 
 caption {
-    padding: $table-cell-padding 0;
+    padding: $table-caption-padding;
     color: $table-caption-color;
     text-align: left;
 }
 
-// Th
+// Table cell
 // =====================================================
 // 1. Matches default `<td>` alignment by inheriting `text-align`
 // 2. Fix alignment for Safari
@@ -39,14 +36,10 @@ caption {
 th {
     text-align: inherit; // 1
     text-align: -webkit-match-parent; // 2
-
-    &:not([align]) {
-        text-align: left;
-    }
 }
 
 th,
 td {
-    border-bottom: $table-border;
     padding: $table-cell-padding;
+    border-bottom: $table-cell-border-bottom;
 }

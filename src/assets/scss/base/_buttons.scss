@@ -17,20 +17,10 @@
 
     &.button--big {
         @include button-size('big');
-
-        &.button--icon-left,
-        &.button--icon-right {
-            --button-icon-margin: #{$button-big-icon-margin};
-        }
     }
 
     &.button--small {
         @include button-size('small');
-
-        &.button--icon-left,
-        &.button--icon-right {
-            --button-icon-margin: #{$button-small-icon-margin};
-        }
     }
 
     &.button--icon {
@@ -43,13 +33,5 @@
         &.button--small {
             @include button-icon-size('small');
         }
-    }
-
-    &.button--icon-left {
-        @include button-icon-position('left');
-    }
-
-    &.button--icon-right {
-        @include button-icon-position('right');
     }
 }

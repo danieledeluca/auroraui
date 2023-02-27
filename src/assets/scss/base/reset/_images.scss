@@ -8,16 +8,17 @@ figure {
     margin: $figure-margin;
 }
 
+// Figcaption
 figcaption {
     color: $figcaption-color;
     font-size: $figcaption-font-size;
 
     img + & {
-        margin-top: 0.5rem;
+        margin-top: $figcaption-margin-top;
     }
 }
 
-// Images and content
+// Images and svg
 img,
 svg {
     vertical-align: middle;

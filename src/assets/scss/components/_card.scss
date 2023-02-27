@@ -5,8 +5,8 @@
 $card-margin-bottom: 2rem !default;
 $card-background-color: $white !default;
 $card-color: color-contrast($card-background-color) !default;
-$card-border-radius: $base-border-radius !default;
-$card-box-shadow: 0 0 20px $base-box-shadow-color !default;
+$card-border-radius: 0.25rem !default;
+$card-box-shadow: 0 0 20px rgba($black, 0.05) !default;
 
 $card-image-height: 300px !default;
 $card-image-height-md: 200px !default;

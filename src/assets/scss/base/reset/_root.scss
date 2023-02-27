@@ -23,10 +23,6 @@
         --#{$prefix}-#{$color}: #{$value};
     }
 
-    // Base variables
-    --#{$prefix}-base-border-radius: #{$base-border-radius};
-    --#{$prefix}-base-box-shadow-color: #{$base-box-shadow-color};
-
     // Body variables
     --#{$prefix}-body-background-color: #{$body-background-color};
     --#{$prefix}-body-color: #{$body-color};

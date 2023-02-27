@@ -17,7 +17,7 @@
 }
 
 @mixin mb-down($break) {
-    $max: (find-break($break) - $break-offset);
+    $max: find-break($break) - $break-offset;
 
     @media (max-width: $max) {
         @content;
@@ -26,7 +26,7 @@
 
 @mixin mb-between($lower-break, $upper-break) {
     $min: find-break($lower-break);
-    $max: (find-break($upper-break) - $break-offset);
+    $max: find-break($upper-break) - $break-offset;
 
     @media (min-width: $min) and (max-width: $max) {
         @content;

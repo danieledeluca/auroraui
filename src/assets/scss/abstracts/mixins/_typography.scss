@@ -9,19 +9,15 @@
     font-size: $value;
 
     @if $value != $rfs-value {
-        @include mb-down($rfs-breakpoint-key) {
+        @include mb-down(xl) {
             font-size: $rfs-value;
         }
     }
 }
 
-@mixin reset-link($color: $body-color, $hover-color: null) {
+@mixin reset-link($color: $body-color, $hover-color: $color) {
     color: $color;
     text-decoration: none;
-
-    @if $hover-color == null {
-        $hover-color: $color;
-    }
 
     &:hover,
     &:focus {

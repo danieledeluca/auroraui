@@ -1,0 +1,26 @@
+// =====================================================
+// Transition
+// =====================================================
+
+$transition-duration: 0.3s !default;
+$transition-timing-function: ease-in-out !default;
+
+@function transition($properties...) {
+    $properties-length: length($properties);
+    $transition: '';
+
+    @if $properties-length > 0 {
+        @each $property in $properties {
+            $index: index($properties, $property);
+            $transition: '#{$transition}#{$property} #{$transition-duration} #{$transition-timing-function}';
+
+            @if $index < $properties-length {
+                $transition: '#{$transition}, ';
+            }
+        }
+    } @else {
+        $transition: 'all #{$transition-duration} #{$transition-timing-function}';
+    }
+
+    @return unquote($transition);
+}

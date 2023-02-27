@@ -46,7 +46,5 @@
         );
     }
 
-    $luminance: 0.2126 * map-get($rgb, 'red') + 0.7152 * map-get($rgb, 'green') + 0.0722 * map-get($rgb, 'blue');
-
-    @return $luminance;
+    @return 0.2126 * map-get($rgb, 'red') + 0.7152 * map-get($rgb, 'green') + 0.0722 * map-get($rgb, 'blue');
 }

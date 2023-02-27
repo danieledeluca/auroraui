@@ -5,7 +5,12 @@
 $cover-padding-y: 7rem !default;
 $cover-padding-y-md: 5rem !default;
 
+$cover-overlay-background-color: rgba($black, 0.5) !default;
+$cover-overlay-color: color-contrast($cover-overlay-background-color) !default;
+
 $cover-content-max-width: 600px !default;
+$cover-content-padding: 0 0 0 $cover-padding-y !default;
+$cover-content-padding-md: 0 1rem !default;
 
 .cover {
     display: block;
@@ -21,12 +26,25 @@ $cover-content-max-width: 600px !default;
     &[href] {
         @include reset-link;
 
-        &.overlay {
-            @include reset-link($overlay-color);
+        &.cover--overlay {
+            @include reset-link($cover-overlay-color);
         }
     }
 
-    &.overlay {
+    &.cover--overlay {
+        position: relative;
+        color: $cover-overlay-color;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $cover-overlay-background-color;
+        }
+
         .cover__content {
             position: relative;
             z-index: 1;
@@ -59,10 +77,13 @@ $cover-content-max-width: 600px !default;
 }
 
 .cover__content {
-    padding: 0 $container-padding-x;
+    padding: $cover-content-padding;
 
     @include mb-up(md) {
         max-width: $cover-content-max-width;
-        padding: 0 0 0 $cover-padding-y;
+    }
+
+    @include mb-down(md) {
+        padding: $cover-content-padding-md;
     }
 }

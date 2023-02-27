@@ -1,0 +1,16 @@
+// =====================================================
+// Animations
+// =====================================================
+
+// Collapse
+// =====================================================
+@mixin collapse {
+    max-height: 0;
+    transition: transition(max-height);
+    overflow-y: hidden;
+}
+
+@mixin collapse-active($max-height: 50vh) {
+    max-height: $max-height;
+    overflow-y: auto;
+}

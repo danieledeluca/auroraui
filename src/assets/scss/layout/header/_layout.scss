@@ -2,9 +2,8 @@
 // Layout
 // =====================================================
 
-$header-height: $scroll-padding-top !default;
 $header-background-color: $white !default;
-$header-box-shadow: 0 5px 20px $base-box-shadow-color !default;
+$header-box-shadow: 0 5px 20px rgba($black, 0.05) !default;
 
 .nav-open {
     @include mb-down(md) {
@@ -20,12 +19,6 @@ $header-box-shadow: 0 5px 20px $base-box-shadow-color !default;
     background-color: $header-background-color;
     box-shadow: $header-box-shadow;
     z-index: 100;
-
-    .container {
-        @include mb-down(md) {
-            padding: 0;
-        }
-    }
 }
 
 .header__inner {

@@ -3,27 +3,39 @@
 // =====================================================
 
 $header-navbar-background-color: $white !default;
+
 $header-navbar-lv1-min-width: 200px !default;
 $header-navbar-lv1-background-color: $white !default;
 $header-navbar-lv1-background-color-md: $gray-200 !default;
 
 $header-navbar-item-lv0-border-md: 1px solid $gray-300 !default;
+
 $header-navbar-item-lv1-border: $header-navbar-item-lv0-border-md !default;
 
+$header-navbar-link-gap: 0.25rem !default;
 $header-navbar-link-color: $gray-700 !default;
 $header-navbar-link-color-md: $body-color !default;
 $header-navbar-link-font-size: $small-font-size !default;
 $header-navbar-link-hover-color: $body-color !default;
 $header-navbar-link-hover-color-md: $header-navbar-link-hover-color !default;
-$header-navbar-link-lv0-padding: 0.5rem 0.75rem !default;
-$header-navbar-link-lv0-padding-x-md: $container-padding-x !default;
-$header-navbar-link-lv0-padding-md: 1.25rem $header-navbar-link-lv0-padding-x-md !default;
-$header-navbar-link-lv0-font-weight-md: $font-weight-medium !default;
-$header-navbar-link-lv1-padding: 0.75rem $container-padding-x !default;
-$header-navbar-link-parent-padding-right-md: $header-navbar-link-lv0-padding-x-md * 2 + $header-navbar-link-font-size !default;
-$header-navbar-link-button-padding-md: $header-navbar-link-lv1-padding !default;
 
-$header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
+$header-navbar-link-lv0-padding-y-md: 1rem !default;
+$header-navbar-link-lv0-padding-x-md: 1rem !default;
+$header-navbar-link-lv0-padding: 0.5rem 0.75rem !default;
+$header-navbar-link-lv0-padding-md: $header-navbar-link-lv0-padding-y-md $header-navbar-link-lv0-padding-x-md !default;
+$header-navbar-link-lv0-font-weight-md: $font-weight-medium !default;
+
+$header-navbar-link-lv1-padding: 0.75rem 1rem !default;
+
+$header-navbar-button-width-md: calc(100% - #{$header-navbar-link-lv0-padding-x-md} * 2) !default;
+$header-navbar-button-margin-md: $header-navbar-link-lv0-padding-md !default;
+$header-navbar-button-padding: $header-navbar-link-lv0-padding !default;
+$header-navbar-button-padding-md: $header-navbar-link-lv0-padding-md !default;
+
+$header-navbar-toggle-icon: 'chevron-down' !default;
+$header-navbar-toggle-height: calc(
+    $header-navbar-link-font-size * $body-line-height + $header-navbar-link-lv0-padding-y-md * 2
+) !default;
 
 .header__navbar {
     background-color: $header-navbar-background-color;
@@ -49,9 +61,9 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
 
     &.header__navbar--slide-in {
         @include mb-down(md) {
-            @include transition(right);
             right: -100%;
             height: calc(100vh - 100%);
+            transition: transition(right);
             overflow-y: auto;
         }
 
@@ -119,6 +131,8 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
         }
 
         &.is-parent {
+            position: relative;
+
             /* stylelint-disable-next-line max-nesting-depth */
             &.is-active {
                 /* stylelint-disable-next-line max-nesting-depth */
@@ -131,8 +145,11 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
 
             /* stylelint-disable-next-line max-nesting-depth */
             > .navbar__link {
-                @include mb-down(md) {
-                    padding-right: $header-navbar-link-parent-padding-right-md;
+                /* stylelint-disable-next-line max-nesting-depth */
+                &::after {
+                    @include mb-up(md) {
+                        @include icon($header-navbar-toggle-icon);
+                    }
                 }
             }
         }
@@ -140,8 +157,9 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
 
     .navbar__link {
         @include reset-link($header-navbar-link-color, $header-navbar-link-hover-color);
-        position: relative;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: $header-navbar-link-gap;
         width: 100%;
         font-size: $header-navbar-link-font-size;
 
@@ -161,29 +179,36 @@ $header-navbar-toggle-padding-md: $header-navbar-link-lv0-padding-md !default;
         &.lv1 {
             padding: $header-navbar-link-lv1-padding;
         }
+    }
 
-        &.button {
-            @include mb-down(md) {
-                width: calc(100% - $container-padding-x * 2);
-                margin: $header-navbar-link-lv0-padding-md;
-                padding: $header-navbar-link-button-padding-md;
-            }
+    .navbar__button {
+        @include button;
+        @include button-primary($primary);
+        /* stylelint-disable-next-line order/order */
+        --#{$prefix}-button-padding: #{$header-navbar-button-padding};
+        --#{$prefix}-button-font-size: #{$header-navbar-link-font-size};
+
+        @include mb-down(md) {
+            --#{$prefix}-button-padding: #{$header-navbar-button-padding-md};
+            width: $header-navbar-button-width-md;
+            margin: $header-navbar-button-margin-md;
         }
     }
 
     .navbar__toggle {
-        @include mb-up(md) {
-            vertical-align: middle;
-        }
+        @include mobile-only;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $header-navbar-toggle-height;
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
 
-        @include mb-down(md) {
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: inline-flex;
-            align-items: center;
-            height: 100%;
-            padding: $header-navbar-toggle-padding-md;
+        &::before {
+            @include icon($header-navbar-toggle-icon);
         }
     }
 }

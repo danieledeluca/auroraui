@@ -2,24 +2,24 @@
 // Hamburger
 // =====================================================
 
+$header-hamburger-margin-right: -$container-padding-x !default;
+$header-hamburger-padding: 0 $container-padding-x !default;
+
 $header-hamburger-layer-width: 22px !default;
 $header-hamburger-layer-height: 3.5px !default;
 $header-hamburger-layer-spacing: 3.5px !default;
 $header-hamburger-layer-color: $body-color !default;
-$header-hamburger-layer-border-radius: $base-border-radius !default;
+$header-hamburger-layer-border-radius: 100px !default;
 
 .header__hamburger {
+    @include mobile-only;
     display: flex;
     align-items: center;
-    padding: 0 $container-padding-x;
+    margin-right: $header-hamburger-margin-right;
+    padding: $header-hamburger-padding;
     cursor: pointer;
 
-    @include mb-up(md) {
-        display: none;
-    }
-
     &::after {
-        @include transition(opacity, visibility);
         content: '';
         position: absolute;
         top: 100%;
@@ -29,11 +29,8 @@ $header-hamburger-layer-border-radius: $base-border-radius !default;
         background-color: rgba($black, 0.5);
         opacity: 0;
         visibility: hidden;
+        transition: transition(opacity, visibility);
         z-index: -1;
-
-        @include mb-up(md) {
-            display: none;
-        }
     }
 
     .nav-open & {

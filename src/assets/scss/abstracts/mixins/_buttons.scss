@@ -3,16 +3,24 @@
 // =====================================================
 
 @mixin button {
-    @include transition(background-color, color, border-color);
+    --#{$prefix}-button-padding: #{$button-padding-y $button-padding-x};
+    --#{$prefix}-button-background-color: #{$button-background-color};
+    --#{$prefix}-button-color: #{$button-color};
+    --#{$prefix}-button-border-color: #{$button-border-color};
+    --#{$prefix}-button-font-size: #{$button-font-size};
+    --#{$prefix}-button-hover-background-color: #{$button-background-color};
+    --#{$prefix}-button-hover-color: #{$button-color};
+    --#{$prefix}-button-hover-border-color: #{$button-border-color};
+    --#{$prefix}-button-icon-margin: #{$button-icon-margin};
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: $button-padding-y $button-padding-x;
-    background-color: $button-background-color;
-    color: $button-color;
-    border: $button-border;
+    padding: var(--#{$prefix}-button-padding);
+    background-color: var(--#{$prefix}-button-background-color);
+    color: var(--#{$prefix}-button-color);
+    border: $button-border-width solid var(--#{$prefix}-button-border-color);
     border-radius: $button-border-radius;
-    font-size: $button-font-size;
+    font-size: var(--#{$prefix}-button-font-size);
     font-weight: $button-font-weight;
     line-height: $button-line-height;
     text-align: center;
@@ -21,82 +29,68 @@
     text-shadow: none;
     cursor: pointer;
     user-select: none;
+    transition: transition(background-color, color, border-color);
     transition-duration: 0.15s;
 
     &:hover,
     &:focus {
-        color: $button-color;
+        background-color: var(--#{$prefix}-button-hover-background-color);
+        color: var(--#{$prefix}-button-hover-color);
+        border-color: var(--#{$prefix}-button-hover-border-color);
     }
 
     &:disabled {
         opacity: $button-disabled-opacity;
         cursor: auto;
     }
+
+    > :not([hidden]) {
+        ~ :not([hidden]) {
+            margin-left: var(--#{$prefix}-button-icon-margin);
+        }
+    }
 }
 
-@mixin button-primary($color) {
-    background-color: $color;
-    color: color-contrast($color);
-    border-color: $color;
-
-    &:hover,
-    &:focus {
-        $color-darken: darken($color, 5);
-
-        background-color: $color-darken;
-        color: color-contrast($color-darken);
-        border-color: $color-darken;
-    }
+@mixin button-primary($color, $hover-color: darken($color, 5)) {
+    --#{$prefix}-button-background-color: #{$color};
+    --#{$prefix}-button-color: #{color-contrast($color)};
+    --#{$prefix}-button-border-color: #{$color};
+    --#{$prefix}-button-hover-background-color: #{$hover-color};
+    --#{$prefix}-button-hover-color: #{color-contrast($hover-color)};
+    --#{$prefix}-button-hover-border-color: #{$hover-color};
 }
 
 @mixin button-secondary($color) {
-    color: $color;
-    border-color: $color;
+    --#{$prefix}-button-color: #{$color};
+    --#{$prefix}-button-border-color: #{$color};
+    --#{$prefix}-button-hover-background-color: #{$color};
+    --#{$prefix}-button-hover-color: #{color-contrast($color)};
+}
 
-    &:hover,
-    &:focus {
-        background-color: $color;
-        color: color-contrast($color);
-    }
+@mixin button-icon {
+    --#{$prefix}-button-icon-width: #{$button-icon-width};
+    --#{$prefix}-button-padding: 0;
+    justify-content: center;
+    width: var(--#{$prefix}-button-icon-width);
+    aspect-ratio: 1 / 1;
 }
 
 @mixin button-size($size) {
     @if $size == 'big' {
-        padding: $button-big-padding-y $button-big-padding-x;
-        font-size: $button-big-font-size;
+        --#{$prefix}-button-padding: #{$button-big-padding-y $button-big-padding-x};
+        --#{$prefix}-button-font-size: #{$button-big-font-size};
+        --#{$prefix}-button-icon-margin: #{$button-big-icon-margin};
     } @else if $size == 'small' {
-        padding: $button-small-padding-y $button-small-padding-x;
-        font-size: $button-small-font-size;
+        --#{$prefix}-button-padding: #{$button-small-padding-y $button-small-padding-x};
+        --#{$prefix}-button-font-size: #{$button-small-font-size};
+        --#{$prefix}-button-icon-margin: #{$button-small-icon-margin};
     }
-}
-
-@mixin button-icon {
-    justify-content: center;
-    width: $button-icon-width;
-    padding: 0;
-    aspect-ratio: 1 / 1;
 }
 
 @mixin button-icon-size($size) {
     @if $size == 'big' {
-        width: $button-big-icon-width;
+        --#{$prefix}-button-icon-width: #{$button-big-icon-width};
     } @else if $size == 'small' {
-        width: $button-small-icon-width;
-    }
-}
-
-@mixin button-icon-position($position) {
-    --button-icon-margin: #{$button-icon-margin};
-
-    @if $position == 'left' {
-        &::before,
-        [class*='icon-'] {
-            margin-right: var(--button-icon-margin);
-        }
-    } @else if $position == 'right' {
-        &::after,
-        [class*='icon-'] {
-            margin-left: var(--button-icon-margin);
-        }
+        --#{$prefix}-button-icon-width: #{$button-small-icon-width};
     }
 }

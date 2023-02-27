@@ -6,19 +6,14 @@ table {
     &.table--mobile {
         thead,
         tfoot {
-            @include mb-down(md) {
-                display: none;
-            }
+            @include desktop-only;
         }
 
         tbody {
             /* stylelint-disable-next-line max-nesting-depth */
             tr:not(:last-child) {
-                /* stylelint-disable-next-line max-nesting-depth, selector-max-compound-selectors */
-                td:last-child {
-                    @include mb-down(md) {
-                        border-bottom-color: currentColor;
-                    }
+                @include mb-down(md) {
+                    border-bottom: $table-group-divider-border-bottom;
                 }
             }
 

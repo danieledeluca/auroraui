@@ -19,14 +19,16 @@ $input-disabled-background-color: $gray-300 !default;
 $input-disabled-opacity: $button-disabled-opacity !default;
 
 // Checkbox
-$checkbox-width: 1rem !default;
+$checkbox-width: 1em !default;
 $checkbox-height: $checkbox-width !default;
-$checkbox-margin: div($body-line-height - $checkbox-width, 2) 0.5rem 0 0 !default;
+$checkbox-margin: div($body-line-height - $checkbox-width, 2) 0.5em 0 0 !default;
 $checkbox-checked-background-color: $input-focus-border-color !default;
 $checkbox-checked-color: color-contrast($checkbox-checked-background-color) !default;
 $checkbox-checked-background-image: svg-encode(
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="none" stroke="#{$checkbox-checked-color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 10l3 3l6-6"/></svg>'
 ) !default;
+$checkbox-checked-background: $checkbox-checked-background-color url($checkbox-checked-background-image) !default;
+$checkbox-checked-border-color: $checkbox-checked-background-color !default;
 
 // Radio
 $radio-width: $checkbox-width !default;
@@ -37,6 +39,8 @@ $radio-checked-color: $checkbox-checked-color !default;
 $radio-checked-background-image: svg-encode(
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="2" fill="#{$radio-checked-color}"/></svg>'
 ) !default;
+$radio-checked-background: $radio-checked-background-color url($radio-checked-background-image) !default;
+$radio-checked-border-color: $radio-checked-background-color !default;
 
 // Textarea
 $textarea-min-width: calc(
@@ -48,6 +52,7 @@ $select-padding-right: 2.25rem !default;
 $select-background-image: svg-encode(
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="#{$input-color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5l6 6 6-6"/></svg>'
 ) !default;
+$select-background: $input-background-color url($select-background-image) no-repeat right $input-padding-x center !default;
 $select-background-size: 1rem 0.75rem !default;
 
 // Fieldset

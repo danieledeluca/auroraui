@@ -2,9 +2,6 @@
 // Typography
 // =====================================================
 
-// Responsive font size
-$rfs-breakpoint-key: 'xl' !default;
-
 // Font families
 $font-family-sans-serif: 'Inter', sans-serif !default;
 $font-family-serif: 'Playfair Display', serif !default;
@@ -59,23 +56,17 @@ $lead-font-size: $font-size * 1.25 !default;
 $lead-font-size-md: $font-size * 1.125 !default;
 $lead-font-weight: null !default;
 
-// Inline text elements
+// Link
 $link-color: $primary !default;
 $link-text-decoration: underline !default;
 $link-hover-color: darken($primary, 5) !default;
 $link-hover-text-decoration: null !default;
 
-$small-font-size: $font-size * 0.875 !default;
-
+// Strong
 $strong-font-weight: $font-weight-bold !default;
 
-// Blockquote
-$blockquote-margin: 0 0 1rem !default;
-$blockquote-font-size: $lead-font-size !default;
-$blockquote-font-size-md: $lead-font-size-md !default;
-$blockquote-figcaption-margin: -$paragraph-margin-bottom 0 $paragraph-margin-bottom !default;
-$blockquote-figcaption-color: $gray-600 !default;
-$blockquote-figcaption-font-size: $small-font-size !default;
+// Small
+$small-font-size: 0.875em !default;
 
 // List
 $list-margin-bottom: 1rem !default;
@@ -86,17 +77,40 @@ $description-list-margin-bottom: 1rem !default;
 $description-list-title-font-weight: $font-weight-bold !default;
 $description-list-detail-margin-bottom: 0.5rem !default;
 
+// Blockquote
+$blockquote-margin-bottom: 1rem !default;
+$blockquote-font-size: $lead-font-size !default;
+$blockquote-font-size-md: $lead-font-size-md !default;
+$blockquote-figcaption-margin: -$blockquote-margin-bottom 0 0 !default;
+$blockquote-figcaption-color: $gray-600 !default;
+$blockquote-figcaption-font-size: $small-font-size !default;
+$blockquote-figcaption-icon: '\2014\00A0' !default;
+
 // Address
 $address-margin-bottom: 1rem !default;
 
-// Hr
-$hr-height: 2px !default;
-$hr-margin: 1.5rem 0 !default;
-$hr-background-color: $gray-300 !default;
+// Mark
+$mark-padding: 0.1875em !default;
+$mark-background-color: $yellow !default;
+
+// Sub and Sup
+$sub-sup-font-size: 0.75em !default;
 
 // Pre
 $pre-margin-bottom: 1rem !default;
 $pre-font-size: $small-font-size !default;
 
-// Sub and Sup
-$sub-sup-font-size: 0.75em !default;
+// Code
+$code-color: $primary !default;
+$code-font-size: $small-font-size !default;
+
+// Kdb
+$kbd-padding: 0.1875rem 0.375rem !default;
+$kbd-background-color: $dark !default;
+$kbd-color: $light !default;
+$kbd-border-radius: 0.25rem !default;
+$kbd-font-size: $small-font-size !default;
+
+// Hr
+$hr-margin: 1.5rem 0 !default;
+$hr-border: 1px solid $gray-300 !default;

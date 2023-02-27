@@ -1,0 +1,45 @@
+// =====================================================
+// Typography
+// =====================================================
+
+// Headings
+@each $heading, $value in $headings-font-sizes {
+    .#{$heading} {
+        @extend #{$heading};
+    }
+}
+
+// Display
+%display {
+    margin-top: 0;
+    margin-bottom: $display-margin-bottom;
+    font-family: $display-font-family;
+    font-weight: $display-font-weight;
+    line-height: $display-line-height;
+}
+
+@each $display, $value in $display-font-sizes {
+    .#{$display} {
+        @extend %display;
+    }
+}
+
+// Lead
+.lead {
+    font-family: $lead-font-family;
+    font-size: $lead-font-size;
+    font-weight: $lead-font-weight;
+
+    @include mb-down(md) {
+        font-size: $lead-font-size-md;
+    }
+}
+
+// Inline text elements
+.strong {
+    @extend %strong;
+}
+
+.small {
+    @extend %small;
+}

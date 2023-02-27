@@ -77,7 +77,7 @@ $colors: (
 $primary: $blue !default;
 $success: $green !default;
 $warning: $amber !default;
-$danger: $red !default;
+$error: $red !default;
 $info: $teal !default;
 $light: $gray-50 !default;
 $dark: $gray-900 !default;
@@ -86,7 +86,7 @@ $theme-colors: (
     'primary': $primary,
     'success': $success,
     'warning': $warning,
-    'danger': $danger,
+    'error': $error,
     'info': $info,
     'light': $light,
     'dark': $dark,
