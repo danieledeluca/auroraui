@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     build: {
         lib: {
-            entry: resolve(__dirname, 'src/assets/js/app.js'),
+            entry: resolve(__dirname, 'src/js/app.js'),
             fileName: 'rocket',
             name: 'Rocket',
         },
