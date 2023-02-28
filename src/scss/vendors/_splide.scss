@@ -2,38 +2,38 @@
 // Splide
 // =====================================================
 
-@import '@splidejs/splide/css';
-
 $splide-arrow-background-color: $gray-300 !default;
 $splide-arrow-prev-icon: 'chevron-left' !default;
 $splide-arrow-next-icon: 'chevron-right' !default;
 
-.splide__arrow {
-    @include desktop-only;
-    @include button;
-    @include button-primary($splide-arrow-background-color);
-    @include button-icon;
-    height: auto;
-    border-radius: 50%;
-    transition: transition(background-color, color, border-color, opacity);
+.splide {
+    .splide__arrow {
+        @include desktop-only;
+        @include button;
+        @include button-primary($splide-arrow-background-color);
+        @include button-icon;
+        height: auto;
+        border-radius: 50%;
+        transition: transition(background-color, color, border-color, opacity);
 
-    svg {
-        display: none;
+        svg {
+            display: none;
+        }
     }
-}
 
-.splide__arrow--prev {
-    &::before {
-        @include icon($splide-arrow-prev-icon);
+    .splide__arrow--prev {
+        &::before {
+            @include icon($splide-arrow-prev-icon);
+        }
     }
-}
 
-.splide__arrow--next {
-    &::before {
-        @include icon($splide-arrow-next-icon);
+    .splide__arrow--next {
+        &::before {
+            @include icon($splide-arrow-next-icon);
+        }
     }
-}
 
-.splide__pagination__page {
-    transition: transition(transform, opacity);
+    .splide__pagination__page {
+        transition: transition(transform, opacity);
+    }
 }
