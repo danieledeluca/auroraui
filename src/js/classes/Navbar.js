@@ -62,8 +62,6 @@ export default class RocketNavbar {
             });
         });
 
-        // this.#toggleSubmenu();
-
         window.addEventListener('resize', () => {
             if (isMobile()) return;
 
