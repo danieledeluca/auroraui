@@ -10,25 +10,8 @@
     font-family: $icons-font-family;
 }
 
-// Icon animations
-// =====================================================
-$icon-animations: (
-    'spin': 'icon-spin 1.5s linear infinite',
-) !default;
-
 @mixin icon-animation($name) {
     $animation: map-get($icon-animations, $name);
 
     animation: unquote($animation);
-}
-
-// Spin
-@keyframes icon-spin {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
 }

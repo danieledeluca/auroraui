@@ -100,3 +100,20 @@ $icons: (
     'x': '\e95d',
     'youtube': '\e95e',
 ) !default;
+
+// Icon animations
+// =====================================================
+$icon-animations: (
+    'spin': 'icon-spin 1.5s linear infinite',
+) !default;
+
+// Spin
+@keyframes icon-spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
