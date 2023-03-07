@@ -21,6 +21,7 @@
 @each $display, $value in $display-font-sizes {
     .#{$display} {
         @extend %display;
+        @include rfs($value);
     }
 }
 
