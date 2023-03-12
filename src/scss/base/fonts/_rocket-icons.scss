@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: $icons-font-family;
-    src: url('../fonts/rocket-icons/rocket-icons.eot');
-    src: url('../fonts/rocket-icons/rocket-icons.eot#iefix') format('embedded-opentype'),
-        url('../fonts/rocket-icons/rocket-icons.ttf') format('truetype'),
-        url('../fonts/rocket-icons/rocket-icons.woff') format('woff'),
-        url('../fonts/rocket-icons/rocket-icons.svg#rocket-icons') format('svg');
+    src: url('./fonts/rocket-icons/rocket-icons.eot');
+    src: url('./fonts/rocket-icons/rocket-icons.eot#iefix') format('embedded-opentype'),
+        url('./fonts/rocket-icons/rocket-icons.ttf') format('truetype'),
+        url('./fonts/rocket-icons/rocket-icons.woff') format('woff'),
+        url('./fonts/rocket-icons/rocket-icons.svg#rocket-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
