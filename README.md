@@ -55,12 +55,6 @@ npm run lint
 npm run format
 ```
 
-## Packages
-
-| Package                                                | Version                                                                    |
-| ------------------------------------------------------ | -------------------------------------------------------------------------- |
-| [@splidejs/splide](https://github.com/Splidejs/splide) | ![splide version](https://img.shields.io/npm/v/@splidejs/splide.svg?label) |
-
 ## License
 
 MIT
