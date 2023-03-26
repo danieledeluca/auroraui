@@ -11,14 +11,17 @@ label {
 
 // Input
 %form-field {
+    @include last-child-no-margin-bottom;
     display: block;
     width: 100%;
-    margin-bottom: $input-margin-bottom;
+    margin: $input-margin;
     padding: $input-padding-y $input-padding-x;
     background-color: $input-background-color;
     color: $input-color;
     border: $input-border;
     border-radius: $input-border-radius;
+    font-size: $input-font-size;
+    line-height: $input-line-height;
     box-shadow: none;
     appearance: none;
 
@@ -38,43 +41,186 @@ input {
     @extend %form-field;
 }
 
-// Checkbox and Radio
+// Checkbox and radio
 // =====================================================
 // Add custom style for checkbox and radio input
 
-input {
-    &[type='checkbox'],
-    &[type='radio'] {
-        float: left;
+[type='checkbox'],
+[type='radio'] {
+    float: left;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+
+    + label {
+        display: inline;
+        margin-bottom: 0;
+    }
+}
+
+[type='checkbox'] {
+    width: $checkbox-width;
+    margin: $checkbox-margin;
+    border-right: $checkbox-border-radius;
+
+    &:checked {
+        background: $checkbox-checked-background;
+        background-size: $checkbox-checked-background-size;
+        border-color: $checkbox-checked-border-color;
+    }
+}
+
+[type='radio'] {
+    width: $radio-width;
+    margin: $radio-margin;
+    border-radius: $radio-border-radius;
+
+    &:checked {
+        background: $radio-checked-background;
+        background-size: $radio-checked-background-size;
+        border-color: $radio-checked-border-color;
+    }
+}
+
+// Number
+// =====================================================
+// Correct the cursor style of increment and decrement buttons in Chrome
+
+[type='number'] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        height: auto;
+    }
+}
+
+// Search
+// =====================================================
+// 1. Correct the odd appearance in Chrome and Safari
+// 2. Correct the outline style in Safari
+// 3. Remove the inner padding in Chrome and Safari on macOS
+
+[type='search'] {
+    appearance: textfield; // 1
+    outline-offset: -2px; // 2
+
+    &::-webkit-search-decoration {
+        appearance: none; // 3
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}
+
+// Date and time
+// =====================================================
+// Add custom style for date and time input
+
+[type='date'],
+[type='datetime-local'],
+[type='week'],
+[type='month'],
+[type='time'] {
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+}
+
+[type='date'],
+[type='datetime-local'],
+[type='week'],
+[type='month'] {
+    padding: $date-padding;
+    padding-right: $date-padding-right;
+    background: $date-background;
+    background-size: $date-background-size;
+
+    &::-webkit-calendar-picker-indicator {
+        margin-right: $date-icon-margin-right;
+    }
+}
+
+[type='time'] {
+    padding: $time-padding;
+    padding-right: $time-padding-right;
+    background: $time-background;
+    background-size: $time-background-size;
+
+    &::-webkit-calendar-picker-indicator {
+        margin-right: $time-icon-margin-right;
+    }
+}
+
+// File
+// =====================================================
+// 1. Correct the inability to style clickable types in iOS and Safari
+// 2. Change font properties to `inherit` in Safari
+
+[type='file'] {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+
+    &:disabled {
+        background-color: transparent;
+    }
+
+    &::-webkit-file-upload-button {
+        @include button;
+        @include button-primary($file-button-color);
+        appearance: button; // 1
+        font: inherit; // 2
+    }
+}
+
+// Color
+// =====================================================
+// Add custom style for color input
+
+[type='color'] {
+    height: $color-height;
+    padding: $color-padding;
+
+    &::-webkit-color-swatch-wrapper {
         padding: 0;
+    }
 
-        + label {
-            display: inline;
-            margin-bottom: 0;
+    &::-webkit-color-swatch {
+        border: 0;
+        border-radius: $color-swatch-border-radius;
+    }
+}
+
+// Range
+// =====================================================
+// Add custom style for range input
+
+[type='range'] {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    appearance: none;
+
+    &:active {
+        &::-webkit-slider-thumb {
+            background-color: $range-thumb-active-background-color;
         }
     }
 
-    &[type='checkbox'] {
-        width: $checkbox-width;
-        height: $checkbox-height;
-        margin: $checkbox-margin;
-
-        &:checked {
-            background: $checkbox-checked-background;
-            border-color: $checkbox-checked-border-color;
-        }
+    &::-webkit-slider-runnable-track {
+        height: $range-track-height;
+        width: 100%;
+        background-color: $range-track-background-color;
+        border-radius: $range-track-border-radius;
     }
 
-    &[type='radio'] {
-        width: $radio-width;
-        height: $radio-height;
-        margin: $radio-margin;
-        border-radius: 50%;
-
-        &:checked {
-            background: $radio-checked-background;
-            border-color: $radio-checked-border-color;
-        }
+    &::-webkit-slider-thumb {
+        width: $range-thumb-width;
+        margin-top: $range-thumb-margin-top;
+        background-color: $range-thumb-background-color;
+        border-radius: $range-thumb-border-radius;
+        appearance: none;
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
     }
 }
 
@@ -128,7 +274,43 @@ legend {
 // Add the correct vertical alignment in Chrome, Firefox, and Opera
 
 progress {
+    display: inline-block;
+    height: $progress-height;
+    width: 100%;
+    margin: $progress-margin;
+    background-color: $progress-background-color;
+    border: 0;
+    border-radius: $progress-border-radius;
     vertical-align: baseline;
+    overflow: hidden;
+
+    &[value]::-webkit-progress-value {
+        background-color: $progress-color;
+    }
+
+    &:indeterminate {
+        background: $progress-indeterminate-background;
+        animation: progress-indeterminate 1s linear infinite;
+
+        &[value]::-webkit-progress-value {
+            background-color: transparent;
+        }
+    }
+
+    &::-webkit-progress-bar {
+        background-color: transparent;
+        border-radius: $progress-border-radius;
+    }
+}
+
+@keyframes progress-indeterminate {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 // Change the font styles in all browsers
@@ -170,40 +352,4 @@ button,
     &:-moz-focusring {
         outline: 1px dotted ButtonText; // 3
     }
-}
-
-// Input number
-// =====================================================
-// Correct the cursor style of increment and decrement buttons in Chrome
-
-[type='number'] {
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-        height: auto;
-    }
-}
-
-// Input search
-// =====================================================
-// 1. Correct the odd appearance in Chrome and Safari
-// 2. Correct the outline style in Safari
-// 3. Remove the inner padding in Chrome and Safari on macOS
-
-[type='search'] {
-    appearance: textfield; // 1
-    outline-offset: -2px; // 2
-
-    &::-webkit-search-decoration {
-        appearance: none; // 3
-    }
-}
-
-// Input file
-// =====================================================
-// 1. Correct the inability to style clickable types in iOS and Safari
-// 2. Change font properties to `inherit` in Safari
-
-::-webkit-file-upload-button {
-    appearance: button; // 1
-    font: inherit; // 2
 }

@@ -6,54 +6,98 @@
 $label-margin-bottom: 0.5rem !default;
 
 // Input
-$input-margin-bottom: 1rem !default;
+$input-margin: 0 0 1rem !default;
 $input-padding-y: $button-padding-y !default;
 $input-padding-x: $button-padding-x !default;
 $input-background-color: $gray-100 !default;
-$input-color: $body-color !default;
+$input-color: $button-color !default;
 $input-border-width: $button-border-width !default;
 $input-border: $input-border-width solid $gray-400 !default;
 $input-border-radius: $button-border-radius !default;
+$input-font-size: $button-font-size !default;
+$input-line-height: $button-line-height !default;
 $input-focus-border-color: $primary !default;
 $input-disabled-background-color: $gray-300 !default;
 $input-disabled-opacity: $button-disabled-opacity !default;
 
 // Checkbox
-$checkbox-width: 1em !default;
-$checkbox-height: $checkbox-width !default;
+$checkbox-width: 1.25em !default;
 $checkbox-margin: div($body-line-height - $checkbox-width, 2) 0.5em 0 0 !default;
+$checkbox-border-radius: null !default;
 $checkbox-checked-background-color: $input-focus-border-color !default;
 $checkbox-checked-color: color-contrast($checkbox-checked-background-color) !default;
 $checkbox-checked-background-image: svg-encode(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="none" stroke="#{$checkbox-checked-color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 10l3 3l6-6"/></svg>'
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><polyline stroke="#{$checkbox-checked-color}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" points="20 6 9 17 4 12"></polyline></svg>'
 ) !default;
-$checkbox-checked-background: $checkbox-checked-background-color url($checkbox-checked-background-image) !default;
+$checkbox-checked-background: $checkbox-checked-background-color url($checkbox-checked-background-image) no-repeat
+    center center !default;
+$checkbox-checked-background-size: 0.75em !default;
 $checkbox-checked-border-color: $checkbox-checked-background-color !default;
 
 // Radio
 $radio-width: $checkbox-width !default;
-$radio-height: $checkbox-height !default;
 $radio-margin: $checkbox-margin !default;
+$radio-border-radius: 50% !default;
 $radio-checked-background-color: $checkbox-checked-background-color !default;
 $radio-checked-color: $checkbox-checked-color !default;
 $radio-checked-background-image: svg-encode(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="2" fill="#{$radio-checked-color}"/></svg>'
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><circle cx="50%" cy="50%" r="4.5" fill="#{$radio-checked-color}"/></svg>'
 ) !default;
-$radio-checked-background: $radio-checked-background-color url($radio-checked-background-image) !default;
+$radio-checked-background: $radio-checked-background-color url($radio-checked-background-image) no-repeat center center !default;
+$radio-checked-background-size: 1.5em !default;
 $radio-checked-border-color: $radio-checked-background-color !default;
+
+// Date
+$date-padding: calc($input-padding-y - 1px) $input-padding-x !default;
+$date-background-image: svg-encode(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" stroke="#{$input-color}" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'
+) !default;
+$date-background: $input-background-color url($date-background-image) no-repeat right $input-padding-x center !default;
+$date-background-size: 1em !default;
+$date-padding-right: calc($input-padding-x * 2 + $date-background-size) !default;
+$date-icon-margin-right: calc(calc($input-padding-x + $date-background-size) * -1) !default;
+
+// Time
+$time-padding: $date-padding !default;
+$time-background-image: svg-encode(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" stroke="#{$input-color}" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
+) !default;
+$time-background: $input-background-color url($time-background-image) no-repeat right $input-padding-x center !default;
+$time-background-size: 1em !default;
+$time-padding-right: calc($input-padding-x * 2 + $time-background-size) !default;
+$time-icon-margin-right: calc(calc($input-padding-x + $time-background-size) * -1) !default;
+
+// File
+$file-button-color: $primary !default;
+
+// Color
+$color-padding: $input-padding-y !default;
+$color-height: calc($input-font-size * $input-line-height + $input-padding-y * 2 + $input-border-width * 2) !default;
+$color-swatch-border-radius: $input-border-radius !default;
+
+// Range
+$range-track-height: 0.25rem !default;
+$range-track-background-color: $gray-300 !default;
+$range-track-border-radius: $input-border-radius !default;
+
+$range-thumb-width: 1.25rem !default;
+$range-thumb-margin-top: -(div($range-thumb-width, 2)) + div($range-track-height, 2) !default;
+$range-thumb-background-color: $gray-600 !default;
+$range-thumb-border-radius: 50% !default;
+$range-thumb-active-background-color: $primary !default;
 
 // Textarea
 $textarea-min-width: calc(
-    $body-line-height * ($body-font-size * 3) + $input-padding-y * 2 + $input-border-width * 2
+    $input-line-height * ($input-font-size * 3) + $input-padding-y * 2 + $input-border-width * 2
 ) !default;
 
 // Select
-$select-padding-right: 2.25rem !default;
 $select-background-image: svg-encode(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="#{$input-color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5l6 6 6-6"/></svg>'
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><polyline stroke="#{$input-color}" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" points="6 9 12 15 18 9"></polyline></svg>'
 ) !default;
 $select-background: $input-background-color url($select-background-image) no-repeat right $input-padding-x center !default;
-$select-background-size: 1rem 0.75rem !default;
+$select-background-size: 1em !default;
+$select-padding-right: calc($input-padding-x * 2 + $select-background-size) !default;
 
 // Fieldset
 $fieldset-margin: 0 0 1rem !default;
@@ -61,3 +105,12 @@ $fieldset-margin: 0 0 1rem !default;
 // Legend
 $legend-margin-bottom: 0.5rem !default;
 $legend-font-size: 1.25rem !default;
+
+// Progress
+$progress-height: 0.5rem !default;
+$progress-margin: $input-margin !default;
+$progress-background-color: $range-track-background-color !default;
+$progress-color: $primary !default;
+$progress-border-radius: $input-border-radius !default;
+$progress-indeterminate-background: $progress-background-color
+    linear-gradient(to right, $progress-color 30%, $progress-background-color 30%) top left / 150% 150% no-repeat !default;
