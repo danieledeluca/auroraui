@@ -72,7 +72,7 @@
     --#{$prefix}-button-padding: 0;
     justify-content: center;
     width: var(--#{$prefix}-button-icon-width);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
 }
 
 @mixin button-size($size) {

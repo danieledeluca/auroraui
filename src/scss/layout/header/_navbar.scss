@@ -204,7 +204,7 @@ $header-navbar-toggle-height: calc(
         justify-content: center;
         align-items: center;
         height: $header-navbar-toggle-height;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1;
         cursor: pointer;
 
         &::before {

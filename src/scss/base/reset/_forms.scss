@@ -49,7 +49,7 @@ input {
 [type='radio'] {
     float: left;
     padding: 0;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
 
     + label {
         display: inline;
@@ -219,7 +219,7 @@ input {
         background-color: $range-thumb-background-color;
         border-radius: $range-thumb-border-radius;
         appearance: none;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1;
         cursor: pointer;
     }
 }
