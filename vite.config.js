@@ -1,29 +1,32 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import autoprefixer from 'autoprefixer';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import autoprefixer from 'autoprefixer';
+import pkg from './package.json';
 
 export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, 'src/js/app.js'),
-            fileName: 'rocket',
-            name: 'Rocket',
+            fileName: pkg.name,
+            name: pkg.config.fullName,
         },
         rollupOptions: {
-            external: ['@splidejs/splide'],
             output: {
                 assetFileNames: ({ name }) => {
-                    if (name === 'style.css') return 'rocket.css';
+                    if (name === 'style.css') return `${pkg.name}.css`;
                     return name;
                 },
-                globals: {
-                    '@splidejs/splide': 'Splide',
-                },
+                banner: `
+                    /*!
+                     * ${pkg.config.fullName} (${pkg.homepage})
+                     * Version: ${pkg.version}
+                     * License: ${pkg.license}
+                     * Copyright: ${new Date().getFullYear()} ${pkg.author}
+                     */`,
             },
         },
         sourcemap: true,
-        watch: true,
     },
     css: {
         devSourcemap: true,
