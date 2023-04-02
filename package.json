@@ -5,6 +5,9 @@
     "type": "module",
     "author": "Daniele De Luca",
     "license": "MIT",
+    "config": {
+        "fullName": "Rocket"
+    },
     "browserslist": [
         "last 2 versions"
     ],
@@ -16,16 +19,21 @@
         "framework",
         "web"
     ],
+    "homepage": "https://danieledeluca.github.io/rocket/docs/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danieledeluca/rocket.git"
+    },
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
         "lint": "npm run lint:js && npm run lint:css",
-        "lint:js": "eslint 'src/assets/js/**/*.js' --config .eslintrc.json --fix",
-        "lint:css": "stylelint 'src/assets/scss/**/*.scss' --config .stylelintrc --fix",
+        "lint:js": "eslint 'src/js/**/*.js' --config .eslintrc.json --fix",
+        "lint:css": "stylelint 'src/scss/**/*.scss' --config .stylelintrc --fix",
         "format": "npm run format:js && npm run format:css",
-        "format:js": "prettier 'src/assets/js/**/*.js' --config .prettierrc --write --ignore-path .gitignore",
-        "format:css": "prettier 'src/assets/scss/**/*.scss' --config .prettierrc --write --ignore-path .gitignore"
+        "format:js": "prettier 'src/js/**/*.js' --config .prettierrc --write --ignore-path .gitignore",
+        "format:css": "prettier 'src/scss/**/*.scss' --config .prettierrc --write --ignore-path .gitignore"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",
@@ -40,5 +48,21 @@
         "stylelint-config-sass-guidelines": "^9.0.1",
         "stylelint-prettier": "^2.0.0",
         "vite": "^4.0.0"
+    },
+    "files": [
+        "dist/*",
+        "src/*"
+    ],
+    "main": "./dist/rocket.umd.cjs",
+    "module": "./dist/rocket.js",
+    "exports": {
+        ".": {
+            "import": "./dist/rocket.js",
+            "require": "./dist/rocket.umd.cjs",
+            "default": "./dist/rocket.js"
+        },
+        "./dist/": "./dist/",
+        "./css": "./dist/rocket.css",
+        "./scss/": "./src/scss/"
     }
 }
