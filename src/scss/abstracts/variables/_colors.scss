@@ -46,6 +46,9 @@ $orange: #ff9800 !default;
 $deep-orange: #ff5722 !default;
 $brown: #795548 !default;
 $blue-gray: #607d8b !default;
+$gray: $gray-500 !default;
+$light-gray: $gray-300 !default;
+$dark-gray: $gray-700 !default;
 $black: #000000 !default;
 $white: #ffffff !default;
 
@@ -67,14 +70,16 @@ $colors: (
     'orange': $orange,
     'deep-orange': $deep-orange,
     'brown': $brown,
-    'gray': $gray-500,
+    'gray': $gray,
+    'light-gray': $light-gray,
+    'dark-gray': $dark-gray,
     'blue-gray': $blue-gray,
     'black': $black,
     'white': $white,
 ) !default;
 
 // Theme colors
-$primary: $blue !default;
+$primary: #56c891 !default;
 $success: $green !default;
 $warning: $amber !default;
 $error: $red !default;

@@ -39,7 +39,8 @@
         border-color: var(--#{$prefix}-button-hover-border-color);
     }
 
-    &:disabled {
+    &:disabled,
+    &.disabled {
         opacity: $button-disabled-opacity;
         cursor: auto;
     }
@@ -68,8 +69,8 @@
 }
 
 @mixin button-icon {
-    --#{$prefix}-button-icon-width: #{$button-icon-width};
     --#{$prefix}-button-padding: 0;
+    --#{$prefix}-button-icon-width: #{$button-icon-width};
     justify-content: center;
     width: var(--#{$prefix}-button-icon-width);
     aspect-ratio: 1;

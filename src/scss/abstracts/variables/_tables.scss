@@ -8,11 +8,11 @@ $table-caption-side: bottom !default;
 // Table cell
 $table-cell-padding: 0.5rem !default;
 $table-cell-border-bottom-width: 1px !default;
-$table-cell-border-bottom: $table-cell-border-bottom-width solid $gray-300 !default;
+$table-cell-border-bottom: $table-cell-border-bottom-width solid $light-gray !default;
 
 // Table caption
 $table-caption-padding: 0.5rem 0 !default;
-$table-caption-color: $gray-700 !default;
+$table-caption-color: $dark-gray !default;
 
 // Table group divider
 $table-group-divider-border-bottom: $table-cell-border-bottom-width * 2 solid currentColor !default;

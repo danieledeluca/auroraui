@@ -2,9 +2,10 @@
 // Color contrast
 // =====================================================
 
+$min-contrast-ratio: 4.5 !default;
+
 @function color-contrast($background-color, $color-contrast-dark: $dark, $color-contrast-light: $light) {
     $foreground-colors: $color-contrast-light, $color-contrast-dark, $white, $black;
-    $min-contrast-ratio: 4.5;
     $max-ratio: 0;
     $max-ratio-color: null;
 

@@ -2,7 +2,7 @@
 // Splide
 // =====================================================
 
-$splide-arrow-background-color: $gray-300 !default;
+$splide-arrow-background-color: $light-gray !default;
 $splide-arrow-prev-icon: 'chevron-left' !default;
 $splide-arrow-next-icon: 'chevron-right' !default;
 
@@ -12,6 +12,7 @@ $splide-arrow-next-icon: 'chevron-right' !default;
         @include button;
         @include button-primary($splide-arrow-background-color);
         @include button-icon;
+        @include button-icon-size('small');
         height: auto;
         border-radius: 50%;
         transition: transition(background-color, color, border-color, opacity);

@@ -22,7 +22,7 @@ $font-weight-bolder: 800 !default;
 $font-weight-black: 900 !default;
 
 // Headings
-$headings-margin-bottom: 0.5rem !default;
+$headings-margin-bottom: 1rem !default;
 $headings-font-family: null !default;
 $headings-font-sizes: (
     'h1': $font-size * 2.5,
@@ -30,13 +30,13 @@ $headings-font-sizes: (
     'h3': $font-size * 1.75,
     'h4': $font-size * 1.5,
     'h5': $font-size * 1.25,
-    'h6': $font-size * 1,
+    'h6': $font-size,
 ) !default;
 $headings-font-weight: $font-weight-semi-bold !default;
 $headings-line-height: 1.2 !default;
 
 // Display
-$display-margin-bottom: 1rem !default;
+$display-margin-bottom: $headings-margin-bottom !default;
 $display-font-family: $headings-font-family !default;
 $display-font-sizes: (
     'huge': $font-size * 5,
@@ -53,7 +53,7 @@ $paragraph-margin-bottom: 1rem !default;
 // Lead
 $lead-font-family: null !default;
 $lead-font-size: $font-size * 1.25 !default;
-$lead-font-size-md: $font-size * 1.125 !default;
+$lead-font-size-md: null !default;
 $lead-font-weight: null !default;
 
 // Link
@@ -71,7 +71,6 @@ $small-font-size: 0.875em !default;
 // List
 $list-margin-bottom: 1rem !default;
 $list-padding-left: 2rem !default;
-$list-nested-margin: 0.25rem 0 !default;
 
 $description-list-margin-bottom: 1rem !default;
 $description-list-title-font-weight: $font-weight-bold !default;
@@ -113,4 +112,4 @@ $kbd-font-size: $small-font-size !default;
 
 // Hr
 $hr-margin: 1.5rem 0 !default;
-$hr-border: 1px solid $gray-300 !default;
+$hr-border-top: 1px solid $light-gray !default;

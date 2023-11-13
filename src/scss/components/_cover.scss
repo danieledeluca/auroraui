@@ -24,11 +24,7 @@ $cover-content-padding-md: 0 1rem !default;
     }
 
     &[href] {
-        @include reset-link;
-
-        &.cover--overlay {
-            @include reset-link($cover-overlay-color);
-        }
+        text-decoration: none;
     }
 
     &.cover--overlay {

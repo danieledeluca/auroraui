@@ -17,7 +17,7 @@ $input-border-radius: $button-border-radius !default;
 $input-font-size: $button-font-size !default;
 $input-line-height: $button-line-height !default;
 $input-focus-border-color: $primary !default;
-$input-disabled-background-color: $gray-300 !default;
+$input-disabled-background-color: $light-gray !default;
 $input-disabled-opacity: $button-disabled-opacity !default;
 
 // Checkbox
@@ -77,7 +77,7 @@ $color-swatch-border-radius: $input-border-radius !default;
 
 // Range
 $range-track-height: 0.25rem !default;
-$range-track-background-color: $gray-300 !default;
+$range-track-background-color: $light-gray !default;
 $range-track-border-radius: $input-border-radius !default;
 
 $range-thumb-width: 1.25rem !default;

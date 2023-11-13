@@ -77,11 +77,6 @@ ol {
     margin-bottom: $list-margin-bottom;
     padding-left: $list-padding-left;
 
-    ul,
-    ol {
-        margin: $list-nested-margin;
-    }
-
     nav & {
         @include reset-list;
     }
@@ -228,5 +223,6 @@ kbd {
 hr {
     margin: $hr-margin;
     color: inherit; // 1
-    border-top: $hr-border;
+    border: 0;
+    border-top: $hr-border-top;
 }

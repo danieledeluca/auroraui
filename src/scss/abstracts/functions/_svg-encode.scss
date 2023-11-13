@@ -15,5 +15,5 @@
         $string: str-replace($string, $char, $value);
     }
 
-    @return 'data:image/svg+xml,' + $string;
+    @return 'data:image/svg+xml,#{$string}';
 }
