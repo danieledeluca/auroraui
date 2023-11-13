@@ -7,22 +7,22 @@ import pkg from './package.json';
 export default defineConfig({
     build: {
         lib: {
-            entry: resolve(__dirname, 'src/js/app.js'),
-            fileName: pkg.name,
-            name: pkg.config.fullName,
+            entry: resolve(__dirname, 'src/js/auroraui.js'),
+            fileName: 'auroraui',
+            name: 'auroraUI',
         },
         rollupOptions: {
             output: {
                 assetFileNames: ({ name }) => {
-                    if (name === 'style.css') return `${pkg.name}.css`;
+                    if (name === 'style.css') return 'auroraui.min.css';
                     return name;
                 },
                 banner: `
                     /*!
-                     * ${pkg.config.fullName} (${pkg.homepage})
+                     * auroraUI (${pkg.homepage})
                      * Version: ${pkg.version}
                      * License: ${pkg.license}
-                     * Copyright: ${new Date().getFullYear()} ${pkg.author}
+                     * Copyright: @ ${new Date().getFullYear()} ${pkg.author}
                      */`,
             },
         },

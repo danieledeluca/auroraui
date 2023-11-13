@@ -1,13 +1,10 @@
 {
-    "name": "rocket",
+    "name": "auroraui",
     "description": "Lightweight HTML, CSS, and JavaScript framework.",
     "version": "1.0.2",
     "type": "module",
     "author": "Daniele De Luca",
     "license": "MIT",
-    "config": {
-        "fullName": "Rocket"
-    },
     "browserslist": [
         "last 2 versions"
     ],
@@ -19,10 +16,13 @@
         "framework",
         "web"
     ],
-    "homepage": "https://danieledeluca.github.io/rocket/docs/",
+    "homepage": "https://danieledeluca.github.io/auroraui/",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/danieledeluca/rocket.git"
+        "url": "git+https://github.com/danieledeluca/auroraui.git"
+    },
+    "bugs": {
+        "url": "https://github.com/danieledeluca/auroraui/issues"
     },
     "scripts": {
         "dev": "vite",
@@ -53,16 +53,16 @@
         "dist/*",
         "src/*"
     ],
-    "main": "./dist/rocket.umd.cjs",
-    "module": "./dist/rocket.js",
+    "main": "./dist/auroraui.umd.cjs",
+    "module": "./dist/auroraui.js",
     "exports": {
         ".": {
-            "import": "./dist/rocket.js",
-            "require": "./dist/rocket.umd.cjs",
-            "default": "./dist/rocket.js"
+            "import": "./dist/auroraui.js",
+            "require": "./dist/auroraui.umd.cjs",
+            "default": "./dist/auroraui.js"
         },
-        "./dist/": "./dist/",
-        "./css": "./dist/rocket.css",
+        "./css": "./dist/auroraui.min.css",
+        "./scss": "./src/scss/auroraui.scss",
         "./scss/": "./src/scss/"
     }
 }

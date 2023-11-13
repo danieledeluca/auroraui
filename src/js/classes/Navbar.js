@@ -14,7 +14,7 @@ const DEFAULT_OPTIONS = {
     hamburgerClass: '[class*="__hamburger"]',
 };
 
-export default class RocketNavbar {
+export default class AuroraNavbar {
     /**
      * The default options
      */
@@ -29,7 +29,7 @@ export default class RocketNavbar {
     constructor(element, options = {}) {
         this.element = element;
         this.options = {
-            ...RocketNavbar.options,
+            ...AuroraNavbar.options,
             ...options,
             ...(JSON.parse(this.element.getAttribute(DATA_ATTRIBUTE)) || {}),
         };

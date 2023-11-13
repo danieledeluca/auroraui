@@ -7,7 +7,7 @@ const DEFAULT_OPTIONS = {
     scrollSpeed: 2,
 };
 
-export default class RocketParallax {
+export default class AuroraParallax {
     /**
      * The default options
      */
@@ -22,7 +22,7 @@ export default class RocketParallax {
     constructor(element, options = {}) {
         this.element = element;
         this.options = {
-            ...RocketParallax.options,
+            ...AuroraParallax.options,
             ...options,
             ...(JSON.parse(this.element.getAttribute(DATA_ATTRIBUTE)) || {}),
         };
