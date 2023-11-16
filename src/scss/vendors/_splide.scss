@@ -24,13 +24,13 @@ $splide-arrow-next-icon: 'chevron-right' !default;
 
     .splide__arrow--prev {
         &::before {
-            @include icon($splide-arrow-prev-icon);
+            @include aurora-icon($splide-arrow-prev-icon);
         }
     }
 
     .splide__arrow--next {
         &::before {
-            @include icon($splide-arrow-next-icon);
+            @include aurora-icon($splide-arrow-next-icon);
         }
     }
 

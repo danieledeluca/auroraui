@@ -148,7 +148,7 @@ $header-navbar-toggle-height: calc(
                 /* stylelint-disable-next-line max-nesting-depth */
                 &::after {
                     @include mb-up(md) {
-                        @include icon($header-navbar-toggle-icon);
+                        @include aurora-icon($header-navbar-toggle-icon);
                     }
                 }
             }
@@ -208,7 +208,7 @@ $header-navbar-toggle-height: calc(
         cursor: pointer;
 
         &::before {
-            @include icon($header-navbar-toggle-icon);
+            @include aurora-icon($header-navbar-toggle-icon);
         }
     }
 }

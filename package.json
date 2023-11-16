@@ -64,5 +64,8 @@
         "./css": "./dist/auroraui.min.css",
         "./scss": "./src/scss/auroraui.scss",
         "./scss/": "./src/scss/"
+    },
+    "dependencies": {
+        "aurora-icons": "^1.0.0"
     }
 }

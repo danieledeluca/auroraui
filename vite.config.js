@@ -12,6 +12,7 @@ export default defineConfig({
             name: 'auroraUI',
         },
         rollupOptions: {
+            external: ['aurora-icons'],
             output: {
                 assetFileNames: ({ name }) => {
                     if (name === 'style.css') return 'auroraui.min.css';
