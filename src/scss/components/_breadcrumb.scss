@@ -21,7 +21,7 @@ $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
 .breadcrumb__item {
     &:not(:last-child) {
         &::after {
-            @include aurora-icon($breadcrumb-item-divider-icon);
+            @include sparkle-icon($breadcrumb-item-divider-icon);
             vertical-align: middle;
         }
     }

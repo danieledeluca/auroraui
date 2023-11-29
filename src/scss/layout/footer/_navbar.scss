@@ -124,7 +124,7 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
         cursor: pointer;
 
         &::before {
-            @include aurora-icon($footer-navbar-toggle-icon);
+            @include sparkle-icon($footer-navbar-toggle-icon);
         }
     }
 }

@@ -66,6 +66,6 @@
         "./scss/": "./src/scss/"
     },
     "dependencies": {
-        "aurora-icons": "^1.0.0"
+        "@sparkleui/sparkle-icons": "^1.0.1"
     }
 }
