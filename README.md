@@ -1,41 +1,11 @@
-# auroraUI
+# Sparkle
 
-## About
+Lightweight HTML, CSS, and JavaScript framework.
 
-A lightweight HTML, CSS, and JavaScript framework.
+## Documentation
 
-## Features
-
--   Lightweight CSS file ![CSS size](https://img.shields.io/github/size/danieledeluca/auroraui/dist/auroraui.min.css?label&color)
--   Minimal JavaScript ![JavaScript size](https://img.shields.io/github/size/danieledeluca/auroraui/dist/auroraui.umd.cjs?label&color)
--   Prebuilt components
-
-## Usage
-
-### CSS
-
-```html
-<link rel="stylesheet" href="./dist/auroraui.min.css" />
-```
-
-or
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/danieledeluca/auroraui/dist/auroraui.min.css" />
-```
-
-### JavaScript
-
-```html
-<script src="./dist/auroraui.umd.cjs"></script>
-```
-
-or
-
-```html
-<script src="https://cdn.jsdelivr.net/gh/danieledeluca/auroraui/dist/auroraui.umd.cjs"></script>
-```
+To check out docs, visit the [documentation](https://danieledeluca.github.io/sparkle/).
 
 ## License
 
-MIT
+Sparkle Icons is released under MIT license. Copyright © 2023 Daniele De Luca
