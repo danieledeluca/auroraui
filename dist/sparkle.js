@@ -1,6 +1,6 @@
 var w = Object.defineProperty;
 var y = (e, t, s) => t in e ? w(e, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : e[t] = s;
-var d = (e, t, s) => (y(e, typeof t != "symbol" ? t + "" : t, s), s), A = (e, t, s) => {
+var d = (e, t, s) => (y(e, typeof t != "symbol" ? t + "" : t, s), s), I = (e, t, s) => {
   if (!t.has(e))
     throw TypeError("Cannot " + s);
 };
@@ -9,10 +9,10 @@ var i = (e, t, s) => {
     throw TypeError("Cannot add the same private member more than once");
   t instanceof WeakSet ? t.add(e) : t.set(e, s);
 };
-var n = (e, t, s) => (A(e, t, "access private method"), s);
-import "aurora-icons";
+var n = (e, t, s) => (I(e, t, "access private method"), s);
+import "@sparkleui/sparkle-icons";
 /*!
- * auroraUI (https://danieledeluca.github.io/auroraui/)
+ * Sparkle (https://danieledeluca.github.io/sparkle/)
  * Version: 1.0.2
  * License: MIT
  * Copyright: @ 2023 Daniele De Luca
@@ -30,7 +30,7 @@ const C = {
 function b() {
   return window.innerWidth < T.md;
 }
-function I() {
+function S() {
   document.querySelectorAll('a[href="#"]').forEach((e) => {
     e.addEventListener("click", (t) => {
       t.preventDefault();
@@ -42,14 +42,14 @@ const j = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   breakpoints: T,
   classes: C,
   isMobile: b,
-  preventClickOnEmptyLinks: I
-}, Symbol.toStringTag, { value: "Module" })), { activeClass: p, navOpenClass: v, parentClass: P } = C, q = "data-navbar", D = {
+  preventClickOnEmptyLinks: S
+}, Symbol.toStringTag, { value: "Module" })), { activeClass: v, navOpenClass: p, parentClass: P } = C, q = "data-navbar", D = {
   navbarItemClass: ".navbar__item",
   navbarLinkClass: ".navbar__link",
   navbarToggleClass: ".navbar__toggle",
   hamburgerClass: '[class*="__hamburger"]'
 };
-var r, k, o, l, a, g, c, S;
+var r, A, o, l, a, g, c, k;
 const h = class h {
   /**
    * The Parallax constructor
@@ -89,29 +89,29 @@ const h = class h {
    */
   mount() {
     this.hamburger && this.hamburger.addEventListener("click", () => {
-      n(this, r, k).call(this);
+      n(this, r, A).call(this);
     }), this.navbarToggles.forEach((t) => {
       t.addEventListener("click", () => {
         n(this, a, g).call(this, t);
       });
     }), this.navbarLinks.forEach((t) => {
       t.addEventListener("click", () => {
-        n(this, c, S).call(this, t);
+        n(this, c, k).call(this, t);
       });
     }), window.addEventListener("resize", () => {
       b() || n(this, o, l).call(this);
     });
   }
 };
-r = new WeakSet(), k = function() {
-  document.documentElement.classList.toggle(v), document.documentElement.classList.contains(v) || n(this, o, l).call(this);
+r = new WeakSet(), A = function() {
+  document.documentElement.classList.toggle(p), document.documentElement.classList.contains(p) || n(this, o, l).call(this);
 }, o = new WeakSet(), l = function() {
-  document.documentElement.classList.remove(v), this.navbarItems.forEach((t) => {
-    t.classList.contains(p) && t.classList.remove(p);
+  document.documentElement.classList.remove(p), this.navbarItems.forEach((t) => {
+    t.classList.contains(v) && t.classList.remove(v);
   });
 }, a = new WeakSet(), g = function(t) {
-  t.closest(this.options.navbarItemClass).classList.toggle(p);
-}, c = new WeakSet(), S = function(t) {
+  t.closest(this.options.navbarItemClass).classList.toggle(v);
+}, c = new WeakSet(), k = function(t) {
   if (!b())
     return;
   const s = t.closest(this.options.navbarItemClass), f = t.getAttribute("href");
@@ -161,8 +161,8 @@ m = new WeakSet(), O = function() {
 d(u, "options", M);
 let L = u;
 export {
-  E as AuroraNavbar,
-  L as AuroraParallax,
-  j as auroraUtilities
+  E as SparkleNavbar,
+  L as SparkleParallax,
+  j as sparkleUtilities
 };
-//# sourceMappingURL=auroraui.js.map
+//# sourceMappingURL=sparkle.js.map

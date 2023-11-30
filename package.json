@@ -1,5 +1,5 @@
 {
-    "name": "auroraui",
+    "name": "@sparkleui/sparkle",
     "description": "Lightweight HTML, CSS, and JavaScript framework.",
     "version": "1.0.2",
     "type": "module",
@@ -16,13 +16,13 @@
         "framework",
         "web"
     ],
-    "homepage": "https://danieledeluca.github.io/auroraui/",
+    "homepage": "https://danieledeluca.github.io/sparkle/",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/danieledeluca/auroraui.git"
+        "url": "git+https://github.com/danieledeluca/sparkle.git"
     },
     "bugs": {
-        "url": "https://github.com/danieledeluca/auroraui/issues"
+        "url": "https://github.com/danieledeluca/sparkle/issues"
     },
     "scripts": {
         "dev": "vite",
@@ -53,16 +53,16 @@
         "dist/*",
         "src/*"
     ],
-    "main": "./dist/auroraui.umd.cjs",
-    "module": "./dist/auroraui.js",
+    "main": "./dist/sparkle.umd.cjs",
+    "module": "./dist/sparkle.js",
     "exports": {
         ".": {
-            "import": "./dist/auroraui.js",
-            "require": "./dist/auroraui.umd.cjs",
-            "default": "./dist/auroraui.js"
+            "import": "./dist/sparkle.js",
+            "require": "./dist/sparkle.umd.cjs",
+            "default": "./dist/sparkle.js"
         },
-        "./css": "./dist/auroraui.min.css",
-        "./scss": "./src/scss/auroraui.scss",
+        "./css": "./dist/sparkle.min.css",
+        "./scss": "./src/scss/sparkle.scss",
         "./scss/": "./src/scss/"
     },
     "dependencies": {

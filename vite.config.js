@@ -7,20 +7,20 @@ import pkg from './package.json';
 export default defineConfig({
     build: {
         lib: {
-            entry: resolve(__dirname, 'src/js/auroraui.js'),
-            fileName: 'auroraui',
-            name: 'auroraUI',
+            entry: resolve(__dirname, 'src/js/sparkle.js'),
+            fileName: 'sparkle',
+            name: 'sparkle',
         },
         rollupOptions: {
             external: ['@sparkleui/sparkle-icons'],
             output: {
                 assetFileNames: ({ name }) => {
-                    if (name === 'style.css') return 'auroraui.min.css';
+                    if (name === 'style.css') return 'sparkle.min.css';
                     return name;
                 },
                 banner: `
                     /*!
-                     * auroraUI (${pkg.homepage})
+                     * Sparkle (${pkg.homepage})
                      * Version: ${pkg.version}
                      * License: ${pkg.license}
                      * Copyright: @ ${new Date().getFullYear()} ${pkg.author}
