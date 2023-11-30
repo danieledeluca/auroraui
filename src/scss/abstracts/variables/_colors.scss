@@ -45,10 +45,10 @@ $amber: #ffc107 !default;
 $orange: #ff9800 !default;
 $deep-orange: #ff5722 !default;
 $brown: #795548 !default;
-$blue-gray: #607d8b !default;
 $gray: $gray-500 !default;
 $light-gray: $gray-300 !default;
 $dark-gray: $gray-700 !default;
+$blue-gray: #607d8b !default;
 $black: #000000 !default;
 $white: #ffffff !default;
 
@@ -79,7 +79,7 @@ $colors: (
 ) !default;
 
 // Theme colors
-$primary: #56c891 !default;
+$primary: $blue !default;
 $success: $green !default;
 $warning: $amber !default;
 $error: $red !default;

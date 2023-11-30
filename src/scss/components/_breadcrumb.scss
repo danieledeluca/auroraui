@@ -6,7 +6,6 @@ $breadcrumb-list-gap: 0.25rem !default;
 
 $breadcrumb-item-divider-icon: 'chevron-right' !default;
 
-$breadcrumb-link-color: $body-color !default;
 $breadcrumb-link-font-size: $small-font-size !default;
 $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
 
@@ -28,10 +27,10 @@ $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
 }
 
 .breadcrumb__link {
-    @include reset-link($breadcrumb-link-color);
     font-size: $breadcrumb-link-font-size;
 
     &[href] {
+        @include reset-link;
         font-weight: $breadcrumb-link-font-weight;
     }
 }

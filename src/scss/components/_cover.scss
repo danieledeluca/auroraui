@@ -8,12 +8,14 @@ $cover-padding-y-md: 5rem !default;
 $cover-overlay-background-color: rgba($black, 0.5) !default;
 $cover-overlay-color: color-contrast($cover-overlay-background-color) !default;
 
-$cover-content-max-width: 600px !default;
-$cover-content-padding: 0 0 0 $cover-padding-y !default;
-$cover-content-padding-md: 0 1rem !default;
+$cover-body-max-width: 600px !default;
+$cover-body-padding: 0 0 0 $cover-padding-y !default;
+$cover-body-padding-md: 0 1rem !default;
+$cover-body-last-child-margin-top: 1rem !default;
+
+$cover-actions-gap: 1rem !default;
 
 .cover {
-    display: block;
     padding: $cover-padding-y 0;
     background-position: center center;
     background-size: cover;
@@ -24,6 +26,7 @@ $cover-content-padding-md: 0 1rem !default;
     }
 
     &[href] {
+        display: block;
         text-decoration: none;
     }
 
@@ -41,7 +44,7 @@ $cover-content-padding-md: 0 1rem !default;
             background-color: $cover-overlay-background-color;
         }
 
-        .cover__content {
+        .cover__body {
             position: relative;
             z-index: 1;
         }
@@ -50,36 +53,54 @@ $cover-content-padding-md: 0 1rem !default;
     &.cover--center {
         text-align: center;
 
-        .cover__content {
+        .cover__body {
             margin: 0 auto;
 
             @include mb-up(md) {
                 padding: 0 div($cover-padding-y, 2);
             }
         }
+
+        .cover__actions {
+            justify-content: center;
+        }
     }
 
     &.cover--right {
         text-align: right;
 
-        .cover__content {
+        .cover__body {
             margin-left: auto;
 
             @include mb-up(md) {
                 padding: 0 $cover-padding-y 0 0;
             }
         }
+
+        .cover__actions {
+            justify-content: flex-end;
+        }
     }
 }
 
-.cover__content {
-    padding: $cover-content-padding;
+.cover__body {
+    padding: $cover-body-padding;
 
     @include mb-up(md) {
-        max-width: $cover-content-max-width;
+        max-width: $cover-body-max-width;
     }
 
     @include mb-down(md) {
-        padding: $cover-content-padding-md;
+        padding: $cover-body-padding-md;
     }
+
+    > *:last-child {
+        margin-top: $cover-body-last-child-margin-top;
+    }
+}
+
+.cover__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $cover-actions-gap;
 }

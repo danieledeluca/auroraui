@@ -243,6 +243,11 @@ select {
     padding-right: $select-padding-right;
     background: $select-background;
     background-size: $select-background-size;
+
+    &[multiple] {
+        padding-right: $input-padding-x;
+        background-image: none;
+    }
 }
 
 // Fieldset

@@ -42,7 +42,7 @@
     &:disabled,
     &.disabled {
         opacity: $button-disabled-opacity;
-        cursor: auto;
+        pointer-events: none;
     }
 
     > :not([hidden]) {
@@ -70,6 +70,7 @@
 
 @mixin button-icon {
     --#{$prefix}-button-padding: 0;
+    --#{$prefix}-button-font-size: #{$button-icon-font-size};
     --#{$prefix}-button-icon-width: #{$button-icon-width};
     justify-content: center;
     width: var(--#{$prefix}-button-icon-width);
@@ -90,8 +91,10 @@
 
 @mixin button-icon-size($size) {
     @if $size == 'big' {
+        --#{$prefix}-button-font-size: #{$button-big-icon-font-size};
         --#{$prefix}-button-icon-width: #{$button-big-icon-width};
     } @else if $size == 'small' {
+        --#{$prefix}-button-font-size: #{$button-small-icon-font-size};
         --#{$prefix}-button-icon-width: #{$button-small-icon-width};
     }
 }

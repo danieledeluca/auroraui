@@ -1,8 +1,7 @@
 // =====================================================
-// Content
+// Options
 // =====================================================
 
-@import 'images';
-@import 'tables';
-@import 'buttons';
-@import 'forms';
+$prefix: 'sk' !default;
+
+$enable-smooth-scroll: true !default;

@@ -31,5 +31,7 @@ $pagination-link-active-background-color: $primary !default;
     @include button-primary($pagination-link-background-color);
     @include button-icon;
     @include button-icon-size($pagination-link-size);
+    /* stylelint-disable-next-line order/order */
+    --#{$prefix}-button-font-size: #{$button-font-size};
     box-shadow: $pagination-link-box-shadow;
 }

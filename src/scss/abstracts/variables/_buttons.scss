@@ -4,7 +4,7 @@
 
 // Button multipliers
 $button-padding-x-multiplier: 2 !default;
-$button-icon-margin-multiplier: div(1, $button-padding-x-multiplier) !default;
+$button-icon-font-size-multiplier: 1.5 !default;
 
 // Button
 $button-padding-y: 0.75rem !default;
@@ -24,6 +24,7 @@ $button-icon-width: calc(
     ($button-padding-y * 2) + ($button-font-size * $button-line-height) + ($button-border-width * 2)
 ) !default;
 $button-icon-margin: div($button-padding-x, 2) !default;
+$button-icon-font-size: $button-font-size * $button-icon-font-size-multiplier !default;
 
 // Button big
 $button-big-padding-y: $button-padding-y + 0.125rem !default;
@@ -34,6 +35,7 @@ $button-big-icon-width: calc(
     ($button-big-padding-y * 2) + ($button-big-font-size * $button-line-height) + ($button-border-width * 2)
 ) !default;
 $button-big-icon-margin: div($button-big-padding-x, 2) !default;
+$button-big-icon-font-size: $button-big-font-size * $button-icon-font-size-multiplier !default;
 
 // Button small
 $button-small-padding-y: $button-padding-y - 0.25rem !default;
@@ -44,3 +46,4 @@ $button-small-icon-width: calc(
     ($button-small-padding-y * 2) + ($button-small-font-size * $button-line-height) + ($button-border-width * 2)
 ) !default;
 $button-small-icon-margin: div($button-small-padding-x, 2) !default;
+$button-small-icon-font-size: $button-small-font-size * $button-icon-font-size-multiplier !default;

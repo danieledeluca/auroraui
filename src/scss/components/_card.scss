@@ -12,10 +12,12 @@ $card-image-height: 300px !default;
 $card-image-height-md: 200px !default;
 
 $card-body-padding: 1.25rem !default;
+$card-body-last-child-margin-top: 1rem !default;
+
+$card-actions-gap: 1rem !default;
 
 .card {
     position: relative;
-    display: block;
     margin-bottom: $card-margin-bottom;
     background-color: $card-background-color;
     color: $card-color;
@@ -25,14 +27,11 @@ $card-body-padding: 1.25rem !default;
     &[href],
     [href]:not(.button) {
         @include reset-link($card-color);
+        display: block;
     }
 }
 
 .card__image {
-    &[href] {
-        display: block;
-    }
-
     img {
         width: 100%;
         height: $card-image-height;
@@ -47,4 +46,14 @@ $card-body-padding: 1.25rem !default;
 
 .card__body {
     padding: $card-body-padding;
+
+    > *:last-child {
+        margin-top: $card-body-last-child-margin-top;
+    }
+}
+
+.card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $card-actions-gap;
 }

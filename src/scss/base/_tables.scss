@@ -3,7 +3,7 @@
 // =====================================================
 
 table {
-    &.table--mobile {
+    &.table--responsive {
         thead,
         tfoot {
             @include desktop-only;
