@@ -33,7 +33,10 @@
         "lint:css": "stylelint 'src/scss/**/*.scss' --config .stylelintrc --fix",
         "format": "npm run format:js && npm run format:css",
         "format:js": "prettier 'src/js/**/*.js' --config .prettierrc --write --ignore-path .gitignore",
-        "format:css": "prettier 'src/scss/**/*.scss' --config .prettierrc --write --ignore-path .gitignore"
+        "format:css": "prettier 'src/scss/**/*.scss' --config .prettierrc --write --ignore-path .gitignore",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",
@@ -47,7 +50,8 @@
         "stylelint-config-prettier-scss": "^0.0.1",
         "stylelint-config-sass-guidelines": "^9.0.1",
         "stylelint-prettier": "^2.0.0",
-        "vite": "^4.0.0"
+        "vite": "^4.0.0",
+        "vitepress": "^1.0.0-rc.31"
     },
     "files": [
         "dist/*",

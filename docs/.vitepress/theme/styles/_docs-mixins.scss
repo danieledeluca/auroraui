@@ -1,0 +1,23 @@
+@mixin not-docs-example($tags...) {
+    $tags-length: length($tags);
+
+    @if $tags-length > 1 {
+        @each $tag in $tags {
+            $tag: unquote($tag);
+
+            #{$tag} {
+                &:not(.docs-example #{$tag}) {
+                    @content;
+                }
+            }
+        }
+    } @else {
+        $tag: unquote(nth($tags, 1));
+
+        #{$tag} {
+            &:not(.docs-example #{$tag}) {
+                @content;
+            }
+        }
+    }
+}

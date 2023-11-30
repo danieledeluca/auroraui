@@ -1,0 +1,212 @@
+/* stylelint-disable */
+
+@import 'docs-mixins';
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.4;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+
+    &.dark {
+        color-scheme: dark;
+    }
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+    line-height: 24px;
+    font-family: var(--vp-font-family-base);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--vp-c-text-1);
+    background-color: var(--vp-c-bg);
+    direction: ltr;
+    font-synthesis: style;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@include not-docs-example(main) {
+    display: block;
+}
+
+@include not-docs-example(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@include not-docs-example(p) {
+    margin: 0;
+}
+
+@include not-docs-example(strong, b) {
+    font-weight: 600;
+}
+
+/**
+ * Avoid 300ms click delay on touch devices that support the `touch-action`
+ * CSS property.
+ *
+ * In particular, unlike most other browsers, IE11+Edge on Windows 10 on
+ * touch devices and IE Mobile 10-11 DON'T remove the click delay when
+ * `<meta name="viewport" content="width=device-width">` is present.
+ * However, they DO support removing the click delay via
+ * `touch-action: manipulation`.
+ *
+ * See:
+ * - http://v4-alpha.getbootstrap.com/content/reboot/#click-delay-optimization-for-touch
+ * - http://caniuse.com/#feat=css-touch-action
+ * - http://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+ */
+
+@include not-docs-example(a, area, button, '[role="button"]', input, label, select, summary, textarea) {
+    touch-action: manipulation;
+}
+
+@include not-docs-example(a) {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+@include not-docs-example(ol, ul) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@include not-docs-example(blockquote) {
+    margin: 0;
+}
+
+@include not-docs-example(pre, code, kbd, samp) {
+    font-family: var(--vp-font-family-mono);
+}
+
+@include not-docs-example(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: block;
+}
+
+@include not-docs-example(figure) {
+    margin: 0;
+}
+
+@include not-docs-example(img, video) {
+    max-width: 100%;
+    height: auto;
+}
+
+@include not-docs-example(button, input, optgroup, select, textarea) {
+    border: 0;
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+}
+
+@include not-docs-example(button) {
+    padding: 0;
+    font-family: inherit;
+    background-color: transparent;
+    background-image: none;
+}
+
+@include not-docs-example('button:enabled', '[role="button"]:enabled') {
+    cursor: pointer;
+}
+
+@include not-docs-example('button:focus', 'button:focus-visible') {
+    outline: 1px dotted;
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@include not-docs-example('button:focus:not(:focus-visible)') {
+    outline: none !important;
+}
+
+@include not-docs-example('input:focus', 'textarea:focus', 'select:focus') {
+    outline: none;
+}
+
+@include not-docs-example(table) {
+    border-collapse: collapse;
+}
+
+@include not-docs-example(input) {
+    background-color: transparent;
+}
+
+@include not-docs-example('input:-ms-input-placeholder', 'textarea:-ms-input-placeholder') {
+    color: var(--vp-c-text-3);
+}
+
+@include not-docs-example('input::-ms-input-placeholder', 'textarea::-ms-input-placeholder') {
+    color: var(--vp-c-text-3);
+}
+
+@include not-docs-example('input::placeholder', 'textarea::placeholder') {
+    color: var(--vp-c-text-3);
+}
+
+@include not-docs-example('input::-webkit-outer-spin-button', 'input::-webkit-inner-spin-button') {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@include not-docs-example('input[type="number"]') {
+    -moz-appearance: textfield;
+}
+
+@include not-docs-example(textarea) {
+    resize: vertical;
+}
+
+@include not-docs-example(select) {
+    -webkit-appearance: none;
+}
+
+@include not-docs-example(fieldset) {
+    margin: 0;
+    padding: 0;
+}
+
+@include not-docs-example(h1, h2, h3, h4, h5, h6, li, p) {
+    overflow-wrap: break-word;
+}
+
+vite-error-overlay {
+    z-index: 9999;
+}
+
+mjx-container {
+    display: inline-block;
+    margin: auto 2px -2px;
+}
+
+mjx-container > svg {
+    margin: auto;
+}
