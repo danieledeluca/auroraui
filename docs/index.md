@@ -1,10 +1,10 @@
 ---
 layout: home
-titleTemplate: Lightweight HTML, CSS, and JavaScript framework
+titleTemplate: Lightweight HTML, CSS and JavaScript framework.
 
 hero:
     name: Sparkle UI
-    text: Lightweight HTML, CSS, and JavaScript framework
+    text: Lightweight HTML, CSS and JavaScript framework.
     tagline: Sparkle UI is a free, open source framework that provides a basic style reset and ready to use frontend components.
     image:
         src: /favicon.svg

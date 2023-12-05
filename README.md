@@ -1,6 +1,6 @@
 # Sparkle
 
-Lightweight HTML, CSS, and JavaScript framework.
+Lightweight HTML, CSS and JavaScript framework.
 
 ## Documentation
 

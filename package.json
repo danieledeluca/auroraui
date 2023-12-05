@@ -1,6 +1,6 @@
 {
     "name": "@sparkleui/sparkle",
-    "description": "Lightweight HTML, CSS, and JavaScript framework.",
+    "description": "Lightweight HTML, CSS and JavaScript framework.",
     "version": "1.0.2",
     "type": "module",
     "author": "Daniele De Luca",
