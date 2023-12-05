@@ -3,13 +3,12 @@ import { defineConfig, type DefaultTheme } from 'vitepress';
 import pkg from '../../package.json';
 
 export default defineConfig({
-    lang: 'en-US',
     title: 'Sparkle UI',
     description: pkg.description,
-    appearance: false,
-    cleanUrls: true,
-    base: '/sparkle/',
     head: [['link', { rel: 'icon', type: 'image/png', href: '/sparkle/favicon.png' }]],
+    base: '/sparkle/',
+    cleanUrls: true,
+    appearance: false,
     themeConfig: {
         logo: '/favicon.svg',
         nav: nav(),
@@ -17,14 +16,14 @@ export default defineConfig({
             '/docs/': { base: '/docs/', items: docsSidebar() },
             '/icons/': { base: '/icons/', items: iconsSidebar() },
         },
-        socialLinks: [{ icon: 'github', link: `https://github.com/danieledeluca/sparkle` }],
         outline: [2, 3],
-        editLink: {
-            pattern: `https://github.com/danieledeluca/sparkle/edit/main/docs/:path`,
-        },
+        socialLinks: [{ icon: 'github', link: `https://github.com/danieledeluca/sparkle` }],
         footer: {
             message: 'Released under the MIT License.',
             copyright: `Copyright © ${new Date().getFullYear()} ${pkg.author}`,
+        },
+        editLink: {
+            pattern: `https://github.com/danieledeluca/sparkle/edit/main/docs/:path`,
         },
     },
     vite: {
