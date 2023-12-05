@@ -31,7 +31,7 @@ if (props.alignment !== 'left') coverClasses.push(`cover--${props.alignment}`);
 if (props.isParallax) coverClasses.push('parallax');
 
 const coverStyle = {
-    backgroundImage: 'url(/background.jpg)',
+    backgroundImage: 'url(/sparkle/background.jpg)',
 };
 
 const parallax = ref(null);

@@ -8,17 +8,17 @@ const props = defineProps<{
     <div class="docs-example">
         <template v-if="props.example === 'figure'">
             <figure>
-                <img src="/background.jpg" alt="Sparkle image" />
+                <img src="/sparkle/background.jpg" alt="Sparkle image" />
             </figure>
         </template>
         <template v-if="props.example === 'figcaption'">
             <figure>
-                <img src="/background.jpg" alt="Sparkle image" />
+                <img src="/sparkle/background.jpg" alt="Sparkle image" />
                 <figcaption>This is an example of figure caption</figcaption>
             </figure>
         </template>
         <template v-if="props.example === 'full-width-image'">
-            <img src="/background.jpg" alt="Sparkle image" class="img--full" />
+            <img src="/sparkle/background.jpg" alt="Sparkle image" class="img--full" />
         </template>
     </div>
 </template>

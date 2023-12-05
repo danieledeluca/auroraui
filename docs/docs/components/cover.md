@@ -9,7 +9,7 @@ import CoverView from '@/views/CoverView.vue';
 <CoverView example="example" />
 
 ```html
-<div class="cover cover--overlay" style='background-image: url("/background.jpg");'>
+<div class="cover cover--overlay" style='background-image: url("/sparkle/background.jpg");'>
     <div class="cover__body">
         <h1 class="cover__title">
             <span>Cover title</span>
@@ -26,7 +26,7 @@ import CoverView from '@/views/CoverView.vue';
 <CoverView example="with-link" />
 
 ```html
-<div class="cover cover--overlay" style='background-image: url("/background.jpg");'>
+<div class="cover cover--overlay" style='background-image: url("/sparkle/background.jpg");'>
     <div class="cover__body">
         <h1 class="cover__title">
             <span>Cover title</span>
@@ -48,7 +48,7 @@ import CoverView from '@/views/CoverView.vue';
 <CoverView example="full-link" />
 
 ```html
-<a href="#" class="cover cover--overlay" style='background-image: url("/background.jpg");'>
+<a href="#" class="cover cover--overlay" style='background-image: url("/sparkle/background.jpg");'>
     <div class="cover__body">
         <h1 class="cover__title">
             <span>Cover title</span>
@@ -67,7 +67,7 @@ import CoverView from '@/views/CoverView.vue';
 <CoverView example="alignment-center" />
 
 ```html
-<div class="cover cover--overlay cover--center" style='background-image: url("/background.jpg");'>
+<div class="cover cover--overlay cover--center" style='background-image: url("/sparkle/background.jpg");'>
     <div class="cover__body">
         <h1 class="cover__title">
             <span>Cover title</span>
@@ -84,7 +84,7 @@ import CoverView from '@/views/CoverView.vue';
 <CoverView example="alignment-right" />
 
 ```html
-<div class="cover cover--overlay cover--right" style='background-image: url("/background.jpg");'>
+<div class="cover cover--overlay cover--right" style='background-image: url("/sparkle/background.jpg");'>
     <div class="cover__body">
         <h1 class="cover__title">
             <span>Cover title</span>

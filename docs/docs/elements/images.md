@@ -10,7 +10,7 @@ import ImagesView from '@/views/ImagesView.vue';
 
 ```html
 <figure>
-    <img src="/background.jpg" alt="Sparkle image" />
+    <img src="/sparkle/background.jpg" alt="Sparkle image" />
 </figure>
 ```
 
@@ -20,7 +20,7 @@ import ImagesView from '@/views/ImagesView.vue';
 
 ```html
 <figure>
-    <img src="/background.jpg" alt="Sparkle image" />
+    <img src="/sparkle/background.jpg" alt="Sparkle image" />
     <figcaption>This is an example of figure caption</figcaption>
 </figure>
 ```
@@ -30,7 +30,7 @@ import ImagesView from '@/views/ImagesView.vue';
 <ImagesView example="full-width-image" />
 
 ```html
-<img src="/background.jpg" alt="Sparkle image" class="img--full" />
+<img src="/sparkle/background.jpg" alt="Sparkle image" class="img--full" />
 ```
 
 ## SCSS
