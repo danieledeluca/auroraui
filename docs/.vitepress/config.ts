@@ -25,6 +25,9 @@ export default defineConfig({
         editLink: {
             pattern: `https://github.com/danieledeluca/sparkle/edit/main/docs/:path`,
         },
+        search: {
+            provider: 'local',
+        },
     },
     vite: {
         resolve: {
