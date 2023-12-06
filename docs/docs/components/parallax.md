@@ -11,7 +11,7 @@ This component is made on top of the [Cover component](./cover.md).
 <CoverView example="parallax" />
 
 ```html
-<div class="cover parallax" style="background-image: url('/sparkle/background.jpg');"></div>
+<div class="cover parallax" style="background-image: url('/background.jpg');"></div>
 ```
 
 ## JavaScript
@@ -41,11 +41,7 @@ sparkleParallax.mount({
 ```
 
 ```html [html]
-<div
-    class="cover parallax"
-    style="background-image: url('/sparkle/background.jpg');"
-    data-parallax='{"scrollSpeed": 2}'
-></div>
+<div class="cover parallax" style="background-image: url('/background.jpg');" data-parallax='{"scrollSpeed": 2}'></div>
 ```
 
 :::

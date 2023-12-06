@@ -11,7 +11,7 @@ import CardView from '@/views/CardView.vue';
 ```html
 <div class="card">
     <div class="card__image">
-        <img src="/sparkle/background.jpg" alt="Card image" />
+        <img src="/background.jpg" alt="Card image" />
     </div>
     <div class="card__body">
         <h3 class="card__title">
@@ -32,7 +32,7 @@ import CardView from '@/views/CardView.vue';
 ```html
 <div class="card">
     <a href="#" class="card__image">
-        <img src="/sparkle/background.jpg" alt="Card image" />
+        <img src="/background.jpg" alt="Card image" />
     </a>
     <div class="card__body">
         <h3 class="card__title">
@@ -60,7 +60,7 @@ import CardView from '@/views/CardView.vue';
 ```html
 <a href="#" class="card">
     <div class="card__image">
-        <img src="/sparkle/background.jpg" alt="Card image" />
+        <img src="/background.jpg" alt="Card image" />
     </div>
     <div class="card__body">
         <h3 class="card__title">

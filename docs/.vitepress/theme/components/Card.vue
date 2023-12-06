@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
     <a v-if="props.isLink" href="javascript:void(0)" class="card">
         <div v-if="props.hasImage" class="card__image">
-            <img src="/sparkle/background.jpg" alt="Card image" />
+            <img src="/background.jpg" alt="Card image" />
         </div>
         <div class="card__body">
             <div class="h3 card__title">
@@ -36,10 +36,10 @@ const props = withDefaults(defineProps<Props>(), {
     </a>
     <div v-else class="card">
         <a v-if="props.hasLink && props.hasImage" href="javascript:void(0)" class="card__image">
-            <img src="/sparkle/background.jpg" alt="Card image" />
+            <img src="/background.jpg" alt="Card image" />
         </a>
         <div v-else-if="props.hasImage" class="card__image">
-            <img src="/sparkle/background.jpg" alt="Card image" />
+            <img src="/background.jpg" alt="Card image" />
         </div>
         <div class="card__body">
             <div class="h3 card__title">
