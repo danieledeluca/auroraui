@@ -212,7 +212,7 @@ import { SparkleNavbar } from '@sparkleui/sparkle';
 ### Initialize
 
 ```js
-const sparkleNavbar = new SparkleNavbar('.header__navbar');
+const sparkleNavbar = new SparkleNavbar(document.querySelector('.header__navbar'));
 sparkleNavbar.mount();
 ```
 
@@ -221,7 +221,7 @@ sparkleNavbar.mount();
 ::: code-group
 
 ```js [js]
-const sparkleNavbar = new SparkleNavbar('.header__navbar');
+const sparkleNavbar = new SparkleNavbar(document.querySelector('.header__navbar'));
 sparkleNavbar.mount({
     navbarItemClass: '.navbar__item',
     navbarLinkClass: '.navbar__link',

@@ -25,7 +25,7 @@ import { SparkleParallax } from '@sparkleui/sparkle';
 ### Initialize
 
 ```js
-const sparkleParallax = new SparkleParallax('.parallax');
+const sparkleParallax = new SparkleParallax(document.querySelector('.parallax'));
 sparkleParallax.mount();
 ```
 
@@ -34,7 +34,7 @@ sparkleParallax.mount();
 ::: code-group
 
 ```js [js]
-const sparkleParallax = new SparkleParallax('.parallax');
+const sparkleParallax = new SparkleParallax(document.querySelector('.parallax'));
 sparkleParallax.mount({
     scrollSpeed: 2,
 });
