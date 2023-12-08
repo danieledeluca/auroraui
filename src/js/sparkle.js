@@ -1,6 +1,7 @@
-// =====================================================
-// Sparkle
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 import '@sparkleui/sparkle-icons';
 import '../scss/sparkle.scss';

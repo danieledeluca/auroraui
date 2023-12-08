@@ -1,6 +1,7 @@
-// =====================================================
-// Forms
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 // Label
 label {
@@ -42,8 +43,10 @@ input {
 }
 
 // Checkbox and radio
-// =====================================================
-// Add custom style for checkbox and radio input
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 [type='checkbox'],
 [type='radio'] {
@@ -82,8 +85,10 @@ input {
 }
 
 // Number
-// =====================================================
-// Correct the cursor style of increment and decrement buttons in Chrome
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 [type='number'] {
     &::-webkit-inner-spin-button,
@@ -93,10 +98,10 @@ input {
 }
 
 // Search
-// =====================================================
-// 1. Correct the odd appearance in Chrome and Safari
-// 2. Correct the outline style in Safari
-// 3. Remove the inner padding in Chrome and Safari on macOS
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 [type='search'] {
     appearance: textfield; // 1
@@ -112,8 +117,10 @@ input {
 }
 
 // Date and time
-// =====================================================
-// Add custom style for date and time input
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 [type='date'],
 [type='datetime-local'],
@@ -151,9 +158,10 @@ input {
 }
 
 // File
-// =====================================================
-// 1. Correct the inability to style clickable types in iOS and Safari
-// 2. Change font properties to `inherit` in Safari
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 [type='file'] {
     padding: 0;
@@ -173,8 +181,10 @@ input {
 }
 
 // Color
-// =====================================================
-// Add custom style for color input
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 [type='color'] {
     height: $color-height;
@@ -191,8 +201,10 @@ input {
 }
 
 // Range
-// =====================================================
-// Add custom style for range input
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 [type='range'] {
     padding: 0;
@@ -225,8 +237,10 @@ input {
 }
 
 // Textarea
-// =====================================================
-// Textareas should really only resize vertically so they don't break their (horizontal) containers
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 textarea {
     @extend %form-field;
@@ -235,8 +249,10 @@ textarea {
 }
 
 // Select
-// =====================================================
-// Add custom style for select
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 select {
     @extend %form-field;
@@ -251,9 +267,10 @@ select {
 }
 
 // Fieldset
-// =====================================================
-// 1. Reset `min-width`
-// 2. Reset the default outline behavior of fieldsets so they don't affect page layout
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 fieldset {
     @include last-child-no-margin-bottom;
@@ -264,8 +281,10 @@ fieldset {
 }
 
 // Legend
-// =====================================================
-// 1. Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers.
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 legend {
     width: 100%;
@@ -275,8 +294,10 @@ legend {
 }
 
 // Progress
-// =====================================================
-// Add the correct vertical alignment in Chrome, Firefox, and Opera
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 progress {
     display: inline-block;
@@ -338,10 +359,10 @@ select {
 }
 
 // Button
-// =====================================================
-// 1. Correct the inability to style clickable types in iOS and Safari
-// 2. Remove the inner border and padding in Firefox
-// 3. Restore the focus styles unset by the previous rule
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 button,
 [type='button'],

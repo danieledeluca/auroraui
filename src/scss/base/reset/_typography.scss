@@ -1,10 +1,13 @@
-// =====================================================
-// Typography
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 // Headings
-// =====================================================
-// 1. Remove top margin from headings
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 %heading {
     margin-top: 0; // 1
@@ -22,9 +25,10 @@
 }
 
 // Paragraphs
-// =====================================================
-// 1. Remove top margin
-// 2. Reset bottom margin to use `rem` instead of `em`
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 p {
     @include last-child-no-margin-bottom;
@@ -45,8 +49,10 @@ a {
 }
 
 // Strong
-// =====================================================
-// 1. Add the correct font weight in Chrome, Edge, and Safari
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 %strong {
     font-weight: $strong-font-weight; // 1
@@ -58,8 +64,10 @@ strong {
 }
 
 // Small
-// =====================================================
-// 1. Add the correct font size in all browsers
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 %small {
     font-size: $small-font-size; // 1
@@ -134,8 +142,10 @@ mark {
 }
 
 // Sub and Sup
-// =====================================================
-// Prevent `sub` and `sup` elements from affecting the line height in all browsers
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 sub,
 sup {
@@ -154,10 +164,10 @@ sup {
 }
 
 // Abbreviations
-// =====================================================
-// 1. Add the correct text decoration in Chrome, Edge, Opera, and Safari
-// 2. Add explicit cursor to indicate changed behavior
-// 3. Prevent the text-decoration to be skipped
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 abbr[title] {
     text-decoration: underline dotted; // 1
@@ -166,9 +176,10 @@ abbr[title] {
 }
 
 // Code
-// =====================================================
-// 1. Correct the inheritance and scaling of font size in all browsers
-// 2. Correct the odd `em` font sizing in all browsers
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 pre,
 code,
@@ -217,8 +228,10 @@ kbd {
 }
 
 // Hr
-// =====================================================
-// 1. Reset Firefox's gray color
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 hr {
     margin: $hr-margin;

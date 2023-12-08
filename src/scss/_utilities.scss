@@ -1,6 +1,7 @@
-// =====================================================
-// Utilities
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 @each $utility, $value in $utilities {
     @include utilities($value);

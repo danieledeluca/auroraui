@@ -1,6 +1,7 @@
-// =====================================================
-// Media queries
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 @function find-break($break) {
     $breakpoint: if(map-get($breakpoints, $break), map-get($breakpoints, $break), $break);

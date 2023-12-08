@@ -1,6 +1,7 @@
-// =====================================================
-// Buttons
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 @mixin button {
     --#{$prefix}-button-padding: #{$button-padding-y $button-padding-x};

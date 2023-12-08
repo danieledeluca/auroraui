@@ -1,6 +1,7 @@
-// =====================================================
-// Parallax class
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 const DATA_ATTRIBUTE = 'data-parallax';
 const DEFAULT_OPTIONS = {

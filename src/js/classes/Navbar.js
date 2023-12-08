@@ -1,6 +1,7 @@
-// =====================================================
-// Navbar class
-// =====================================================
+/**
+ * Copyright @ 2023 Sparkle
+ * https://github.com/danieledeluca/sparkle
+ */
 
 import { classes, isMobile } from '../utilities';
 
