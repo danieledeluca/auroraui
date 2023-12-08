@@ -31,7 +31,7 @@
         "build": "vite build",
         "preview": "vite preview",
         "lint": "npm run lint:js && npm run lint:css",
-        "lint:js": "eslint 'src/js/**/*.js' --config .eslintrc.json --fix",
+        "lint:js": "eslint 'src/js/**/*.js' --config .eslintrc --fix",
         "lint:css": "stylelint 'src/scss/**/*.scss' --config .stylelintrc --fix",
         "format": "npm run format:js && npm run format:css",
         "format:js": "prettier 'src/js/**/*.js' --config .prettierrc --write --ignore-path .gitignore",
