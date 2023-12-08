@@ -5,7 +5,7 @@ import pkg from '../../package.json';
 export default defineConfig({
     title: 'Sparkle UI',
     description: pkg.description,
-    head: [['link', { rel: 'icon', type: 'image/png', href: '/sparkle/favicon.png' }]],
+    head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/sparkle/favicon.svg' }]],
     base: '/sparkle/',
     cleanUrls: true,
     appearance: false,
