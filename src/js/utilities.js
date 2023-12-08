@@ -25,14 +25,3 @@ export const breakpoints = {
 export function isMobile() {
     return window.innerWidth < breakpoints.md;
 }
-
-/**
- * Prevent default behavior on click on empty links
- */
-export function preventClickOnEmptyLinks() {
-    document.querySelectorAll('a[href="#"]').forEach((emptyLink) => {
-        emptyLink.addEventListener('click', (e) => {
-            e.preventDefault();
-        });
-    });
-}
