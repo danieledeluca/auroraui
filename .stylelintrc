@@ -1,5 +1,4 @@
 {
-    "extends": ["stylelint-config-prettier-scss"],
     "plugins": ["stylelint-prettier"],
     "ignorePatterns": ".gitignore",
     "rules": {
@@ -9,26 +8,6 @@
         "function-parentheses-space-inside": "never-single-line",
         "max-nesting-depth": [2, { "ignore": ["pseudo-classes"], "ignoreAtRules": ["/include/", "/each/", "/if/"] }],
         "selector-class-pattern": null,
-        "selector-no-qualifying-type": [true, { "ignore": ["attribute", "class"] }],
-        "scss/at-each-key-value-single-line": true,
-        "scss/at-else-if-parentheses-space-before": "always",
-        "scss/at-function-parentheses-space-before": "never",
-        "scss/at-mixin-argumentless-call-parentheses": "never",
-        "scss/at-mixin-parentheses-space-before": "never",
-        "scss/dollar-variable-default": [true, { "ignore": "local" }],
-        "scss/dollar-variable-empty-line-after": [
-            "always",
-            {
-                "except": ["last-nested", "before-comment", "before-dollar-variable"],
-                "ignore": ["before-comment", "inside-single-line-block"]
-            }
-        ],
-        "scss/double-slash-comment-whitespace-inside": "always",
-        "scss/comment-no-empty": true,
-        "scss/dimension-no-non-numeric-values": true,
-        "scss/operator-no-unspaced": true,
-        "scss/selector-no-union-class-name": true,
-        "scss/no-duplicate-mixins": true,
-        "order/properties-alphabetical-order": null
+        "selector-no-qualifying-type": [true, { "ignore": ["attribute", "class"] }]
     }
 }
