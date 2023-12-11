@@ -1,13 +1,50 @@
 {
-    "plugins": ["stylelint-prettier"],
+    "extends": ["stylelint-prettier/recommended", "stylelint-config-standard-scss"],
     "ignorePatterns": ".gitignore",
     "rules": {
         "prettier/prettier": true,
+        "at-rule-disallowed-list": ["debug"],
         "color-hex-length": "long",
-        "declaration-property-value-disallowed-list": null,
-        "function-parentheses-space-inside": "never-single-line",
-        "max-nesting-depth": [2, { "ignore": ["pseudo-classes"], "ignoreAtRules": ["/include/", "/each/", "/if/"] }],
+        "color-named": ["never", { "ignore": ["inside-function"] }],
+        "declaration-property-value-disallowed-list": {
+            "border": ["none"],
+            "border-top": ["none"],
+            "border-right": ["none"],
+            "border-bottom": ["none"],
+            "border-left": ["none"]
+        },
+        "max-nesting-depth": [
+            2,
+            {
+                "ignore": ["pseudo-classes"],
+                "ignoreAtRules": ["include", "media", "support", "each", "if"],
+                "ignoreRules": ["/^&\\S+/"]
+            }
+        ],
+        "no-descending-specificity": null,
+        "number-max-precision": null,
+        "scss/at-each-key-value-single-line": true,
+        "scss/dimension-no-non-numeric-values": true,
+        "scss/dollar-variable-default": [true, { "ignore": "local" }],
+        "scss/dollar-variable-empty-line-after": [
+            "always",
+            {
+                "except": ["last-nested", "before-comment", "before-dollar-variable"],
+                "ignore": ["before-comment", "inside-single-line-block"]
+            }
+        ],
+        "scss/dollar-variable-empty-line-before": null,
+        "scss/no-duplicate-dollar-variables": [
+            true,
+            { "ignoreInsideAtRules": ["if", "else", "mixin", "function"], "ignoreDefaults": true }
+        ],
+        "scss/no-global-function-names": null,
+        "scss/operator-no-newline-after": null,
+        "scss/selector-no-redundant-nesting-selector": true,
+        "scss/selector-no-union-class-name": true,
         "selector-class-pattern": null,
+        "selector-max-compound-selectors": 3,
+        "selector-max-id": 0,
         "selector-no-qualifying-type": [true, { "ignore": ["attribute", "class"] }]
     }
 }
