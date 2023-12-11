@@ -4,13 +4,13 @@
  */
 
 // Table
-/**
- * Copyright @ 2023 Sparkle
- * https://github.com/danieledeluca/sparkle
- */
+// =====================================================
+// 1. Collapse border spacing in all browsers (prevent double borders)
+// 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
 
 table {
     @include last-child-no-margin-bottom;
+
     width: 100%;
     margin-bottom: $table-margin-bottom;
     border-collapse: collapse; // 1
@@ -31,10 +31,9 @@ caption {
 }
 
 // Table cell
-/**
- * Copyright @ 2023 Sparkle
- * https://github.com/danieledeluca/sparkle
- */
+// =====================================================
+// 1. Matches default `<td>` alignment by inheriting `text-align`
+// 2. Fix alignment for Safari
 
 th {
     text-align: inherit; // 1
