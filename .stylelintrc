@@ -1,5 +1,6 @@
 {
     "extends": ["stylelint-prettier/recommended", "stylelint-config-standard-scss"],
+    "plugins": ["stylelint-order"],
     "ignorePatterns": ".gitignore",
     "rules": {
         "prettier/prettier": true,
@@ -23,6 +24,46 @@
         ],
         "no-descending-specificity": null,
         "number-max-precision": null,
+        "order/order": [
+            "custom-properties",
+            "dollar-variables",
+            {
+                "type": "at-rule",
+                "name": "extend"
+            },
+            {
+                "type": "at-rule",
+                "name": "include",
+                "hasBlock": false
+            },
+            "declarations",
+            {
+                "type": "at-rule",
+                "name": "include",
+                "hasBlock": true
+            },
+            {
+                "type": "rule",
+                "selector": "^&:[\\w-]+",
+                "name": "pseudo-classes"
+            },
+            {
+                "type": "rule",
+                "selector": "^&::[\\w-]+",
+                "name": "pseudo-elements"
+            },
+            {
+                "type": "rule",
+                "selector": "^\\S+ &$",
+                "name": "parent-elements"
+            },
+            {
+                "type": "rule",
+                "selector": "^&\\S+",
+                "name": "nested-elements"
+            },
+            "rules"
+        ],
         "scss/at-each-key-value-single-line": true,
         "scss/dimension-no-non-numeric-values": true,
         "scss/dollar-variable-default": [true, { "ignore": "local" }],
