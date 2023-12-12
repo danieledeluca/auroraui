@@ -6,6 +6,7 @@
 // Label
 label {
     @include last-child-no-margin-bottom;
+
     display: block;
     margin-bottom: $label-margin-bottom;
 }
@@ -13,6 +14,7 @@ label {
 // Input
 %form-field {
     @include last-child-no-margin-bottom;
+
     display: block;
     width: 100%;
     margin: $input-margin;
@@ -294,10 +296,6 @@ progress {
     vertical-align: baseline;
     overflow: hidden;
 
-    &[value]::-webkit-progress-value {
-        background-color: $progress-color;
-    }
-
     &:indeterminate {
         background: $progress-indeterminate-background;
         animation: progress-indeterminate 1s linear infinite;
@@ -310,6 +308,10 @@ progress {
     &::-webkit-progress-bar {
         background-color: transparent;
         border-radius: $progress-border-radius;
+    }
+
+    &[value]::-webkit-progress-value {
+        background-color: $progress-color;
     }
 }
 
@@ -345,8 +347,8 @@ select {
 // Button
 // =====================================================
 // 1. Correct the inability to style clickable types in iOS and Safari
-// 2. Remove the inner border and padding in Firefox
-// 3. Restore the focus styles unset by the previous rule
+// 2. Restore the focus styles unset by the previous rule
+// 3. Remove the inner border and padding in Firefox
 
 button,
 [type='button'],
@@ -354,12 +356,12 @@ button,
 [type='submit'] {
     appearance: button; // 1
 
-    &::-moz-focus-inner {
-        padding: 0; // 2
-        border-style: none; // 2
+    &:-moz-focusring {
+        outline: 1px dotted ButtonText; // 2
     }
 
-    &:-moz-focusring {
-        outline: 1px dotted ButtonText; // 3
+    &::-moz-focus-inner {
+        padding: 0; // 3
+        border-style: none; // 3
     }
 }

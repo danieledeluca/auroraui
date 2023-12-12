@@ -11,20 +11,17 @@ table {
         }
 
         tbody {
-            /* stylelint-disable-next-line max-nesting-depth */
             tr:not(:last-child) {
                 @include mb-down(md) {
                     border-bottom: $table-group-divider-border-bottom;
                 }
             }
 
-            /* stylelint-disable-next-line max-nesting-depth */
             td {
                 @include mb-down(md) {
                     display: block;
                 }
 
-                /* stylelint-disable-next-line max-nesting-depth */
                 &::before {
                     @include mb-down(md) {
                         content: attr(data-th) ': ';
@@ -39,7 +36,6 @@ table {
 
     &.table--stripped {
         tbody {
-            /* stylelint-disable-next-line max-nesting-depth */
             tr:nth-of-type(odd) {
                 background-color: $table-stripped-background-color;
             }

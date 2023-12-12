@@ -6,6 +6,7 @@
 // Figure
 figure {
     @include last-child-no-margin-bottom;
+
     margin: $figure-margin;
 }
 

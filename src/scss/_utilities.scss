@@ -10,7 +10,7 @@
 @each $breakpoint, $value in $breakpoints {
     @include mb-up($breakpoint) {
         @each $utility, $utility-value in $utilities {
-            @if (map-get($utility-value, responsive)) {
+            @if map-get($utility-value, responsive) {
                 @include utilities($utility-value, '-#{$breakpoint}');
             }
         }

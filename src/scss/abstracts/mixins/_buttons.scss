@@ -13,6 +13,7 @@
     --#{$prefix}-button-hover-color: #{$button-color};
     --#{$prefix}-button-hover-border-color: #{$button-border-color};
     --#{$prefix}-button-icon-margin: #{$button-icon-margin};
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +74,7 @@
     --#{$prefix}-button-padding: 0;
     --#{$prefix}-button-font-size: #{$button-icon-font-size};
     --#{$prefix}-button-icon-width: #{$button-icon-width};
+
     justify-content: center;
     width: var(--#{$prefix}-button-icon-width);
     aspect-ratio: 1;

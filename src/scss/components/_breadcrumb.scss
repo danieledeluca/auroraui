@@ -12,6 +12,7 @@ $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
 
 .breadcrumb__list {
     @include reset-list;
+
     display: flex;
     align-items: center;
     gap: $breadcrumb-list-gap;
@@ -22,6 +23,7 @@ $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
     &:not(:last-child) {
         &::after {
             @include sparkle-icon($breadcrumb-item-divider-icon);
+
             vertical-align: middle;
         }
     }
@@ -32,6 +34,7 @@ $breadcrumb-link-font-weight: $font-weight-semi-bold !default;
 
     &[href] {
         @include reset-link;
+
         font-weight: $breadcrumb-link-font-weight;
     }
 }

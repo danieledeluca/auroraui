@@ -3,6 +3,7 @@
  * https://github.com/danieledeluca/sparkle
  */
 
+// eslint-disable-next-line import/no-unresolved
 import '@sparkleui/sparkle-icons';
 import '../scss/sparkle.scss';
 

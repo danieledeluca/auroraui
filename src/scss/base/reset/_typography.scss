@@ -18,6 +18,7 @@
 @each $heading, $value in $headings-font-sizes {
     #{$heading} {
         @extend %heading;
+
         font-size: $value;
     }
 }
@@ -29,6 +30,7 @@
 
 p {
     @include last-child-no-margin-bottom;
+
     margin-top: 0; // 1
     margin-bottom: $paragraph-margin-bottom; // 2
 }
@@ -74,6 +76,7 @@ small {
 ul,
 ol {
     @include last-child-no-margin-bottom;
+
     margin-top: 0;
     margin-bottom: $list-margin-bottom;
     padding-left: $list-padding-left;
@@ -86,6 +89,7 @@ ol {
 // Description lists
 dl {
     @include last-child-no-margin-bottom;
+
     margin-top: 0;
     margin-bottom: $description-list-margin-bottom;
 }
@@ -102,6 +106,7 @@ dd {
 // Blockquote
 blockquote {
     @include last-child-no-margin-bottom;
+
     margin: 0 0 $blockquote-margin-bottom;
     font-size: $blockquote-font-size;
 
@@ -123,6 +128,7 @@ blockquote {
 // Address
 address {
     @include last-child-no-margin-bottom;
+
     margin-bottom: $address-margin-bottom;
     font-style: normal;
     line-height: inherit;
@@ -185,6 +191,7 @@ samp {
 
 pre {
     @include last-child-no-margin-bottom;
+
     display: block;
     margin-top: 0; // 1
     margin-bottom: $pre-margin-bottom; // 2

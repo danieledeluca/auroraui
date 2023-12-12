@@ -74,9 +74,7 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
         &.is-parent {
             position: relative;
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &.is-active {
-                /* stylelint-disable-next-line max-nesting-depth */
                 > .navbar {
                     @include mb-down(md) {
                         @include collapse-active;
@@ -92,6 +90,7 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
 
         &.lv0 {
             @include reset-link($footer-navbar-link-lv0-color);
+
             font-size: $footer-navbar-link-lv0-font-size;
             font-weight: $footer-navbar-link-lv0-font-weight;
             text-transform: $footer-navbar-link-lv0-text-transform;
@@ -103,6 +102,7 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
 
         &.lv1 {
             @include reset-link($footer-navbar-link-lv1-color, $footer-navbar-link-lv1-hover-color);
+
             font-size: $footer-navbar-link-lv1-font-size;
 
             @include mb-down(md) {
@@ -113,6 +113,7 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
 
     .navbar__toggle {
         @include mobile-only;
+
         position: absolute;
         top: 0;
         right: 0;

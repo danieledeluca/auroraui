@@ -14,6 +14,7 @@ $header-hamburger-layer-border-radius: 100px !default;
 
 .header__hamburger {
     @include mobile-only;
+
     display: flex;
     align-items: center;
     margin-right: $header-hamburger-margin-right;
@@ -65,6 +66,7 @@ $header-hamburger-layer-border-radius: 100px !default;
         transition: transform 0.15s ease;
     }
 
+    /* stylelint-disable-next-line order/order */
     &::before,
     &::after {
         content: '';
@@ -106,11 +108,15 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
         transition-timing-function: $hamburger-spin-transition-timing;
 
         &::before {
-            transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+            transition:
+                top 0.1s 0.25s ease-in,
+                opacity 0.1s ease-in;
         }
 
         &::after {
-            transition: bottom 0.1s 0.25s ease-in, transform 0.22s $hamburger-spin-transition-timing;
+            transition:
+                bottom 0.1s 0.25s ease-in,
+                transform 0.22s $hamburger-spin-transition-timing;
         }
 
         .nav-open & {
@@ -118,18 +124,20 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transition-delay: 0.12s;
             transition-timing-function: $hamburger-spin-active-transition-timing;
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 opacity: 0;
-                transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+                transition:
+                    top 0.1s ease-out,
+                    opacity 0.1s 0.12s ease-out;
             }
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 bottom: 0;
                 transform: rotate(-90deg);
-                transition: bottom 0.1s ease-out, transform 0.22s 0.12s $hamburger-spin-active-transition-timing;
+                transition:
+                    bottom 0.1s ease-out,
+                    transform 0.22s 0.12s $hamburger-spin-active-transition-timing;
             }
         }
     }
@@ -160,19 +168,16 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transform: rotate(765deg);
             transition-timing-function: $hamburger-vortex-active-transition-timing;
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::before,
             &::after {
                 transition-delay: 0s;
             }
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 opacity: 0;
             }
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 bottom: 0;
                 transform: rotate(90deg);
@@ -191,13 +196,16 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
         transition-timing-function: $hamburger-collapse-transition-timing-1;
 
         &::before {
-            transition: top 0.12s 0.2s $hamburger-collapse-transition-timing-2,
+            transition:
+                top 0.12s 0.2s $hamburger-collapse-transition-timing-2,
                 transform 0.13s $hamburger-collapse-transition-timing-1;
         }
 
         &::after {
             top: ($header-hamburger-layer-spacing * 2 + $header-hamburger-layer-height * 2) * -1;
-            transition: top 0.2s 0.2s $hamburger-collapse-transition-timing-2, opacity 0.1s linear;
+            transition:
+                top 0.2s 0.2s $hamburger-collapse-transition-timing-2,
+                opacity 0.1s linear;
         }
 
         .nav-open & {
@@ -206,19 +214,20 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transition-delay: 0.22s;
             transition-timing-function: $hamburger-collapse-active-transition-timing-1;
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 transform: rotate(-90deg);
-                transition: top 0.1s 0.16s $hamburger-collapse-active-transition-timing-2,
+                transition:
+                    top 0.1s 0.16s $hamburger-collapse-active-transition-timing-2,
                     transform 0.13s 0.25s $hamburger-collapse-active-transition-timing-1;
             }
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 top: 0;
                 opacity: 0;
-                transition: top 0.2s $hamburger-collapse-active-transition-timing-2, opacity 0.1s 0.22s linear;
+                transition:
+                    top 0.2s $hamburger-collapse-active-transition-timing-2,
+                    opacity 0.1s 0.22s linear;
             }
         }
     }
@@ -231,11 +240,15 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
         transition-timing-function: $hamburger-squeeze-transition-timing;
 
         &::before {
-            transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+            transition:
+                top 0.075s 0.12s ease,
+                opacity 0.075s ease;
         }
 
         &::after {
-            transition: bottom 0.075s 0.12s ease, transform 0.075s $hamburger-squeeze-transition-timing;
+            transition:
+                bottom 0.075s 0.12s ease,
+                transform 0.075s $hamburger-squeeze-transition-timing;
         }
 
         .nav-open & {
@@ -243,18 +256,20 @@ $hamburger-squeeze-active-transition-timing: $hamburger-base-active-transition-t
             transition-delay: 0.12s;
             transition-timing-function: $hamburger-squeeze-active-transition-timing;
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::before {
                 top: 0;
                 opacity: 0;
-                transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+                transition:
+                    top 0.075s ease,
+                    opacity 0.075s 0.12s ease;
             }
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &::after {
                 bottom: 0;
                 transform: rotate(-90deg);
-                transition: bottom 0.075s ease, transform 0.075s 0.12s $hamburger-squeeze-active-transition-timing;
+                transition:
+                    bottom 0.075s ease,
+                    transform 0.075s 0.12s $hamburger-squeeze-active-transition-timing;
             }
         }
     }

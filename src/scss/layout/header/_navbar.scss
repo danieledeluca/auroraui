@@ -50,6 +50,7 @@ $header-navbar-toggle-height: calc(
     &.header__navbar--collapse {
         @include mb-down(md) {
             @include collapse;
+
             left: 0;
         }
 
@@ -95,6 +96,7 @@ $header-navbar-toggle-height: calc(
 
             @include mb-down(md) {
                 @include collapse;
+
                 background-color: $header-navbar-lv1-background-color-md;
             }
         }
@@ -114,7 +116,6 @@ $header-navbar-toggle-height: calc(
 
             &:hover,
             &:focus-within {
-                /* stylelint-disable-next-line max-nesting-depth */
                 > .navbar {
                     @include mb-up(md) {
                         display: block;
@@ -134,9 +135,7 @@ $header-navbar-toggle-height: calc(
         &.is-parent {
             position: relative;
 
-            /* stylelint-disable-next-line max-nesting-depth */
             &.is-active {
-                /* stylelint-disable-next-line max-nesting-depth */
                 > .navbar {
                     @include mb-down(md) {
                         @include collapse-active;
@@ -144,9 +143,7 @@ $header-navbar-toggle-height: calc(
                 }
             }
 
-            /* stylelint-disable-next-line max-nesting-depth */
             > .navbar__link {
-                /* stylelint-disable-next-line max-nesting-depth */
                 &::after {
                     @include mb-up(md) {
                         @include sparkle-icon($header-navbar-toggle-icon);
@@ -158,6 +155,7 @@ $header-navbar-toggle-height: calc(
 
     .navbar__link {
         @include reset-link($header-navbar-link-color, $header-navbar-link-hover-color);
+
         display: inline-flex;
         align-items: center;
         gap: $header-navbar-link-gap;
@@ -185,12 +183,14 @@ $header-navbar-toggle-height: calc(
     .navbar__button {
         @include button;
         @include button-primary($primary);
+
         /* stylelint-disable-next-line order/order */
         --#{$prefix}-button-padding: #{$header-navbar-button-padding};
         --#{$prefix}-button-font-size: #{$header-navbar-link-font-size};
 
         @include mb-down(md) {
             --#{$prefix}-button-padding: #{$header-navbar-button-padding-md};
+
             width: $header-navbar-button-width-md;
             margin: $header-navbar-button-margin-md;
         }
@@ -198,6 +198,7 @@ $header-navbar-toggle-height: calc(
 
     .navbar__toggle {
         @include mobile-only;
+
         position: absolute;
         top: 0;
         right: 0;

@@ -28,6 +28,7 @@ $card-actions-gap: 1rem !default;
     &[href],
     [href]:not(.button) {
         @include reset-link($card-color);
+
         display: block;
     }
 }
