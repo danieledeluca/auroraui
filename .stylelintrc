@@ -3,7 +3,6 @@
     "plugins": ["stylelint-order"],
     "ignorePatterns": ".gitignore",
     "rules": {
-        "prettier/prettier": true,
         "at-rule-disallowed-list": ["debug"],
         "color-hex-length": "long",
         "color-named": ["never", { "ignore": ["inside-function"] }],
