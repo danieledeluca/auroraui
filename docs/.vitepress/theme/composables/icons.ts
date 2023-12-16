@@ -22,7 +22,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'apple',
-        tags: ['brand', 'logo'],
+        tags: ['logo'],
     },
     {
         name: 'archive',
@@ -30,35 +30,35 @@ export const icons: Icon[] = [
     },
     {
         name: 'arrow-down',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'arrow-down-left',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'arrow-down-right',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'arrow-left',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'arrow-right',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'arrow-up',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'arrow-up-left',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'arrow-up-right',
-        tags: ['arrows'],
+        tags: [],
     },
     {
         name: 'award',
@@ -90,39 +90,39 @@ export const icons: Icon[] = [
     },
     {
         name: 'check',
-        tags: ['warning', 'alert', 'danger'],
+        tags: ['confirm', 'done'],
     },
     {
         name: 'chevron-down',
-        tags: ['chevrons', 'expand'],
+        tags: ['expand'],
     },
     {
         name: 'chevron-left',
-        tags: ['chevrons'],
+        tags: [],
     },
     {
         name: 'chevron-right',
-        tags: ['chevrons'],
+        tags: [],
     },
     {
         name: 'chevron-up',
-        tags: ['chevrons', 'collapse'],
+        tags: ['collapse'],
     },
     {
         name: 'chevrons-down',
-        tags: ['chevrons'],
+        tags: [],
     },
     {
         name: 'chevrons-left',
-        tags: ['chevrons'],
+        tags: [],
     },
     {
         name: 'chevrons-right',
-        tags: ['chevrons'],
+        tags: [],
     },
     {
         name: 'chevrons-up',
-        tags: ['chevrons'],
+        tags: [],
     },
     {
         name: 'clipboard',
@@ -142,39 +142,39 @@ export const icons: Icon[] = [
     },
     {
         name: 'corner-down-left',
-        tags: ['arrows', 'return'],
+        tags: ['arrow', 'return'],
     },
     {
         name: 'corner-down-right',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'corner-left-down',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'corner-left-up',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'corner-right-down',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'corner-right-up',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'corner-up-left',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'corner-up-right',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'discord',
-        tags: ['brand', 'social', 'logo', 'chat'],
+        tags: ['logo', 'social', 'chat'],
     },
     {
         name: 'download',
@@ -186,7 +186,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'dribbble',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social'],
     },
     {
         name: 'edit',
@@ -206,15 +206,15 @@ export const icons: Icon[] = [
     },
     {
         name: 'facebook-1',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social', 'meta'],
     },
     {
         name: 'facebook-2',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social', 'meta'],
     },
     {
         name: 'file',
-        tags: [],
+        tags: ['document', 'page'],
     },
     {
         name: 'flag',
@@ -230,11 +230,11 @@ export const icons: Icon[] = [
     },
     {
         name: 'github',
-        tags: ['brand', 'social', 'logo', 'version control'],
+        tags: ['logo', 'social', 'version control'],
     },
     {
         name: 'google',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social', 'search'],
     },
     {
         name: 'grid',
@@ -270,7 +270,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'instagram',
-        tags: ['brand', 'social', 'logo', 'camera'],
+        tags: ['logo', 'social', 'chat'],
     },
     {
         name: 'key',
@@ -282,23 +282,23 @@ export const icons: Icon[] = [
     },
     {
         name: 'linkedin-1',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social'],
     },
     {
         name: 'linkedin-2',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social'],
     },
     {
         name: 'list',
-        tags: [],
+        tags: ['layout'],
     },
     {
         name: 'loader-1',
-        tags: [''],
+        tags: [],
     },
     {
         name: 'loader-2',
-        tags: [''],
+        tags: [],
     },
     {
         name: 'log-in',
@@ -334,7 +334,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'messenger',
-        tags: ['brand', 'social', 'logo', 'facebook', 'chat'],
+        tags: ['logo', 'social', 'chat', 'facebook', 'meta'],
     },
     {
         name: 'minimize',
@@ -342,7 +342,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'moon',
-        tags: ['weather', 'dark', 'night'],
+        tags: ['dark', 'night'],
     },
     {
         name: 'navigation',
@@ -354,11 +354,11 @@ export const icons: Icon[] = [
     },
     {
         name: 'phone',
-        tags: ['telephone', 'call'],
+        tags: ['call'],
     },
     {
         name: 'pinterest',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social'],
     },
     {
         name: 'plus',
@@ -370,7 +370,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'reddit',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social'],
     },
     {
         name: 'search',
@@ -390,7 +390,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'skype',
-        tags: ['brand', 'social', 'logo', 'chat'],
+        tags: ['logo', 'social', 'chat'],
     },
     {
         name: 'sliders',
@@ -398,7 +398,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'snapchat',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social'],
     },
     {
         name: 'sparkle',
@@ -406,11 +406,11 @@ export const icons: Icon[] = [
     },
     {
         name: 'spotify',
-        tags: ['brand', 'social', 'logo', 'music'],
+        tags: ['logo', 'social', 'music'],
     },
     {
         name: 'star',
-        tags: ['weather', 'bookmark', 'favorite', 'like'],
+        tags: ['bookmark', 'favorite', 'like'],
     },
     {
         name: 'sun',
@@ -434,7 +434,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'tiktok',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social'],
     },
     {
         name: 'trash',
@@ -442,11 +442,11 @@ export const icons: Icon[] = [
     },
     {
         name: 'trending-down',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'trending-up',
-        tags: ['arrows'],
+        tags: ['arrow'],
     },
     {
         name: 'truck',
@@ -454,11 +454,11 @@ export const icons: Icon[] = [
     },
     {
         name: 'twitch',
-        tags: ['brand', 'social', 'logo', 'stream'],
+        tags: ['logo', 'social', 'stream'],
     },
     {
         name: 'twitter',
-        tags: ['brand', 'social', 'logo'],
+        tags: ['logo', 'social', 'chat'],
     },
     {
         name: 'upload',
@@ -478,11 +478,11 @@ export const icons: Icon[] = [
     },
     {
         name: 'vimeo',
-        tags: ['logo', 'social'],
+        tags: ['logo', 'social', 'video'],
     },
     {
         name: 'whatsapp',
-        tags: ['brand', 'social', 'logo', 'chat'],
+        tags: ['logo', 'social', 'chat', 'meta'],
     },
     {
         name: 'x',
@@ -490,7 +490,7 @@ export const icons: Icon[] = [
     },
     {
         name: 'youtube',
-        tags: ['brand', 'social', 'logo', 'video'],
+        tags: ['logo', 'social', 'video', 'google'],
     },
     {
         name: 'zoom-in',
