@@ -24,7 +24,7 @@ Then just include them with the correct name (you can find the list of all the n
 
 ```scss
 .foo::before {
-    @include sparkle-icon('star');
+    @include sparkle-icon('sparkle');
     @include sparkle-icon-animations('beat');
 }
 ```

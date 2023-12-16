@@ -6,13 +6,13 @@ import IconsView from '@/views/IconsView.vue';
 
 ## Example
 
-<i class="si-icon-star si-icon-beat"></i>
+<i class="si-icon-sparkle si-icon-beat"></i>
 
 ```html
-<i class="si-icon-star si-icon-beat"></i>
+<i class="si-icon-sparkle si-icon-beat"></i>
 ```
 
-## Animations
+## Animations list
 
 <IconsView example="animations" />
 

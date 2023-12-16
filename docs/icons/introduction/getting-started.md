@@ -68,7 +68,7 @@ Add the icon trough CSS, using [pseudo elements](https://developer.mozilla.org/e
 
 ```css
 .foo::before {
-    content: '\e94e';
+    content: '\e966';
     font-family: 'sparkle-icons';
 }
 ```

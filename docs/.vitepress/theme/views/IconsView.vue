@@ -51,7 +51,7 @@ onMounted(() => {
         </div>
         <div class="icons" v-if="props.example === 'animations' && iconAnimations.length">
             <div v-for="animation in iconAnimations" class="icon__card">
-                <i class="icon si-icon-star" :class="`si-icon-${animation}`"></i>
+                <i class="icon si-icon-sparkle" :class="`si-icon-${animation}`"></i>
                 <div class="icon__name">
                     <small>{{ animation }}</small>
                 </div>

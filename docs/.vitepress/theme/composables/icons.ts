@@ -5,12 +5,28 @@ export interface Icon {
 
 export const icons: Icon[] = [
     {
+        name: 'activity',
+        tags: ['pulse', 'health', 'action', 'motion'],
+    },
+    {
+        name: 'alert-circle',
+        tags: ['warning', 'alert', 'danger'],
+    },
+    {
         name: 'alert-triangle',
         tags: ['warning', 'alert', 'danger'],
     },
     {
+        name: 'android',
+        tags: ['logo', 'google'],
+    },
+    {
         name: 'apple',
         tags: ['brand', 'logo'],
+    },
+    {
+        name: 'archive',
+        tags: ['index', 'box'],
     },
     {
         name: 'arrow-down',
@@ -47,6 +63,26 @@ export const icons: Icon[] = [
     {
         name: 'award',
         tags: ['achievement', 'badge'],
+    },
+    {
+        name: 'behance',
+        tags: ['logo', 'social'],
+    },
+    {
+        name: 'book',
+        tags: ['read', 'dictionary', 'booklet', 'magazine', 'library'],
+    },
+    {
+        name: 'book-open',
+        tags: ['read', 'library'],
+    },
+    {
+        name: 'bookmark',
+        tags: ['read', 'clip', 'marker', 'tag'],
+    },
+    {
+        name: 'briefcase',
+        tags: ['work', 'bag', 'baggage', 'folder'],
     },
     {
         name: 'calendar',
@@ -137,6 +173,10 @@ export const icons: Icon[] = [
         tags: ['arrows'],
     },
     {
+        name: 'discord',
+        tags: ['brand', 'social', 'logo', 'chat'],
+    },
+    {
         name: 'download',
         tags: ['network', 'save'],
     },
@@ -173,8 +213,20 @@ export const icons: Icon[] = [
         tags: ['brand', 'social', 'logo'],
     },
     {
+        name: 'file',
+        tags: [],
+    },
+    {
         name: 'flag',
         tags: ['report'],
+    },
+    {
+        name: 'folder',
+        tags: ['directory'],
+    },
+    {
+        name: 'gift',
+        tags: ['present', 'box', 'birthday', 'party'],
     },
     {
         name: 'github',
@@ -193,6 +245,10 @@ export const icons: Icon[] = [
         tags: ['like', 'love', 'emotion'],
     },
     {
+        name: 'help-circle',
+        tags: ['question mark'],
+    },
+    {
         name: 'home-1',
         tags: ['house', 'living'],
     },
@@ -205,12 +261,20 @@ export const icons: Icon[] = [
         tags: ['house', 'living'],
     },
     {
+        name: 'image',
+        tags: ['picture'],
+    },
+    {
         name: 'info',
         tags: ['warning', 'alert', 'danger'],
     },
     {
         name: 'instagram',
         tags: ['brand', 'social', 'logo', 'camera'],
+    },
+    {
+        name: 'key',
+        tags: ['password', 'login', 'authentication', 'secure'],
     },
     {
         name: 'link',
@@ -223,6 +287,10 @@ export const icons: Icon[] = [
     {
         name: 'linkedin-2',
         tags: ['brand', 'social', 'logo'],
+    },
+    {
+        name: 'list',
+        tags: [],
     },
     {
         name: 'loader-1',
@@ -245,24 +313,44 @@ export const icons: Icon[] = [
         tags: ['email', 'message'],
     },
     {
+        name: 'map',
+        tags: ['location', 'navigation', 'travel'],
+    },
+    {
         name: 'map-pin',
         tags: ['location', 'navigation', 'travel', 'marker'],
+    },
+    {
+        name: 'maximize',
+        tags: ['fullscreen', 'arrows', 'expand'],
+    },
+    {
+        name: 'menu',
+        tags: ['bars', 'navigation', 'hamburger'],
+    },
+    {
+        name: 'message-square',
+        tags: ['comment', 'chat'],
     },
     {
         name: 'messenger',
         tags: ['brand', 'social', 'logo', 'facebook', 'chat'],
     },
     {
+        name: 'minimize',
+        tags: ['exit fullscreen', 'arrows', 'close'],
+    },
+    {
         name: 'moon',
         tags: ['weather', 'dark', 'night'],
     },
     {
-        name: 'pause',
-        tags: ['music', 'stop'],
+        name: 'navigation',
+        tags: ['location', 'travel'],
     },
     {
-        name: 'pause-circle',
-        tags: ['music', 'audio', 'stop'],
+        name: 'paperclip',
+        tags: ['attachment'],
     },
     {
         name: 'phone',
@@ -273,16 +361,12 @@ export const icons: Icon[] = [
         tags: ['brand', 'social', 'logo'],
     },
     {
-        name: 'play',
-        tags: ['music', 'start'],
-    },
-    {
-        name: 'play-circle',
-        tags: ['music', 'start'],
-    },
-    {
         name: 'plus',
         tags: ['add', 'new'],
+    },
+    {
+        name: 'printer',
+        tags: ['fax', 'office', 'device'],
     },
     {
         name: 'reddit',
@@ -295,6 +379,10 @@ export const icons: Icon[] = [
     {
         name: 'settings',
         tags: ['cog', 'edit', 'gear', 'preferences'],
+    },
+    {
+        name: 'share',
+        tags: ['network', 'connections'],
     },
     {
         name: 'shopping-cart',
@@ -313,6 +401,10 @@ export const icons: Icon[] = [
         tags: ['brand', 'social', 'logo'],
     },
     {
+        name: 'sparkle',
+        tags: ['logo'],
+    },
+    {
         name: 'spotify',
         tags: ['brand', 'social', 'logo', 'music'],
     },
@@ -329,6 +421,10 @@ export const icons: Icon[] = [
         tags: ['label'],
     },
     {
+        name: 'telegram',
+        tags: ['logo', 'social', 'chat'],
+    },
+    {
         name: 'thumbs-down',
         tags: ['dislike', 'bad', 'emotion'],
     },
@@ -343,6 +439,14 @@ export const icons: Icon[] = [
     {
         name: 'trash',
         tags: ['garbage', 'delete', 'remove', 'bin'],
+    },
+    {
+        name: 'trending-down',
+        tags: ['arrows'],
+    },
+    {
+        name: 'trending-up',
+        tags: ['arrows'],
     },
     {
         name: 'truck',
@@ -373,6 +477,10 @@ export const icons: Icon[] = [
         tags: ['group'],
     },
     {
+        name: 'vimeo',
+        tags: ['logo', 'social'],
+    },
+    {
         name: 'whatsapp',
         tags: ['brand', 'social', 'logo', 'chat'],
     },
@@ -383,6 +491,14 @@ export const icons: Icon[] = [
     {
         name: 'youtube',
         tags: ['brand', 'social', 'logo', 'video'],
+    },
+    {
+        name: 'zoom-in',
+        tags: ['magnifying glass'],
+    },
+    {
+        name: 'zoom-out',
+        tags: ['magnifying glass'],
     },
 ];
 
