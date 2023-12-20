@@ -14,10 +14,7 @@ export default defineConfig({
         rollupOptions: {
             external: ['@sparkleui/sparkle-icons'],
             output: {
-                assetFileNames: ({ name }) => {
-                    if (name === 'style.css') return 'sparkle.min.css';
-                    return name;
-                },
+                assetFileNames: 'sparkle.min.[ext]',
                 banner: `
                     /*!
                      * Sparkle (${pkg.homepage})
