@@ -73,6 +73,6 @@
         "./scss/": "./src/scss/"
     },
     "dependencies": {
-        "@sparkleui/sparkle-icons": "^1.0.2"
+        "@sparkleui/sparkle-icons": "^1.0.3"
     }
 }
