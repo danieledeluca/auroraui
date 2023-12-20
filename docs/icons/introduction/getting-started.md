@@ -59,7 +59,7 @@ Sparkle Icons includes a class for every icons. Include the icon web fonts in yo
 Use `font-size` and `color` to change the icon appearance.
 
 ```html
-<i class="si-icon-star"></i>
+<i class="si-icon-sparkle"></i>
 ```
 
 ### CSS

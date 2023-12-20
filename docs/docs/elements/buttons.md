@@ -84,12 +84,12 @@ To make a button there are some classes that are mandatory:
 
 ```html
 <button type="button" class="button button--primary primary">
-    <i class="si-icon-star"></i>
+    <i class="si-icon-sparkle"></i>
     <span>Button</span>
 </button>
 <button type="button" class="button button--secondary primary">
     <span>Button</span>
-    <i class="si-icon-star"></i>
+    <i class="si-icon-sparkle"></i>
 </button>
 ```
 
@@ -99,10 +99,10 @@ To make a button there are some classes that are mandatory:
 
 ```html
 <button type="button" class="button button--primary button--icon primary">
-    <i class="si-icon-star"></i>
+    <i class="si-icon-sparkle"></i>
 </button>
 <button type="button" class="button button--secondary button--icon primary">
-    <i class="si-icon-star"></i>
+    <i class="si-icon-sparkle"></i>
 </button>
 ```
 

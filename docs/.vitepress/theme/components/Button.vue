@@ -31,14 +31,14 @@ if (props.htmlTag === 'link' && props.link && props.isDisabled) buttonClasses.pu
 
 <template>
     <button v-if="props.htmlTag === 'button'" type="button" :class="buttonClasses" :disabled="props.isDisabled">
-        <i v-if="(props.hasIcon && props.iconPosition === 'left') || props.isIconOnly" class="si-icon-star"></i>
+        <i v-if="(props.hasIcon && props.iconPosition === 'left') || props.isIconOnly" class="si-icon-sparkle"></i>
         <span v-if="!props.isIconOnly">{{ props.text }}</span>
-        <i v-if="props.hasIcon && props.iconPosition === 'right'" class="si-icon-star"></i>
+        <i v-if="props.hasIcon && props.iconPosition === 'right'" class="si-icon-sparkle"></i>
     </button>
     <a v-if="props.htmlTag === 'link'" :href="props.link" :class="buttonClasses">
-        <i v-if="(props.hasIcon && props.iconPosition === 'left') || props.isIconOnly" class="si-icon-star"></i>
+        <i v-if="(props.hasIcon && props.iconPosition === 'left') || props.isIconOnly" class="si-icon-sparkle"></i>
         <span v-if="!props.isIconOnly">{{ props.text }}</span>
-        <i v-if="props.hasIcon && props.iconPosition === 'right'" class="si-icon-star"></i>
+        <i v-if="props.hasIcon && props.iconPosition === 'right'" class="si-icon-sparkle"></i>
     </a>
 </template>
 
