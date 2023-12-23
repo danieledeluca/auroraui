@@ -65,6 +65,7 @@
         ],
         "scss/at-each-key-value-single-line": true,
         "scss/dimension-no-non-numeric-values": true,
+        "scss/dollar-variable-colon-space-after": "always-single-line",
         "scss/dollar-variable-default": [true, { "ignore": "local" }],
         "scss/dollar-variable-empty-line-after": [
             "always",
