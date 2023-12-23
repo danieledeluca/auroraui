@@ -6,18 +6,12 @@
 $footer-background-color: $gray-200 !default;
 $footer-color: $body-color !default;
 
-$footer-navbar-padding: 1.5rem 0 !default;
-
-$footer-bottom-padding: $footer-navbar-padding !default;
+$footer-bottom-padding: 1.5rem 0 !default;
 $footer-bottom-border-top: 2px solid $light-gray !default;
 
 .footer {
     background-color: $footer-background-color;
     color: $footer-color;
-}
-
-.footer__navbar {
-    padding: $footer-navbar-padding;
 }
 
 .footer__bottom {

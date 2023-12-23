@@ -5,53 +5,48 @@
 
 $header-navbar-background-color: $white !default;
 
-$header-navbar-lv1-min-width: 200px !default;
+$header-navbar-lv0-padding-md: 0 $container-padding-x !default;
+
+$header-navbar-lv1-min-width: 150px !default;
+$header-navbar-lv1-margin-left-md: 0.75rem !default;
 $header-navbar-lv1-background-color: $white !default;
-$header-navbar-lv1-background-color-md: $gray-200 !default;
+$header-navbar-lv1-border: 1px solid $gray-200 !default;
+$header-navbar-lv1-border-radius: 0.25rem !default;
+$header-navbar-lv1-box-shadow: 0 0 10px rgba($black, 0.05) !default;
+
+$header-navbar-item-parent-active-padding-bottom-md: 0.75rem !default;
 
 $header-navbar-item-lv0-border-md: 1px solid $light-gray !default;
 
-$header-navbar-item-lv1-border: $header-navbar-item-lv0-border-md !default;
-
 $header-navbar-link-gap: 0.25rem !default;
 $header-navbar-link-color: $dark-gray !default;
-$header-navbar-link-color-md: $body-color !default;
 $header-navbar-link-font-size: $small-font-size !default;
 $header-navbar-link-hover-color: $body-color !default;
-$header-navbar-link-hover-color-md: $header-navbar-link-hover-color !default;
 
-$header-navbar-link-lv0-padding-y-md: 1rem !default;
-$header-navbar-link-lv0-padding-x-md: 1rem !default;
+$header-navbar-link-parent-padding-bottom-md: 0.5rem !default;
+
 $header-navbar-link-lv0-padding: 0.5rem 0.75rem !default;
-$header-navbar-link-lv0-padding-md: $header-navbar-link-lv0-padding-y-md $header-navbar-link-lv0-padding-x-md !default;
+$header-navbar-link-lv0-padding-md: 1rem 0 !default;
 $header-navbar-link-lv0-font-weight-md: $font-weight-medium !default;
 
-$header-navbar-link-lv1-padding: 0.75rem 1rem !default;
+$header-navbar-link-lv1-padding: $header-navbar-link-lv0-padding !default;
+$header-navbar-link-lv1-padding-md: 0.25rem 0 !default;
+$header-navbar-link-lv1-hover-background-color: $gray-50 !default;
 
-$header-navbar-button-width-md: calc(100% - #{$header-navbar-link-lv0-padding-x-md} * 2) !default;
 $header-navbar-button-margin-md: $header-navbar-link-lv0-padding-md !default;
 $header-navbar-button-padding: $header-navbar-link-lv0-padding !default;
-$header-navbar-button-padding-md: $header-navbar-link-lv0-padding-md !default;
-
-$header-navbar-toggle-icon: 'chevron-down' !default;
-$header-navbar-toggle-height: calc(
-    $header-navbar-link-font-size * $body-line-height + $header-navbar-link-lv0-padding-y-md * 2
-) !default;
 
 .header__navbar {
     background-color: $header-navbar-background-color;
-
-    @include mb-down(md) {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-    }
 
     &.header__navbar--collapse {
         @include mb-down(md) {
             @include collapse;
 
+            position: absolute;
+            top: 100%;
             left: 0;
+            width: 100%;
         }
 
         .nav-open & {
@@ -61,73 +56,45 @@ $header-navbar-toggle-height: calc(
         }
     }
 
-    &.header__navbar--slide-in {
-        @include mb-down(md) {
-            right: -100%;
-            height: calc(100vh - 100%);
-            transition: transition(right);
-            overflow-y: auto;
-        }
-
-        .nav-open & {
-            @include mb-down(md) {
-                right: 0;
-            }
-        }
-    }
-
     .navbar {
         &.lv0 {
             @include mb-up(md) {
                 display: flex;
-                height: 100%;
+            }
+
+            @include mb-down(md) {
+                padding: $header-navbar-lv0-padding-md;
             }
         }
 
         &.lv1 {
+            background-color: $header-navbar-lv1-background-color;
+
             @include mb-up(md) {
                 position: absolute;
                 top: 100%;
                 right: 0;
-                display: none;
                 min-width: $header-navbar-lv1-min-width;
-                background-color: $header-navbar-lv1-background-color;
+                border: $header-navbar-lv1-border;
+                border-radius: $header-navbar-lv1-border-radius;
+                box-shadow: $header-navbar-lv1-box-shadow;
+                opacity: 0;
+                visibility: hidden;
+                transition: transition(opacity);
             }
 
             @include mb-down(md) {
-                @include collapse;
-
-                background-color: $header-navbar-lv1-background-color-md;
+                display: none;
+                margin-left: $header-navbar-lv1-margin-left-md;
             }
         }
     }
 
     .navbar__item {
         &.lv0 {
-            @include mb-up(md) {
-                position: relative;
-                display: flex;
-                align-items: center;
-            }
-
-            @include mb-down(md) {
-                border-bottom: $header-navbar-item-lv0-border-md;
-            }
-
-            &:hover,
-            &:focus-within {
-                > .navbar {
-                    @include mb-up(md) {
-                        display: block;
-                    }
-                }
-            }
-        }
-
-        &.lv1 {
             &:not(:last-child) {
-                @include mb-up(md) {
-                    border-bottom: $header-navbar-item-lv1-border;
+                @include mb-down(md) {
+                    border-bottom: $header-navbar-item-lv0-border-md;
                 }
             }
         }
@@ -135,19 +102,41 @@ $header-navbar-toggle-height: calc(
         &.is-parent {
             position: relative;
 
+            &:hover,
+            &:focus-within {
+                > .navbar {
+                    @include mb-up(md) {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
             &.is-active {
+                @include mb-down(md) {
+                    padding-bottom: $header-navbar-item-parent-active-padding-bottom-md;
+                }
+
+                > .navbar__link {
+                    @include mb-down(md) {
+                        padding-bottom: $header-navbar-link-parent-padding-bottom-md;
+                    }
+
+                    &::after {
+                        @include sparkle-icon('chevron-up');
+                    }
+                }
+
                 > .navbar {
                     @include mb-down(md) {
-                        @include collapse-active;
+                        display: block;
                     }
                 }
             }
 
             > .navbar__link {
                 &::after {
-                    @include mb-up(md) {
-                        @include sparkle-icon($header-navbar-toggle-icon);
-                    }
+                    @include sparkle-icon('chevron-down');
                 }
             }
         }
@@ -163,11 +152,12 @@ $header-navbar-toggle-height: calc(
         font-size: $header-navbar-link-font-size;
 
         @include mb-down(md) {
-            @include reset-link($header-navbar-link-color-md, $header-navbar-link-hover-color-md);
+            justify-content: space-between;
         }
 
         &.lv0 {
             padding: $header-navbar-link-lv0-padding;
+            transition: transition(color);
 
             @include mb-down(md) {
                 padding: $header-navbar-link-lv0-padding-md;
@@ -177,6 +167,17 @@ $header-navbar-toggle-height: calc(
 
         &.lv1 {
             padding: $header-navbar-link-lv1-padding;
+            transition: transition(background-color, color);
+
+            @include mb-down(md) {
+                padding: $header-navbar-link-lv1-padding-md;
+            }
+
+            &:hover {
+                @include mb-up(md) {
+                    background-color: $header-navbar-link-lv1-hover-background-color;
+                }
+            }
         }
     }
 
@@ -188,29 +189,49 @@ $header-navbar-toggle-height: calc(
         --#{$prefix}-button-padding: #{$header-navbar-button-padding};
         --#{$prefix}-button-font-size: #{$header-navbar-link-font-size};
 
-        @include mb-down(md) {
-            --#{$prefix}-button-padding: #{$header-navbar-button-padding-md};
+        width: 100%;
 
-            width: $header-navbar-button-width-md;
+        @include mb-down(md) {
             margin: $header-navbar-button-margin-md;
         }
     }
+}
 
-    .navbar__toggle {
-        @include mobile-only;
+// Navbar toggle
+.navbar__toggle {
+    @include mobile-only;
+    @include button;
+    @include button-icon;
 
+    /* stylelint-disable-next-line order/order */
+    --#{$prefix}-button-icon-width: #{$header-logo-height};
+
+    &::before {
+        @include sparkle-icon('menu');
+    }
+
+    &::after {
+        content: '';
         position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: $header-navbar-toggle-height;
-        aspect-ratio: 1;
-        cursor: pointer;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100%);
+        background-color: rgba($black, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: transition(opacity, visibility);
+        z-index: -1;
+    }
 
+    .nav-open & {
         &::before {
-            @include sparkle-icon($header-navbar-toggle-icon);
+            @include sparkle-icon('x');
+        }
+
+        &::after {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

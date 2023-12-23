@@ -16,4 +16,9 @@ $footer-social-margin-bottom-md: 0.5rem !default;
         order: 0;
         margin-bottom: $footer-social-margin-bottom-md;
     }
+
+    .social {
+        @include button;
+        @include button-icon;
+    }
 }

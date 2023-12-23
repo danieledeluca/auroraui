@@ -3,36 +3,37 @@
  * https://github.com/danieledeluca/sparkle
  */
 
+$footer-navbar-padding: 2.5rem 0 !default;
+$footer-navbar-padding-md: 1.5rem 0 !default;
 $footer-navbar-min-width: 200px !default;
 
-$footer-navbar-lv0-gap: 2rem !default;
+$footer-navbar-lv0-gap: 1rem !default;
 
-$footer-navbar-lv1-margin-top: 0.5rem !default;
+$footer-navbar-lv1-margin-top: 0.75rem !default;
+
+$footer-navbar-item-parent-active-padding-bottom-md: $header-navbar-item-parent-active-padding-bottom-md !default;
 
 $footer-navbar-item-lv0-border-bottom-md: 1px solid $gray-400 !default;
 
-$footer-navbar-link-padding: 0.25rem 0 !default;
+$footer-navbar-link-color: $dark-gray !default;
+$footer-navbar-link-hover-color: $body-color !default;
 
-$footer-navbar-link-lv0-padding-y-md: 1.5rem !default;
-$footer-navbar-link-lv0-padding-x-md: 0.5rem !default;
-$footer-navbar-link-lv0-padding-md: $footer-navbar-link-lv0-padding-y-md $footer-navbar-link-lv0-padding-x-md !default;
-$footer-navbar-link-lv0-color: $body-color !default;
-$footer-navbar-link-lv0-font-size: 0.75rem !default;
+$footer-navbar-link-parent-padding-bottom-md: $header-navbar-link-parent-padding-bottom-md !default;
+
+$footer-navbar-link-lv0-padding-md: $header-navbar-link-lv0-padding-md !default;
+$footer-navbar-link-lv0-font-size: 1.125rem !default;
 $footer-navbar-link-lv0-font-weight: $font-weight-semi-bold !default;
-$footer-navbar-link-lv0-text-transform: uppercase !default;
 
-$footer-navbar-link-lv1-padding-md: 0.25rem 0.5rem !default;
-$footer-navbar-link-lv1-color: $gray-600 !default;
+$footer-navbar-link-lv1-padding: $header-navbar-link-lv1-padding-md !default;
 $footer-navbar-link-lv1-font-size: $small-font-size !default;
-$footer-navbar-link-lv1-hover-color: $body-color !default;
-
-$footer-navbar-toggle-icon: 'chevron-down' !default;
-$footer-navbar-toggle-height: calc(
-    $footer-navbar-link-lv0-font-size * $body-line-height + $footer-navbar-link-lv0-padding-y-md * 2
-) !default;
-$footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !default;
 
 .footer__navbar {
+    padding: $footer-navbar-padding;
+
+    @include mb-down(md) {
+        padding: $footer-navbar-padding-md;
+    }
+
     .navbar {
         @include mb-up(md) {
             display: grid;
@@ -51,7 +52,7 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
             }
 
             @include mb-down(md) {
-                @include collapse;
+                display: none;
             }
         }
     }
@@ -63,21 +64,35 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
             }
         }
 
-        &.lv1 {
-            &:last-child {
-                @include mb-down(md) {
-                    margin-bottom: 0.5rem;
-                }
-            }
-        }
-
         &.is-parent {
-            position: relative;
-
             &.is-active {
+                @include mb-down(md) {
+                    padding-bottom: $footer-navbar-item-parent-active-padding-bottom-md;
+                }
+
                 > .navbar {
                     @include mb-down(md) {
-                        @include collapse-active;
+                        display: block;
+                    }
+                }
+
+                > .navbar__link {
+                    @include mb-down(md) {
+                        padding-bottom: $footer-navbar-link-parent-padding-bottom-md;
+                    }
+
+                    &::after {
+                        @include mb-down(md) {
+                            @include sparkle-icon('chevron-up');
+                        }
+                    }
+                }
+            }
+
+            > .navbar__link {
+                &::after {
+                    @include mb-down(md) {
+                        @include sparkle-icon('chevron-down');
                     }
                 }
             }
@@ -85,15 +100,22 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
     }
 
     .navbar__link {
-        display: block;
-        padding: $footer-navbar-link-padding;
+        @include reset-link($footer-navbar-link-color, $footer-navbar-link-hover-color);
+
+        display: inline-flex;
+
+        @include mb-down(md) {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
 
         &.lv0 {
-            @include reset-link($footer-navbar-link-lv0-color);
-
-            font-size: $footer-navbar-link-lv0-font-size;
             font-weight: $footer-navbar-link-lv0-font-weight;
-            text-transform: $footer-navbar-link-lv0-text-transform;
+
+            @include mb-up(md) {
+                font-size: $footer-navbar-link-lv0-font-size;
+            }
 
             @include mb-down(md) {
                 padding: $footer-navbar-link-lv0-padding-md;
@@ -101,32 +123,8 @@ $footer-navbar-toggle-padding-right: $footer-navbar-link-lv0-padding-x-md !defau
         }
 
         &.lv1 {
-            @include reset-link($footer-navbar-link-lv1-color, $footer-navbar-link-lv1-hover-color);
-
+            padding: $footer-navbar-link-lv1-padding;
             font-size: $footer-navbar-link-lv1-font-size;
-
-            @include mb-down(md) {
-                padding: $footer-navbar-link-lv1-padding-md;
-            }
-        }
-    }
-
-    .navbar__toggle {
-        @include mobile-only;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        height: $footer-navbar-toggle-height;
-        padding-right: $footer-navbar-toggle-padding-right;
-        aspect-ratio: 1 / 2;
-        cursor: pointer;
-
-        &::before {
-            @include sparkle-icon($footer-navbar-toggle-icon);
         }
     }
 }

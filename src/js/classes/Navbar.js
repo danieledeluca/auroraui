@@ -12,7 +12,6 @@ const DEFAULT_OPTIONS = {
     navbarItemClass: '.navbar__item',
     navbarLinkClass: '.navbar__link',
     navbarToggleClass: '.navbar__toggle',
-    hamburgerClass: '[class*="__hamburger"]',
 };
 
 export default class SparkleNavbar {
@@ -37,25 +36,18 @@ export default class SparkleNavbar {
 
         this.navbarItems = this.element.querySelectorAll(this.options.navbarItemClass);
         this.navbarLinks = this.element.querySelectorAll(this.options.navbarLinkClass);
-        this.navbarToggles = this.element.querySelectorAll(this.options.navbarToggleClass);
-        this.hamburger = this.element.parentElement.querySelector(this.options.hamburgerClass);
+        this.navbarToggle = this.element.parentElement.querySelector(this.options.navbarToggleClass);
     }
 
     /**
      * Initialize the instance
      */
     mount() {
-        if (this.hamburger) {
-            this.hamburger.addEventListener('click', () => {
+        if (this.navbarToggle) {
+            this.navbarToggle.addEventListener('click', () => {
                 this.#toggleMenu();
             });
         }
-
-        this.navbarToggles.forEach((toggle) => {
-            toggle.addEventListener('click', () => {
-                this.#toggleSubmenu(toggle);
-            });
-        });
 
         this.navbarLinks.forEach((link) => {
             link.addEventListener('click', () => {
@@ -95,15 +87,6 @@ export default class SparkleNavbar {
     }
 
     /**
-     * Toggle submenu
-     *
-     * @param {HTMLElement} element
-     */
-    #toggleSubmenu(element) {
-        element.closest(this.options.navbarItemClass).classList.toggle(activeClass);
-    }
-
-    /**
      * Handle link click
      *
      * @param {HTMLElement} link
@@ -112,10 +95,9 @@ export default class SparkleNavbar {
         if (!isMobile()) return;
 
         const navbarItem = link.closest(this.options.navbarItemClass);
-        const linkHref = link.getAttribute('href');
 
-        if (navbarItem.classList.contains(parentClass) && linkHref === '#') {
-            this.#toggleSubmenu(link);
+        if (navbarItem.classList.contains(parentClass)) {
+            link.closest(this.options.navbarItemClass).classList.toggle(activeClass);
         } else {
             this.#closeMenu();
         }

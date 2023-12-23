@@ -6,6 +6,9 @@
 $header-background-color: $white !default;
 $header-box-shadow: 0 5px 20px rgba($black, 0.05) !default;
 
+$header-inner-gap: 1.25rem !default;
+$header-inner-padding: 1rem 0 !default;
+
 .nav-open {
     @include mb-down(md) {
         overflow-y: hidden;
@@ -25,4 +28,7 @@ $header-box-shadow: 0 5px 20px rgba($black, 0.05) !default;
 .header__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: $header-inner-gap;
+    padding: $header-inner-padding;
 }
