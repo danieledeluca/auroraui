@@ -28,7 +28,6 @@ import Header from '@/components/Header.vue';
                         <a href="#" class="navbar__link lv0">
                             <span>Parent</span>
                         </a>
-                        <div class="navbar__toggle"></div>
                         <ul class="navbar lv1">
                             <li class="navbar__item lv1">
                                 <a href="#" class="navbar__link lv1">
@@ -44,34 +43,12 @@ import Header from '@/components/Header.vue';
                     </li>
                 </ul>
             </nav>
-            <!-- Header hamburger -->
-            <div class="header__hamburger">
-                <div class="hamburger hamburger--vortex">
-                    <span class="hamburger__inner"></span>
-                </div>
-            </div>
+            <!-- Navbar toggle -->
+            <div class="navbar__toggle"></div>
         </div>
     </div>
 </header>
 ```
-
-## Navbar
-
-### Navbar animations
-
-Add `.header__navbar--{animation}` class to element width class `.header__navbar` to apply an animation on mobile.
-
-::: code-group
-
-```html [collapse]
-<nav class="header__navbar header__navbar--collapse"></nav>
-```
-
-```html [slide-in]
-<nav class="header__navbar header__navbar--slide-in"></nav>
-```
-
-:::
 
 ### Navbar buttons
 
@@ -83,48 +60,6 @@ Change the class `.navbar__link` in `.navbar__button`.
 </a>
 ```
 
-## Hamburger
-
-### Hamburger animations
-
-Add `.hamburger--{animation}` class to element width class `.hamburger` to apply an animation.
-
-::: code-group
-
-```html [spin]
-<div class="header__hamburger">
-    <div class="hamburger hamburger--spin">
-        <span class="hamburger__inner"></span>
-    </div>
-</div>
-```
-
-```html [vortex]
-<div class="header__hamburger">
-    <div class="hamburger hamburger--vortex">
-        <span class="hamburger__inner"></span>
-    </div>
-</div>
-```
-
-```html [collapse]
-<div class="header__hamburger">
-    <div class="hamburger hamburger--collapse">
-        <span class="hamburger__inner"></span>
-    </div>
-</div>
-```
-
-```html [squeeze]
-<div class="header__hamburger">
-    <div class="hamburger hamburger--squeeze">
-        <span class="hamburger__inner"></span>
-    </div>
-</div>
-```
-
-:::
-
 ## SCSS
 
 ### Variables
@@ -134,56 +69,45 @@ Add `.hamburger--{animation}` class to element width class `.hamburger` to apply
 $header-background-color: $white !default;
 $header-box-shadow: 0 5px 20px rgba($black, 0.05) !default;
 
+$header-inner-gap: 1.25rem !default;
+$header-inner-padding: 1rem 0 !default;
+
 // Logo
-$header-logo-margin-right: 1.25rem !default;
-$header-logo-padding: 1rem 0 !default;
 $header-logo-height: 2.5rem !default;
 
 // Navbar
 $header-navbar-background-color: $white !default;
 
-$header-navbar-lv1-min-width: 200px !default;
+$header-navbar-lv0-padding-md: 0 $container-padding-x !default;
+
+$header-navbar-lv1-min-width: 150px !default;
+$header-navbar-lv1-margin-left-md: 0.75rem !default;
 $header-navbar-lv1-background-color: $white !default;
-$header-navbar-lv1-background-color-md: $gray-200 !default;
+$header-navbar-lv1-border: 1px solid $gray-200 !default;
+$header-navbar-lv1-border-radius: 0.25rem !default;
+$header-navbar-lv1-box-shadow: 0 0 10px rgba($black, 0.05) !default;
+
+$header-navbar-item-parent-active-padding-bottom-md: 0.75rem !default;
 
 $header-navbar-item-lv0-border-md: 1px solid $light-gray !default;
 
-$header-navbar-item-lv1-border: $header-navbar-item-lv0-border-md !default;
-
 $header-navbar-link-gap: 0.25rem !default;
 $header-navbar-link-color: $dark-gray !default;
-$header-navbar-link-color-md: $body-color !default;
 $header-navbar-link-font-size: $small-font-size !default;
 $header-navbar-link-hover-color: $body-color !default;
-$header-navbar-link-hover-color-md: $header-navbar-link-hover-color !default;
 
-$header-navbar-link-lv0-padding-y-md: 1rem !default;
-$header-navbar-link-lv0-padding-x-md: 1rem !default;
+$header-navbar-link-parent-padding-bottom-md: 0.5rem !default;
+
 $header-navbar-link-lv0-padding: 0.5rem 0.75rem !default;
-$header-navbar-link-lv0-padding-md: $header-navbar-link-lv0-padding-y-md $header-navbar-link-lv0-padding-x-md !default;
+$header-navbar-link-lv0-padding-md: 1rem 0 !default;
 $header-navbar-link-lv0-font-weight-md: $font-weight-medium !default;
 
-$header-navbar-link-lv1-padding: 0.75rem 1rem !default;
+$header-navbar-link-lv1-padding: $header-navbar-link-lv0-padding !default;
+$header-navbar-link-lv1-padding-md: 0.25rem 0 !default;
+$header-navbar-link-lv1-hover-background-color: $gray-50 !default;
 
-$header-navbar-button-width-md: calc(100% - #{$header-navbar-link-lv0-padding-x-md} * 2) !default;
 $header-navbar-button-margin-md: $header-navbar-link-lv0-padding-md !default;
 $header-navbar-button-padding: $header-navbar-link-lv0-padding !default;
-$header-navbar-button-padding-md: $header-navbar-link-lv0-padding-md !default;
-
-$header-navbar-toggle-icon: 'chevron-down' !default;
-$header-navbar-toggle-height: calc(
-    $header-navbar-link-font-size * $body-line-height + $header-navbar-link-lv0-padding-y-md * 2
-) !default;
-
-// Hamburger
-$header-hamburger-margin-right: -$container-padding-x !default;
-$header-hamburger-padding: 0 $container-padding-x !default;
-
-$header-hamburger-layer-width: 22px !default;
-$header-hamburger-layer-height: 3.5px !default;
-$header-hamburger-layer-spacing: 3.5px !default;
-$header-hamburger-layer-color: $body-color !default;
-$header-hamburger-layer-border-radius: 100px !default;
 ```
 
 ### Mixins
@@ -226,7 +150,6 @@ sparkleNavbar.mount({
     navbarItemClass: '.navbar__item',
     navbarLinkClass: '.navbar__link',
     navbarToggleClass: '.navbar__toggle',
-    hamburgerClass: '[class*="__hamburger"]',
 });
 ```
 

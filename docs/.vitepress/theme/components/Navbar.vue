@@ -36,7 +36,6 @@ const navbarItems = [
             <a :href="navbarItem.link" class="lv0" :class="navbarItem.isButton ? 'navbar__button' : 'navbar__link'">
                 <span>{{ navbarItem.label }}</span>
             </a>
-            <div class="navbar__toggle" v-if="navbarItem.children.length"></div>
             <ul class="navbar lv1" v-if="navbarItem.children.length">
                 <li class="navbar__item lv1" v-for="subItem in navbarItem.children">
                     <a :href="subItem.link" class="lv1" :class="subItem.isButton ? 'navbar__button' : 'navbar__link'">

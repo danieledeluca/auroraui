@@ -24,12 +24,8 @@ onMounted(() => {
                     <nav class="header__navbar header__navbar--collapse" ref="headerNavbar">
                         <Navbar />
                     </nav>
-                    <!-- Header hamburger -->
-                    <div class="header__hamburger">
-                        <div class="hamburger hamburger--vortex">
-                            <span class="hamburger__inner"></span>
-                        </div>
-                    </div>
+                    <!-- Navbar toggle -->
+                    <div class="navbar__toggle"></div>
                 </div>
             </div>
         </header>

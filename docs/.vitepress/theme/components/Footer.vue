@@ -32,13 +32,13 @@ onMounted(() => {
                         </div>
                         <!-- Footer social -->
                         <div class="footer__social">
-                            <a href="javascript:void(0)" target="_blank" class="button button--icon">
+                            <a href="javascript:void(0)" target="_blank" class="social">
                                 <i class="si-icon-facebook-2"></i>
                             </a>
-                            <a href="javascript:void(0)" target="_blank" class="button button--icon">
+                            <a href="javascript:void(0)" target="_blank" class="social">
                                 <i class="si-icon-instagram"></i>
                             </a>
-                            <a href="javascript:void(0)" target="_blank" class="button button--icon">
+                            <a href="javascript:void(0)" target="_blank" class="social">
                                 <i class="si-icon-twitter"></i>
                             </a>
                         </div>

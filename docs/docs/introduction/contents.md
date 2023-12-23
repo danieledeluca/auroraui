@@ -79,7 +79,6 @@ sparkle/
         │   │   ├── _navbar.scss
         │   │   └── _social.scss
         │   ├── header/
-        │   │   ├── _hamburger.scss
         │   │   ├── _header.scss
         │   │   ├── _layout.scss
         │   │   ├── _logo.scss
