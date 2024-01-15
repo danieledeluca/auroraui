@@ -23,9 +23,9 @@ npm install @sparkleui/sparkle @sparkleui/sparkle-icons
 
 ### Download
 
-Download the [release](https://github.com/danieledeluca/sparkle/releases/) from GitHub.
+Download the [release](https://github.com/sparkleui/sparkle/releases/) from GitHub.
 
-<VPButton text="Download latest release" href="https://github.com/danieledeluca/sparkle/releases/latest/"></VPButton>
+<VPButton text="Download latest release" href="https://github.com/sparkleui/sparkle/releases/latest/"></VPButton>
 
 ### CDN
 

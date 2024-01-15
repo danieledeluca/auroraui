@@ -1,4 +1,4 @@
-# [v1.0.2](https://github.com/danieledeluca/sparkle/compare/v1.0.1...v1.0.2) (2023-01-03)
+# [v1.0.2](https://github.com/sparkleui/sparkle/compare/v1.0.1...v1.0.2) (2023-01-03)
 
 ## 🎨 CSS
 
@@ -38,7 +38,7 @@
 
 -   Update dependencies and devDependencies
 
-# [v1.0.1](https://github.com/danieledeluca/sparkle/compare/v1.0.0...v1.0.1) (2022-10-30)
+# [v1.0.1](https://github.com/sparkleui/sparkle/compare/v1.0.0...v1.0.1) (2022-10-30)
 
 ## 🎨 CSS
 

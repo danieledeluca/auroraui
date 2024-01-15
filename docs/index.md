@@ -15,5 +15,5 @@ hero:
           link: /docs/introduction/getting-started
         - theme: alt
           text: View on GitHub
-          link: https://github.com/danieledeluca/sparkle
+          link: https://github.com/sparkleui/sparkle
 ---

@@ -1,6 +1,6 @@
 # Contents
 
-## Sparkle UI source code
+## Sparkle source code
 
 ```
 sparkle/

@@ -18,16 +18,16 @@ npm install @sparkleui/sparkle-icons
 
 ### Download
 
-Download the [release](https://github.com/danieledeluca/sparkle-icons/releases/) from GitHub.
+Download the [release](https://github.com/sparkleui/icons/releases/) from GitHub.
 
-<VPButton text="Download latest release" href="https://github.com/danieledeluca/sparkle-icons/releases/latest/"></VPButton>
+<VPButton text="Download latest release" href="https://github.com/sparkleui/icons/releases/latest/"></VPButton>
 
 ### CDN
 
 Include the library in your website from jsDelivr.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sparkleui/sparkle-icons/dist/sparkle-icons.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sparkleui/icons/dist/sparkle-icons.min.css" />
 ```
 
 ## Import

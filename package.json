@@ -3,7 +3,7 @@
     "description": "Lightweight HTML, CSS and JavaScript framework.",
     "version": "1.0.2",
     "type": "module",
-    "author": "Daniele De Luca",
+    "author": "Sparkle UI",
     "license": "MIT",
     "browserslist": [
         "last 2 versions"
@@ -18,13 +18,13 @@
         "framework",
         "web"
     ],
-    "homepage": "https://danieledeluca.github.io/sparkle/",
+    "homepage": "https://sparkleui.github.io/sparkle/",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/danieledeluca/sparkle.git"
+        "url": "git+https://github.com/sparkleui/sparkle.git"
     },
     "bugs": {
-        "url": "https://github.com/danieledeluca/sparkle/issues"
+        "url": "https://github.com/sparkleui/sparkle/issues"
     },
     "scripts": {
         "dev": "vite",

@@ -25,7 +25,7 @@ onMounted(() => {
                         <!-- Footer copyright -->
                         <div class="footer__copyright">
                             <span>
-                                © {{ new Date().getFullYear() }} Daniele De Luca |
+                                © {{ new Date().getFullYear() }} Sparkle UI |
                                 <a href="javascript:void(0)">Privacy Policy</a> |
                                 <a href="javascript:void(0)">Cookie Policy</a>
                             </span>

@@ -25,7 +25,7 @@ const iconData = icons.find((icon) => icon.name === params.value.icon);
 
 Download the SVG to use or edit.
 
-<VPButton text="Download SVG file" :href="`https://github.com/danieledeluca/sparkle-icons/blob/main/src/icons/${$params.icon}.svg`"></VPButton>
+<VPButton text="Download SVG file" :href="`https://github.com/sparkleui/sparkle-icons/blob/main/src/icons/${$params.icon}.svg`"></VPButton>
 
 ## Usage
 
