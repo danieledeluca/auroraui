@@ -22,12 +22,12 @@ import IconsView from '@/views/IconsView.vue';
 
 ```scss
 $sparkle-icon-animations: (
-    'beat': 'si-beat 1s ease-in-out infinite',
-    'bounce': 'si-bounce 1s cubic-bezier(0.28, 0.84, 0.42, 1) infinite',
-    'fade': 'si-fade 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-    'flip': 'si-flip 1s ease-in-out infinite',
-    'shake': 'si-shake 1s linear infinite',
-    'spin': 'si-spin 2s linear infinite',
+    'beat': si-beat 1s ease-in-out infinite,
+    'bounce': si-bounce 1s cubic-bezier(0.28, 0.84, 0.42, 1) infinite,
+    'fade': si-fade 1s cubic-bezier(0.4, 0, 0.6, 1) infinite,
+    'flip': si-flip 1s ease-in-out infinite,
+    'shake': si-shake 1s linear infinite,
+    'spin': si-spin 2s linear infinite,
 ) !default;
 ```
 
@@ -35,6 +35,6 @@ $sparkle-icon-animations: (
 
 ```scss
 @mixin sparkle-icon-animation($name) {
-    animation: unquote(map-get($sparkle-icon-animations, $name));
+    animation: map-get($sparkle-icon-animations, $name);
 }
 ```

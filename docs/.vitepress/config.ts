@@ -1,6 +1,8 @@
 import { fileURLToPath, URL } from 'node:url';
-import { defineConfig, type DefaultTheme } from 'vitepress';
+import { defineConfig, type DefaultTheme, type PageData } from 'vitepress';
 import pkg from '../../package.json';
+import { capitalize, kebabToText } from './theme/composables/utils';
+import { iconAnimations, icons } from './theme/composables/icons';
 
 export default defineConfig({
     title: 'Sparkle UI',
@@ -29,6 +31,7 @@ export default defineConfig({
             provider: 'local',
         },
     },
+    transformPageData: (pageData) => transformPageData(pageData),
     vite: {
         resolve: {
             alias: [
@@ -137,9 +140,64 @@ function iconsSidebar(): DefaultTheme.SidebarItem[] {
         {
             text: 'Demo',
             items: [
-                { text: 'Icons', link: 'demo/icons' },
-                { text: 'Animations', link: 'demo/animations' },
+                { text: 'Icons', link: 'demo/icons/' },
+                { text: 'Animations', link: 'demo/animations/' },
             ],
         },
     ];
+}
+
+function transformPageData(pageData: PageData) {
+    if (pageData.params?.icon) {
+        const { icon } = pageData.params;
+        pageData.title = kebabToText(capitalize(icon));
+
+        const currentIconIndex = icons.findIndex(({ name }) => name === icon);
+
+        pageData.frontmatter = {
+            prev: {
+                text: currentIconIndex === 0 ? 'Icons' : kebabToText(capitalize(icons[currentIconIndex - 1].name)),
+                link:
+                    currentIconIndex === 0
+                        ? '/icons/demo/icons/'
+                        : `/icons/demo/icons/${icons[currentIconIndex - 1].name}`,
+            },
+            next: {
+                text:
+                    currentIconIndex === icons.length - 1
+                        ? 'Animations'
+                        : kebabToText(capitalize(icons[currentIconIndex + 1].name)),
+                link:
+                    currentIconIndex === icons.length - 1
+                        ? '/icons/demo/animations/'
+                        : `/icons/demo/icons/${icons[currentIconIndex + 1].name}`,
+            },
+        };
+    } else if (pageData.params?.animation) {
+        const { animation } = pageData.params;
+        pageData.title = capitalize(animation);
+
+        const currentAnimationIndex = iconAnimations.findIndex((iconAnimation) => iconAnimation === animation);
+
+        pageData.frontmatter = {
+            prev: {
+                text:
+                    currentAnimationIndex === 0 ? 'Animations' : capitalize(iconAnimations[currentAnimationIndex - 1]),
+                link:
+                    currentAnimationIndex === 0
+                        ? '/icons/demo/animations/'
+                        : `/icons/demo/animations/${iconAnimations[currentAnimationIndex - 1]}`,
+            },
+            next: {
+                text:
+                    currentAnimationIndex === iconAnimations.length - 1
+                        ? ''
+                        : capitalize(iconAnimations[currentAnimationIndex + 1]),
+                link:
+                    currentAnimationIndex === iconAnimations.length - 1
+                        ? ''
+                        : `/icons/demo/animations/${iconAnimations[currentAnimationIndex + 1]}`,
+            },
+        };
+    }
 }
