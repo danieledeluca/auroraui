@@ -40,16 +40,20 @@ import FormsView from '@/views/FormsView.vue';
 
 <FormsView example="text" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="text-example">This is an example of text input</label><input type="text" id="text-example" />
+<label for="text-example">This is an example of text input</label>
+<input type="text" id="text-example" />
 ```
 
 ### Email
 
 <FormsView example="email" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="email-example">This is an example of email input</label><input type="email" id="email-example" />
+<label for="email-example">This is an example of email input</label>
+<input type="email" id="email-example" />
 ```
 
 ### Password
@@ -65,46 +69,57 @@ import FormsView from '@/views/FormsView.vue';
 
 <FormsView example="search" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="search-example">This is an example of search input</label><input type="search" id="search-example" />
+<label for="search-example">This is an example of search input</label>
+<input type="search" id="search-example" />
 ```
 
 ### Telephone
 
 <FormsView example="telephone" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="tel-example">This is an example of telephone input</label><input type="tel" id="tel-example" />
+<label for="tel-example">This is an example of telephone input</label>
+<input type="tel" id="tel-example" />
 ```
 
 ### URL
 
 <FormsView example="url" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="url-example">This is an example of url input</label><input type="url" id="url-example" />
+<label for="url-example">This is an example of url input</label>
+<input type="url" id="url-example" />
 ```
 
 ### Number
 
 <FormsView example="number" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="number-example">This is an example of number input</label><input type="number" id="number-example" />
+<label for="number-example">This is an example of number input</label>
+<input type="number" id="number-example" />
 ```
 
 ### Date
 
 <FormsView example="date" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="date-example">This is an example of date input</label><input type="date" id="date-example" />
+<label for="date-example">This is an example of date input</label>
+<input type="date" id="date-example" />
 ```
 
 ### Datetime local
 
 <FormsView example="datetime-local" />
 
+<!-- prettier-ignore -->
 ```html
 <label for="datetime-local-example">This is an example of datetime local input</label>
 <input type="datetime-local" id="datetime-local-example" />
@@ -114,24 +129,30 @@ import FormsView from '@/views/FormsView.vue';
 
 <FormsView example="week" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="week-example">This is an example of week input</label><input type="week" id="week-example" />
+<label for="week-example">This is an example of week input</label
+<input type="week" id="week-example" />
 ```
 
 ### Month
 
 <FormsView example="month" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="month-example">This is an example of month input</label><input type="month" id="month-example" />
+<label for="month-example">This is an example of month input</label>
+<input type="month" id="month-example" />
 ```
 
 ### Time
 
 <FormsView example="time" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="time-example">This is an example of time input</label><input type="time" id="time-example" />
+<label for="time-example">This is an example of time input</label>
+<input type="time" id="time-example" />
 ```
 
 ### Checkbox
@@ -172,32 +193,40 @@ import FormsView from '@/views/FormsView.vue';
 
 <FormsView example="color" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="color-example">This is an example of color input</label><input type="color" id="color-example" />
+<label for="color-example">This is an example of color input</label>
+<input type="color" id="color-example" />
 ```
 
 ### File
 
 <FormsView example="file" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="file-example">This is an example of file input</label><input type="file" id="file-example" />
+<label for="file-example">This is an example of file input</label>
+<input type="file" id="file-example" />
 ```
 
 ### Range
 
 <FormsView example="range" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="range-example">This is an example of range input</label><input type="range" id="range-example" />
+<label for="range-example">This is an example of range input</label>
+<input type="range" id="range-example" />
 ```
 
 ## Textarea
 
 <FormsView example="textarea" />
 
+<!-- prettier-ignore -->
 ```html
-<label for="textarea-example">This is an example of textarea</label> <textarea id="textarea-example"></textarea>
+<label for="textarea-example">This is an example of textarea</label>
+<textarea id="textarea-example"></textarea>
 ```
 
 ## Select
@@ -270,6 +299,7 @@ import FormsView from '@/views/FormsView.vue';
 
 <FormsView example="disabled" />
 
+<!-- prettier-ignore -->
 ```html
 <label for="text-disabled-example">This is an example of disabled text input</label>
 <input type="text" id="text-disabled-example" disabled />
@@ -317,6 +347,7 @@ import FormsView from '@/views/FormsView.vue';
 
 <FormsView example="required" />
 
+<!-- prettier-ignore -->
 ```html
 <label for="text-required-example" class="is-required">This is an example of required text input</label>
 <input type="text" id="text-required-example" required />
