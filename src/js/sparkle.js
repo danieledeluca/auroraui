@@ -1,6 +1,6 @@
 /**
- * Copyright @ 2024 Sparkle
- * https://github.com/danieledeluca/sparkle
+ * Copyright @ 2024 Sparkle UI
+ * https://github.com/sparkleui/sparkle
  */
 
 // eslint-disable-next-line import/no-unresolved
