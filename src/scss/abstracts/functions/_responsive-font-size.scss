@@ -1,5 +1,5 @@
 /**
- * Copyright @ 2023 Sparkle
+ * Copyright @ 2024 Sparkle
  * https://github.com/danieledeluca/sparkle
  */
 
