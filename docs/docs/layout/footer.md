@@ -43,7 +43,7 @@ import Footer from '@/components/Footer.vue';
             <div class="footer__bottom">
                 <!-- Footer copyright -->
                 <div class="footer__copyright">
-                    <span>© 2023 Sparkle UI | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></span>
+                    <span>© 2024 Sparkle UI | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></span>
                 </div>
                 <!-- Footer social -->
                 <div class="footer__social">

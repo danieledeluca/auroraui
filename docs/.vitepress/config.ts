@@ -19,13 +19,13 @@ export default defineConfig({
             '/icons/': { base: '/icons/', items: iconsSidebar() },
         },
         outline: [2, 3],
-        socialLinks: [{ icon: 'github', link: `https://github.com/danieledeluca/sparkle` }],
+        socialLinks: [{ icon: 'github', link: `https://github.com/sparkleui/sparkle` }],
         footer: {
             message: 'Released under the MIT License.',
             copyright: `Copyright © ${new Date().getFullYear()} ${pkg.author}`,
         },
         editLink: {
-            pattern: `https://github.com/danieledeluca/sparkle/edit/main/docs/:path`,
+            pattern: `https://github.com/sparkleui/sparkle/edit/main/docs/:path`,
         },
         search: {
             provider: 'local',
