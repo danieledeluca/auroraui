@@ -48,7 +48,7 @@ import Footer from '@/components/Footer.vue';
                 <!-- Footer social -->
                 <div class="footer__social">
                     <a href="#" target="_blank" class="social">
-                        <i class="si-icon-facebook-2"></i>
+                        <i class="si-icon-facebook"></i>
                     </a>
                     <a href="#" target="_blank" class="social">
                         <i class="si-icon-instagram"></i>

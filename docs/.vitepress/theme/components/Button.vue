@@ -23,9 +23,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 const buttonClasses = ['button'];
 if (props.type) buttonClasses.push(`button--${props.type}`);
-if (props.color) buttonClasses.push(props.color);
 if (props.size) buttonClasses.push(`button--${props.size}`);
 if (props.isIconOnly) buttonClasses.push(`button--icon`);
+if (props.color) buttonClasses.push(props.color);
 if (props.htmlTag === 'link' && props.link && props.isDisabled) buttonClasses.push('disabled');
 </script>
 

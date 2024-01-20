@@ -33,7 +33,7 @@ onMounted(() => {
                         <!-- Footer social -->
                         <div class="footer__social">
                             <a href="javascript:void(0)" target="_blank" class="social">
-                                <i class="si-icon-facebook-2"></i>
+                                <i class="si-icon-facebook"></i>
                             </a>
                             <a href="javascript:void(0)" target="_blank" class="social">
                                 <i class="si-icon-instagram"></i>

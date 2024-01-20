@@ -153,12 +153,12 @@ To make a button there are some classes that are mandatory:
 
 ```scss
 // Button multipliers
-$button-padding-x-multiplier: 2 !default;
-$button-icon-font-size-multiplier: 1.5 !default;
+$button-padding-x-multiplier: 2.5 !default;
 
 // Button
-$button-padding-y: 0.75rem !default;
+$button-padding-y: 0.5rem !default;
 $button-padding-x: $button-padding-y * $button-padding-x-multiplier !default;
+$button-gap: 5px !default;
 $button-background-color: transparent !default;
 $button-color: $body-color !default;
 $button-border-width: 1px !default;
@@ -173,8 +173,6 @@ $button-disabled-opacity: 0.5 !default;
 $button-icon-width: calc(
     ($button-padding-y * 2) + ($button-font-size * $button-line-height) + ($button-border-width * 2)
 ) !default;
-$button-icon-margin: div($button-padding-x, 2) !default;
-$button-icon-font-size: $button-font-size * $button-icon-font-size-multiplier !default;
 
 // Button big
 $button-big-padding-y: $button-padding-y + 0.125rem !default;
@@ -184,8 +182,6 @@ $button-big-font-size: $body-font-size * 1.25 !default;
 $button-big-icon-width: calc(
     ($button-big-padding-y * 2) + ($button-big-font-size * $button-line-height) + ($button-border-width * 2)
 ) !default;
-$button-big-icon-margin: div($button-big-padding-x, 2) !default;
-$button-big-icon-font-size: $button-big-font-size * $button-icon-font-size-multiplier !default;
 
 // Button small
 $button-small-padding-y: $button-padding-y - 0.25rem !default;
@@ -195,8 +191,6 @@ $button-small-font-size: $body-font-size * 0.875 !default;
 $button-small-icon-width: calc(
     ($button-small-padding-y * 2) + ($button-small-font-size * $button-line-height) + ($button-border-width * 2)
 ) !default;
-$button-small-icon-margin: div($button-small-padding-x, 2) !default;
-$button-small-icon-font-size: $button-small-font-size * $button-icon-font-size-multiplier !default;
 ```
 
 ### Mixins
@@ -211,10 +205,11 @@ $button-small-icon-font-size: $button-small-font-size * $button-icon-font-size-m
     --#{$prefix}-button-hover-background-color: #{$button-background-color};
     --#{$prefix}-button-hover-color: #{$button-color};
     --#{$prefix}-button-hover-border-color: #{$button-border-color};
-    --#{$prefix}-button-icon-margin: #{$button-icon-margin};
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    gap: $button-gap;
     padding: var(--#{$prefix}-button-padding);
     background-color: var(--#{$prefix}-button-background-color);
     color: var(--#{$prefix}-button-color);
@@ -244,12 +239,6 @@ $button-small-icon-font-size: $button-small-font-size * $button-icon-font-size-m
         opacity: $button-disabled-opacity;
         pointer-events: none;
     }
-
-    > :not([hidden]) {
-        ~ :not([hidden]) {
-            margin-left: var(--#{$prefix}-button-icon-margin);
-        }
-    }
 }
 
 @mixin button-primary($color, $hover-color: darken($color, 5)) {
@@ -270,8 +259,8 @@ $button-small-icon-font-size: $button-small-font-size * $button-icon-font-size-m
 
 @mixin button-icon {
     --#{$prefix}-button-padding: 0;
-    --#{$prefix}-button-font-size: #{$button-icon-font-size};
     --#{$prefix}-button-icon-width: #{$button-icon-width};
+
     justify-content: center;
     width: var(--#{$prefix}-button-icon-width);
     aspect-ratio: 1;
@@ -281,21 +270,19 @@ $button-small-icon-font-size: $button-small-font-size * $button-icon-font-size-m
     @if $size == 'big' {
         --#{$prefix}-button-padding: #{$button-big-padding-y $button-big-padding-x};
         --#{$prefix}-button-font-size: #{$button-big-font-size};
-        --#{$prefix}-button-icon-margin: #{$button-big-icon-margin};
     } @else if $size == 'small' {
         --#{$prefix}-button-padding: #{$button-small-padding-y $button-small-padding-x};
         --#{$prefix}-button-font-size: #{$button-small-font-size};
-        --#{$prefix}-button-icon-margin: #{$button-small-icon-margin};
     }
 }
 
 @mixin button-icon-size($size) {
     @if $size == 'big' {
-        --#{$prefix}-button-font-size: #{$button-big-icon-font-size};
         --#{$prefix}-button-icon-width: #{$button-big-icon-width};
+        --#{$prefix}-button-font-size: #{$button-big-font-size};
     } @else if $size == 'small' {
-        --#{$prefix}-button-font-size: #{$button-small-icon-font-size};
         --#{$prefix}-button-icon-width: #{$button-small-icon-width};
+        --#{$prefix}-button-font-size: #{$button-small-font-size};
     }
 }
 ```
