@@ -31,7 +31,7 @@ To use these mixins, first you need to import them.
 @import '@sparkleui/icons/scss';
 ```
 
-Then just include them with the correct name (you can find the list of all the names [here](../demo/icons#variables)).
+Then just include them with the correct name (you can find the list of all the names [here](../demo/icons/index.md#variables)).
 
 ```scss
 .foo::before {
