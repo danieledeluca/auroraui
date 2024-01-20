@@ -202,6 +202,7 @@ $header-navbar-button-padding: $header-navbar-link-lv0-padding !default;
     @include mobile-only;
     @include button;
     @include button-icon;
+    @include button-icon-size('big');
 
     /* stylelint-disable-next-line order/order */
     --#{$prefix}-button-icon-width: #{$header-logo-height};

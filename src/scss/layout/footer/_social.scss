@@ -20,5 +20,8 @@ $footer-social-margin-bottom-md: 0.5rem !default;
     .social {
         @include button;
         @include button-icon;
+
+        /* stylelint-disable-next-line order/order */
+        --#{$prefix}-button-font-size: 1.5rem;
     }
 }

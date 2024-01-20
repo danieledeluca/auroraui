@@ -7,7 +7,6 @@ $pagination-list-gap: 0.5rem !default;
 
 $pagination-link-background-color: $white !default;
 $pagination-link-box-shadow: 0 0 10px rgba($black, 0.05) !default;
-$pagination-link-size: 'small' !default;
 
 $pagination-link-active-background-color: $primary !default;
 
@@ -32,7 +31,6 @@ $pagination-link-active-background-color: $primary !default;
     @include button;
     @include button-primary($pagination-link-background-color);
     @include button-icon;
-    @include button-icon-size($pagination-link-size);
 
     /* stylelint-disable-next-line order/order */
     --#{$prefix}-button-font-size: #{$button-font-size};
