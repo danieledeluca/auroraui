@@ -1,4 +1,4 @@
-import '@sparkleui/sparkle-icons';
+import '@sparkleui/icons';
 
 import { h } from 'vue';
 import type { Theme } from 'vitepress';

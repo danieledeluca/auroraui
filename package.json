@@ -36,6 +36,9 @@
         "docs-build": "vitepress build docs",
         "docs-preview": "vitepress preview docs"
     },
+    "dependencies": {
+        "@sparkleui/icons": "^1.0.5"
+    },
     "devDependencies": {
         "@sparkleui/stylelint-config": "^1.0.0",
         "autoprefixer": "^10.4.16",
@@ -66,8 +69,5 @@
         "./css": "./dist/sparkle.min.css",
         "./scss": "./src/scss/sparkle.scss",
         "./scss/": "./src/scss/"
-    },
-    "dependencies": {
-        "@sparkleui/sparkle-icons": "^1.0.3"
     }
 }

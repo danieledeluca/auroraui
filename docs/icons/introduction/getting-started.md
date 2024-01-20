@@ -13,7 +13,7 @@ Sparkle Icons are published to NPM, but they can also be manually downloaded if 
 Install Sparkle Icons with npm.
 
 ```sh
-npm install @sparkleui/sparkle-icons
+npm install @sparkleui/icons
 ```
 
 ### Download
@@ -35,15 +35,15 @@ Include the library in your website from jsDelivr.
 ::: code-group
 
 ```css [css]
-@import url('@sparkleui/sparkle-icons');
+@import url('@sparkleui/icons');
 ```
 
 ```scss [scss]
-@import '@sparkleui/sparkle-icons';
+@import '@sparkleui/icons';
 ```
 
 ```js [js]
-import '@sparkleui/sparkle-icons';
+import '@sparkleui/icons';
 ```
 
 :::
@@ -68,7 +68,7 @@ Add the icon trough CSS, using [pseudo elements](https://developer.mozilla.org/e
 
 ```css
 .foo::before {
-    content: '\e966';
+    content: '\f164';
     font-family: 'sparkle-icons';
 }
 ```

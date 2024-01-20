@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import autoprefixer from 'autoprefixer';
 import pkg from './package.json';
@@ -12,7 +12,7 @@ export default defineConfig({
             name: 'sparkle',
         },
         rollupOptions: {
-            external: ['@sparkleui/sparkle-icons'],
+            external: ['@sparkleui/icons'],
             output: {
                 assetFileNames: 'sparkle.min.[ext]',
                 banner: `

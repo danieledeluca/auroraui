@@ -18,7 +18,7 @@ Install Sparkle with npm.
 
 ```sh
 # Install Sparkle, Sparkle Icons
-npm install @sparkleui/sparkle @sparkleui/sparkle-icons
+npm install @sparkleui/sparkle @sparkleui/icons
 ```
 
 ### Download
@@ -75,7 +75,7 @@ You can also import the stylesheets individually if you want. Read [Advanced Usa
 
 ```js
 // Import Sparkle Icons
-import '@sparkleui/sparkle-icons';
+import '@sparkleui/icons';
 
 // Import your custom CSS
 import './style.scss';
